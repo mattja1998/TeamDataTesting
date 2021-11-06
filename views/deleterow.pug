@@ -1,0 +1,38 @@
+doctype html
+html
+    head
+        meta(charset='UTF-8')
+        title Simple templates
+        link(rel='stylesheet', href='./styles2.css')
+
+    body
+        h3 You are about to delete a row Are you sure you would like to do this
+        table(style='with:100%' border='1')
+            tr
+                th ID
+                th FName
+                th Date
+                th Time
+                th State
+                th User Id
+                th First Name
+                th Last Name
+
+            each row in Form
+                tr
+                    td= row.FormId
+                    td= row.FormName
+                    td= row.Date
+                    td= row.Time
+                    td= row.State
+                    td= row.UserId
+                    td= row.FirstName
+                    td= row.LastName
+                    td
+                        form(action='deleteThis' method='post')
+                                input(type='hidden' name=`id` value=`${row.FormId}`)
+                                input(type='submit' value=`Yes`)
+                    td
+                        form(action='SaveThis' method='post')
+                            input(type='hidden' name=`id` value=`${row.FormId}`)
+                            input(type='submit' value=`No`)
