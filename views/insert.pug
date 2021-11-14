@@ -1,0 +1,48 @@
+doctype html
+html
+    head
+        meta(charset='UTF-8')
+        title Simple templates
+        link(rel='stylesheet', href='./styles2.css')
+        script.
+
+
+
+    body
+
+        form(action = "/insertRow", method = "POST")
+            div
+                label(for = "id") Form ID:
+                input(id="id" name="fId" value = "")
+            br
+            div
+                label(for="fName") Form Name:
+                input(id  = "fName" name="FormName" value = "")
+            br
+            div
+                label(for = "Date") Date:
+                input(id='Date' name = "d" value = "")
+            br
+            div
+                label(for = "Time") Time:
+                input(id='Time' name ='t' value='')
+            br
+            div
+                lable(for = 'State') State:
+                input(id='State' name = 's' value='')
+            br
+            div
+                lable(for='UserId') UserId:
+                input(id='UserId' name='UId' value="")
+            br
+            div
+                label(for = 'FirstName') FirstName:
+                input(id='FirstName' name='firstName' value='')
+            br
+            div
+                label(for = "lastName") Last Name:
+                input(id = 'lastName' name='lName' value='')
+            br
+            div
+
+                button(type = "submit") Input Info
