@@ -1,0 +1,95 @@
+doctype html
+head
+    meta(charset='utf-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no')
+    meta(name='description' content='')
+    meta(name='author' content='Mark Otto, Jacob Thornton, and Bootstrap contributors')
+    meta(name='generator' content='Jekyll v3.8.5')
+    title Form 4e
+    link(rel='canonical' href='https://getbootstrap.com/docs/4.3/examples/checkout/')
+    // Bootstrap core CSS
+
+    style
+        include css/form1bootstrap1.css
+    style.
+
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+
+
+
+
+
+
+body(class="bg-light")
+    div(class="container")
+        div(class="py-5 text-center")
+            h1 Form 04e Employee injury form
+
+
+    div(class="row")
+        div(class="col-md-4 order-md-2 mb-4")
+            div(class="col-md-8 order-md-1")
+                form(class="needs-validation" novalidate)
+                div(class="row")
+                    div(class="col-md-6 mb-3") Employee Name.
+                        input(type='label' name = 'name' class="form-control")
+
+                    div(class='col-md-6 mb-3') Date of the incident (mm/dd/yyyy)
+                        input(type='date' name = 'date' class="form-control")
+
+                    div(class="col-md-6 mb-3") time of the Incident (hh/mm a.m/p.m)
+                        input(type='label' name = 'time' class="form-control")
+
+                    div(class="col-md-6 mb-3") Specific Location of the incident (second floor hallway of recreation center, storage closet of maintenance shed etc.)
+                        input(type='label' name = 'location' class="form-control")
+
+
+                    div(class="col-md-6 mb-3") Are you reporting the injury for the first time? Yes:
+                        input(type='radio'  name='report' value='yes' id='checkYes' checked="checked" class="form-control")
+                        span No:
+                            input(type='radio'  name = 'report' id='checkNo' value='no' class="form-control")
+                    div(class="col-md-6 mb-3") If no, when did you first report the injury (verbally or in writing) and to whom did you report it?
+                    div(class="col-md-6 mb-3") Date:
+                        input(type='label' name = 'repDate' class="form-control")
+                    div(class="col-md-6 mb-3") Time:
+                        input(type='label' name = 'repTime')
+                    div(class="col-md-6 mb-3") Reported to:
+                        input(type='label' name = 'repTo' class="form-control")
+
+
+                    div(class="col-md-6 mb-3") Describe how the injury Occurred ( Identify the job task you were doing and include a step-by-step explanation of what led to the injury.)
+                        input(type='label' name = 'Exp' class="form-control")
+
+                    div(class="col-md-6 mb-3") Name all people present at the time of injury(e.g., coworkers and/or witnesses)
+                        input(type='label' name = 'witnesses' class="form-control")
+
+                    div(class="col-md-6 mb-3")
+                        span Identify all body parts you injured. (Be specific. indicate left or right, upper or lower.)
+                        input(type='label' name = 'Injury' class="form-control")
+
+                    div(class="col-md-6 mb-3") Did you seek medical attention on the date of the accident  Yes:
+                        input(type='radio' name ='medAtt' value='checkY' checked class="form-control")
+                        span No:
+                            input(type='radio' name = 'medAtt' id = 'checkN' value='no' class="form-control")
+                    div(class="col-md-6 mb-3") If yes, where did you seek treatment?
+                        input(type='label' name = 'treatLoc' class="form-control")
+
+                    div(class="col-md-6 mb-3") The above information is ture and accurate (please type name):
+                        input(type='label' name = 'sig' class="form-control")
+                    div(class="col-md-6 mb-3") Date:
+                        input(type='label' name='conDate' class="form-control")
+                    input( class="btn btn-primary btn-lg btn-block" type="submit")
+
+

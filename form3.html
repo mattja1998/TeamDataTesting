@@ -1,0 +1,175 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Jekyll v3.8.5">
+    <title>Form 3</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/checkout/">
+
+    <!-- Bootstrap core CSS -->
+    <link href="form1bootstrap1.css" rel="stylesheet" >
+
+
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+    </style>
+    <!-- Custom styles for this template -->
+
+</head>
+<body class="bg-light">
+<div class="container">
+    <div class="py-5 text-center">
+        <h1>Property Loss Report: Form 3</h1>
+    </div>
+
+    <div class="row">
+        <div class="col-md-4 order-md-2 mb-4">
+        </div>
+        <div class="col-md-8 order-md-1">
+            <form class="needs-validation" novalidate>
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label for="agencyName">Agency Name</label>
+                        <input type="text" class="form-control" id="agencyName" placeholder="Enter Name Here" value="" required>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="todaysDate">Today's Date</label>
+                        <input type="date" id="todaysDate" name="dateOfIncident"
+                               min="2021-01-01" max="2031-12-31">
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="dateOfIncident">Date of Incident</label>
+                        <input type="date" id="dateOfIncident" name="dateOfIncident"
+                               min="2021-01-01" max="2031-12-31">
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="timeOfIncident">Time of Incident</label>
+                        <input type="text" class="form-control" id="timeOfIncident" placeholder="Enter Time: hh/mm a.m./p.m." value="" required>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="reporterName">Name of Person Completing Report</label>
+                        <input type="text" class="form-control" id="reporterName" placeholder="Enter Name Here" value="" required>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="reporterTitle">Title of Person Completing Report</label>
+                        <input type="text" class="form-control" id="reporterTitle" placeholder="Enter Title Here" value="" required>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="businessNumber">Business Phone Number</label>
+                        <input type="text" class="form-control" id="businessNumber" placeholder="Enter Phone Number Here" value="" required>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="businessEmail">Business Email</label>
+                        <input type="text" class="form-control" id="businessEmail" placeholder="Enter Email Here" value="" required>
+                    </div>
+                    <div class="col-md-auto">
+                        <label for="howOccured">How Did the Incident Occur and What Property Was Damaged?</label>
+                        <textarea id="howOccured" rows="6" cols="96">
+                            Provide a brief, factual description.
+                        </textarea>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="incidentLocation">Name of Location (park, pool, community center) or nearest intersection</label>
+                        <input type="text" class="form-control" id="incidentLocation" placeholder="Enter Location Here" value="" required>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        Is there an Address for this location?
+                        If Yes, please provide the following (Address and City, State, Zip):
+                        <label for="incidentAddress">Address</label>
+                        <input type="text" class="form-control" id="incidentAddress" placeholder="1234 Main St" required>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="cityStateZip">City, State, Zip</label>
+                        <input type="text" class="form-control" id="cityStateZip" placeholder="City, State, Zip" required>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="locationType">Location ( Specify the exact type of location/facility where injury occured )</label>
+                        <input type="text" class="form-control" id="locationType" placeholder="Enter Location Here" value="" required>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="primaryLocation">Primary Location ( Specify the exact location Ex. pool, classroom etc.)</label>
+                        <input type="text" class="form-control" id="primaryLocation" placeholder="Enter Location Here" value="" required>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="lossEstimate">Estimate of Loss</label>
+                        <input type="text" class="form-control" id="lossEstimate" value="">
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="contactPerson">Contact Person at Facility</label>
+                        <input type="text" class="form-control" id="contactPerson" value="">
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="contactPersonEmail">Contact Person's Email</label>
+                        <input type="text" class="form-control" id="contactPersonEmail" value="">
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="contactPersonPhone">Contact Person's Phone Number</label>
+                        <input type="text" class="form-control" id="contactPersonPhone" value="">
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        Was damage caused by third-party (non-agency) individual?
+                        <input type="checkbox" id="checkYes" name="yes" value="Yes">
+                        <label for="checkYes"> Yes</label>
+                        <input type="checkbox" id="checkNo" name="no" value="No">
+                        <label for="checkNo"> No</label>
+                        <input type="checkbox" id="checkUnknown" name="unknown" value="Unknown">
+                        <label for="checkUnknown"> Unknown</label><br>
+                    </div>
+
+                    <div class="col-md-6 mb-3">
+                        <label for="personIdentified">Has the party responsible for damage been identified? If yes, provide the following contact information for the person or persons identified:</label>
+                        <input type="text" class="form-control" id="personIdentified" placeholder="Name, Street Address" value="" >
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="cityStateZipPersonIdentidied">City, State, Zip</label>
+                        <input type="text" class="form-control" id="cityStateZipPersonIdentidied" placeholder="City, State, Zip" required>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        Has a police agency conducted an investigation?
+                        <br>
+                        <input type="checkbox" id="policeCheckYes" name="yes" value="Yes">
+                        <label for="policeCheckYes"> Yes</label>
+                        <input type="checkbox" id="policeCheckNo" name="no" value="No">
+                        <label for="policeCheckNo"> No</label>
+                        <input type="checkbox" id="policeCheckUnknown" name="unknown" value="Unknown">
+                        <label for="policeCheckUnknown"> Unknown</label><br>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="policeAgency">What policy agency investigated the incident? What is the police report number?</label>
+                        <input type="text" class="form-control" id="policeAgency" value="" >
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="theCharges">Were criminal charges brought against the responsible party? If yes, what were the charges?</label>
+                        <input type="text" class="form-control" id="theCharges" value="" >
+                    </div>
+                    <h5>Please ensure every field is filled out!</h5>
+                <button class="btn btn-primary btn-lg btn-block" type="submit">Submit Details</button>
+                <br>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script>window.jQuery || document.write('<script src="/docs/4.3/assets/js/vendor/jquery-slim.min.js"><\/script>')</script><script src="/docs/4.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o" crossorigin="anonymous"></script>
+<br>
+</body>
+</html>
