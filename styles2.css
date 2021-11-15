@@ -8336,4 +8336,16 @@ textarea.form-control-lg {
     font-size: 2rem;
     color: black;
   }
+  footer #group-info ul {
+    list-style-type: none;
+  }
+
+  footer #group-info li {
+    margin: 10px;
+  }
+  footer img{
+    margin-top: 15px;
+    padding: 16px 15px 28px 15px;
+    float: right;
+  }
 }
