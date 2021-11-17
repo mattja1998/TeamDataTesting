@@ -9,6 +9,7 @@ html
 
 
     body
+        include navbar.pug
 
         form(action = "/insertRow", method = "POST")
             div
@@ -46,3 +47,4 @@ html
             div
 
                 button(type = "submit") Input Info
+        include footer.pug

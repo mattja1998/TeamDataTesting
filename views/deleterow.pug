@@ -1,11 +1,16 @@
 doctype html
 html
     head
+
         meta(charset='UTF-8')
         title Simple templates
         link(rel='stylesheet', href='Styles2.css')
 
     body
+        include navbar.pug
+
+
+
         h3 You are about to delete a row Are you sure you would like to do this
         table(style='with:100%' border='1')
             tr
@@ -29,10 +34,16 @@ html
                     td= row.FirstName
                     td= row.LastName
                     td
-                        form(action='deleteThis' method='post')
-                                input(type='hidden' name=`id` value=`${row.FormId}`)
-                                input(type='submit' value=`Yes`)
+
+                            form(action='/deleteThis' method='post')
+
+                                    input(type='hidden' name=`id` value=`${row.FormId}`)
+                                    input(type='submit' value=`Yes` onClick=function(){location.replace('/minorInjdb')})
                     td
-                        form(action='SaveThis' method='post')
-                            input(type='hidden' name=`id` value=`${row.FormId}`)
-                            input(type='submit' value=`No`)
+
+                            a(href='/minorInjDb')
+                                input(type='hidden' name=`id` value=`${row.FormId}`)
+                                input(type='submit' value=`No` )
+        include footer.pug
+
+

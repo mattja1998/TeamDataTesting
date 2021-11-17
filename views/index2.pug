@@ -1,0 +1,82 @@
+doctype html
+head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
+    meta(name='description', content='')
+    meta(name='author', content='')
+    title project
+    head
+        style
+            include css/styles2.css
+
+    include navbar.pug
+// Responsive navbar
+
+header.py-5
+    .container.px-lg-5
+        .p-4.p-lg-5.bg-light.rounded-3.text-center
+            .m-4.m-lg-5
+                h1.display-5.fw-bold A Warm Welcome!
+                p.fs-4 Incident Report Sheets
+                // <a class="btn btn-primary btn-lg" href="#!">Call to action</a>
+// Page Content
+section.pt-4
+    .container.px-lg-5
+        // Page Features
+        .row.gx-lg-5
+            .col-lg-6.col-xxl-4.mb-5
+                .card.bg-light.border-0.h-100
+                    .card-body.text-center.p-4.p-lg-5.pt-0.pt-lg-0
+                        .feature.bg-primary.bg-gradient.text-white.mb-4
+                            // mt-n4 for sticking out box
+                            i.bi.bi-collection
+                        h2.fs-4.fw-bold
+                            a(href=' ', target='_blank')
+                                form(action = "/MinorInjDb", method = "get")
+                                    button(style='background: none;border:none; font-weight: 700') Minor Injury Log
+                        // so i did the css font on the html itself since it wasnt working not it does so i can delete fw-bold in class
+                        // <p class="mb-0">With Bootstrap 5, we've created a fresh new layout for this template!</p>
+            .col-lg-6.col-xxl-4.mb-5
+                .card.bg-light.border-0.h-100
+                    .card-body.text-center.p-4.p-lg-5.pt-0.pt-lg-0
+                        .feature.bg-primary.bg-gradient.text-white.rounded-3.mb-4
+                            i.bi.bi-cloud-download
+                        h2.fs-4.fw-bold
+                            a(href=' ', target='_blank')
+                                form(action = "/form1", method = "get")
+                                    button(style='background: none;border:none; font-weight: 700') PDRMA Form 01 Accident Incident Report
+                        // <p class="mb-0">As always, Start Bootstrap has a powerful collectin of free templates.</p>
+            .col-lg-6.col-xxl-4.mb-5
+                .card.bg-light.border-0.h-100
+                    .card-body.text-center.p-4.p-lg-5.pt-0.pt-lg-0
+                        .feature.bg-primary.bg-gradient.text-white.rounded-3.mb-4
+                            i.bi.bi-card-heading
+                        h2.fs-4.fw-bold
+                            a(href=' ', target='_blank')
+                                form(action = "/form2", method = "get")
+                                    button(style='background: none;border:none; font-weight: 700') PDRMA Form 02 Vehicle Accident Report
+                        // <p class="mb-0">The heroic part of this template is the jumbotron hero header!</p>
+            .col-lg-6.col-xxl-4.mb-5
+                .card.bg-light.border-0.h-100
+                    .card-body.text-center.p-4.p-lg-5.pt-0.pt-lg-0
+                        .feature.bg-primary.bg-gradient.text-white.rounded-3.mb-4
+                            i.bi.bi-bootstrap
+                        h2.fs-4.fw-bold
+                            a(href=' ', target='_blank')
+                                form(action = "/form3", method = "get")
+                                    button(style='background: none;border:none; font-weight: 700') PDRMA Form 03 Property Loss Report
+                        // <p class="mb-0">We've created some custom feature boxes using Bootstrap icons!</p>
+            .col-lg-6.col-xxl-4.mb-5
+                .card.bg-light.border-0.h-100
+                    .card-body.text-center.p-4.p-lg-5.pt-0.pt-lg-0
+                        .feature.bg-primary.bg-gradient.text-white.rounded-3.mb-4
+                            i.bi.bi-code
+                        h2.fs-4.fw-bold
+                            a(href=' ', target='_blank')
+                                form(action = "/form4e", method = "get")
+                                    button(style='background: none;border:none; font-weight: 700') PDRMA Form 04 Employee Injury Report
+                        // <p class="mb-0">We keep our dependencies up to date and squash bugs as they come!</p>
+
+    include footer.pug
+// Bootstrap core JS
+script(src='https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js')

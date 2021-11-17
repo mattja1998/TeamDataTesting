@@ -40,22 +40,9 @@ app.post('/deleteThis',function(req,res){
     con.query(sql,function(err2,result,fields) {
         res.writeHead(301,{location:'/minorInjDb'});
         console.log("Deleted Form From Db");
-    });
-    app.get('/minorInjDb', function(req,res) {
-        con.connect(function (err) {
-            if (err) throw  err;
-            let sql = "select FormId, FormName,UserId,Date,Time,State, FirstName,LastName from FormV2";
-            con.query(sql, function (err2, result, fields) {
-                if (err2) throw  err2;
 
-
-                res.render('MinorInjurys', {
-                    title: "FormV2",
-                    Form: result
-                });
-            });
-        });
     });
+
 
 })
 
@@ -71,16 +58,59 @@ app.post('/ConfirmDelete', function(req,res) {
         Form:result
 
     })
-        // let id = req.body.FormId;
 
-        // let sql = "delete from FormV2 where FormId='${id}'";
-        //res.writeHead(301,{location:'/varpassdb'});
-        //alert(`Deleted Form Id: ${id}   ` )
     })
 })
-app.get('/minorInjDb', function(req,res) {
+
+app.post('/insertRow4e',function(req,res){
+    let id = req.body.fId;
+    let fName = req.body.FormName;
+    let date = req.body.d;
+    let time = req.body.t;
+    let state = req.body.s;
+    let userId = req.body.UId;
+    let firstName = req.body.firstName;
+    let lastName = req.body.lName;
+
+    let sql = `INSERT INTO FormV2(FormId,FormName,Date,Time,State,UserId,FirstName,LastName)  VALUES ('${id}', '${fName}', CURRENT_DATE, '${time}', '${state}', '${userId}', '${firstName}', '${lastName}')`;
+    con.query(sql);
+
+
+})
+
+app.get('/form4e', function(req,res) {
     con.connect(function (err) {
         if (err) throw  err;
+        let sql = "select FormId, FormName,UserId,Date,Time,State, FirstName,LastName from FormV2";
+        con.query(sql, function (err2, result, fields) {
+            if (err2) throw  err2;
+
+
+            res.render('form4e' );
+        });
+    });
+});
+
+app.get('/form1', function(req,res) {
+    res.render('form1')
+});
+
+app.get('/form3', function(req,res) {
+    res.render('form3')
+});
+
+app.get('/home', function(req,res) {
+    res.render('index2')
+});
+
+app.get('/login', function(req,res) {
+    res.render('project')
+});
+
+
+
+app.get('/minorInjDb', function(req,res) {
+
         let sql = "select FormId, FormName,UserId,Date,Time,State, FirstName,LastName from FormV2";
         con.query(sql, function (err2, result, fields) {
             if (err2) throw  err2;
@@ -91,7 +121,7 @@ app.get('/minorInjDb', function(req,res) {
                 Form: result
             });
         });
-    });
+
 });
 let port = 3333;
 app.listen(port);

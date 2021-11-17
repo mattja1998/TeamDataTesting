@@ -1,0 +1,317 @@
+doctype html
+html(lang='en')
+    head
+        style
+            include css/form1bootstrap1.css
+        meta(charset='utf-8')
+        meta(name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no')
+        meta(name='description' content='')
+        meta(name='author' content='Mark Otto, Jacob Thornton, and Bootstrap contributors')
+        meta(name='generator' content='Jekyll v3.8.5')
+        title Form 1
+        link(rel='canonical' href='https://getbootstrap.com/docs/4.3/examples/checkout/')
+        // Bootstrap core CSS
+        include navbar.pug
+        style.
+            .bd-placeholder-img {
+                font-size: 1.125rem;
+                text-anchor: middle;
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                user-select: none;
+            }
+
+            @media (min-width: 768px) {
+                .bd-placeholder-img-lg {
+                    font-size: 3.5rem;
+                }
+            }
+        // Custom styles for this template
+        link(href='form-validation.css' rel='stylesheet')
+
+    body.bg-light
+        .container
+            .py-5.text-center
+                h1 Accident/Incident Report: Form 1
+            .row
+                .col-md-4.order-md-2.mb-4
+                .col-md-8.order-md-1
+                    form.needs-validation(novalidate)
+                        .row
+                            .col-md-6.mb-3
+                                label(for='agencyName') Agency Name
+                                input#agencyName.form-control(type='text' placeholder='Enter Name Here' value='' required)
+                            .col-md-6.mb-3
+                                label(for='todaysDate') Today's Date
+                                input#todaysDate(type='date' name='dateOfIncident' min='2021-01-01' max='2031-12-31')
+                            .col-md-6.mb-3
+                                label(for='dateOfIncident') Date of Incident
+                                input#dateOfIncident(type='date' name='dateOfIncident' min='2021-01-01' max='2031-12-31')
+                            .col-md-6.mb-3
+                                label(for='timeOfIncident') Time of Incident
+                                input#timeOfIncident.form-control(type='text' placeholder='Enter Time: hh/mm a.m./p.m.' value='' required)
+                            .col-md-6.mb-3
+                                label(for='reporterName') Name of Person Completing Report
+                                input#reporterName.form-control(type='text' placeholder='Enter Name Here' value='' required)
+                            .col-md-6.mb-3
+                                label(for='reporterTitle') Title of Person Completing Report
+                                input#reporterTitle.form-control(type='text' placeholder='Enter Title Here' value='' required)
+                            .col-md-6.mb-3
+                                label(for='businessNumber') Business Phone Number
+                                input#businessNumber.form-control(type='text' placeholder='Enter Phone Number Here' value='' required)
+                            .col-md-6.mb-3
+                                label(for='businessEmail') Business Email
+                                input#businessEmail.form-control(type='text' placeholder='Enter Email Here' value='' required)
+                            .col-md-auto
+                                label(for='howOccured') How Did the Incident Occur?
+                                textarea#howOccured(rows='6' cols='96')
+                                    | Provide a brief, factual description; do not speculate on fault, etc.
+                            .col-md-6.mb-3
+                                label(for='incidentLocation') Name of Location (park, pool, community center) or nearest intersection
+                                input#incidentLocation.form-control(type='text' placeholder='Enter Location Here' value='' required)
+                            .col-md-6.mb-3
+                                | Is there an Address for this location?
+                                br
+                                input#checkYes(type='checkbox' name='yes' value='Yes')
+                                label(for='checkYes')  Yes
+                                input#checkNo(type='checkbox' name='no' value='No')
+                                label(for='checkNo')  No
+                                input#checkUnknown(type='checkbox' name='unknown' value='Unknown')
+                                label(for='checkUnknown')  Unknown
+                                br
+                                | If Yes, please provide the following (Address and City, State, Zip):
+                            .col-md-6.mb-3
+                                label(for='incidentAddress') Address
+                                input#incidentAddress.form-control(type='text' placeholder='1234 Main St' required)
+                            .col-md-6.mb-3
+                                label(for='cityStateZip') City, State, Zip
+                                input#cityStateZip.form-control(type='text' placeholder='City, State, Zip' required)
+                            .col-md-6.mb-3
+                                label(for='locationType') Location ( Specify the exact type of location/facility where injury occured )
+                                input#locationType.form-control(type='text' placeholder='Enter Location Here' value='' required)
+                            .col-md-6.mb-3
+                                label(for='primaryLocation') Primary Location ( Specify the exact location Ex. pool, classroom etc.)
+                                input#primaryLocation.form-control(type='text' placeholder='Enter Location Here' value='' required)
+                            .mb-3
+                                br
+                                h3 BODILY INJURY
+                                | Was a person injured (Ex. patron, citizen, participant, volunteer)?
+                                br
+                                input#injuredYes(type='checkbox' name='yes' value='Yes')
+                                label(for='injuredYes')  Yes
+                                input#injuredNo(type='checkbox' name='no' value='No')
+                                label(for='injuredNo')  No
+                                input#injuredUnknown(type='checkbox' name='unknown' value='Unknown')
+                                label(for='injuredUnknown')  Unknown
+                                br
+                                | If Yes, please provide the following information:
+                            br
+                            .col-md-6.mb-3
+                                label(for='lastName') Last Name
+                                input#lastName.form-control(type='text' placeholder='Enter Last Name Here' value='')
+                            .col-md-6.mb-3
+                                label(for='firstName') First Name
+                                input#firstName.form-control(type='text' placeholder='Enter First Name Here' value='')
+                            .col-md-6.mb-3
+                                label(for='injuredAddress') Address
+                                input#injuredAddress.form-control(type='text' placeholder='1234 Main St')
+                            .col-md-6.mb-3
+                                label(for='injuredCity') City
+                                input#injuredCity.form-control(type='text' placeholder='City')
+                            .col-md-6.mb-3
+                                label(for='injuredState') State
+                                input#injuredState.form-control(type='text' placeholder='State')
+                            .col-md-6.mb-3
+                                label(for='injuredZip') Zip
+                                input#injuredZip.form-control(type='text' placeholder='Zip')
+                            .col-md-6.mb-3
+                                label(for='homePhone') Home Phone #
+                                input#homePhone.form-control(type='text' placeholder='Enter Phone Number Here' value='' required)
+                            .col-md-6.mb-3
+                                label(for='workPhone') Work Phone #
+                                input#workPhone.form-control(type='text' placeholder='Enter Phone Number Here' value='' required)
+                            .col-md-6.mb-3
+                                label(for='cellPhone') Cell Phone #
+                                input#cellPhone.form-control(type='text' placeholder='Enter Phone Number Here' value='' required)
+                            .col-md-6.mb-3
+                                label(for='injuredAge') Age
+                                input#injuredAge.form-control(type='text' placeholder='' value='')
+                            .col-md-6.mb-3
+                                | Sex
+                                input#injuredMale(type='checkbox' name='injuredSex' value='male')
+                                label(for='injuredMale')  Male
+                                input#injuredFemale(type='checkbox' name='injuredSex' value='female')
+                                label(for='injuredFemale')  Female
+                            .col-md-6.mb-3
+                                | Is injured person an agency volunteer?
+                                br
+                                input#volunteerYes(type='checkbox' name='volunteer' value='Yes')
+                                label(for='volunteerYes')  Yes
+                                input#volunteerNo(type='checkbox' name='volunteer' value='No')
+                                label(for='volunteerNo')  No
+                                input#volunteerUnknown(type='checkbox' name='volunteer' value='Unknown')
+                                label(for='volunteerUnknown')  Unknown
+                                br
+                            .col-md-auto
+                                label(for='describeInjury') Describe the Injury ( Affected body part and type of injury )
+                                textarea#describeInjury(rows='4' cols='96')
+                            .col-md-6.mb-3
+                                | Did injured Person make any statements?
+                                br
+                                input#statementYes(type='checkbox' name='statement' value='Yes')
+                                label(for='statementYes')  Yes
+                                input#statementNo(type='checkbox' name='statement' value='No')
+                                label(for='statementNo')  No
+                                input#statementUnknown(type='checkbox' name='statement' value='Unknown')
+                                label(for='statementUnknown')  Unknown
+                                br
+                            .col-md-auto
+                                label(for='injuredStatement') If yes, what did the injured person say?
+                                textarea#injuredStatement(rows='4' cols='96')
+                            .col-md-6.mb-3
+                                | Was First Aid Administered?
+                                br
+                                input#firstAidYes(type='checkbox' name='firstAid' value='Yes')
+                                label(for='firstAidYes')  Yes
+                                input#firstAidNo(type='checkbox' name='firstAid' value='No')
+                                label(for='firstAidNo')  No
+                                input#firstAidUnknown(type='checkbox' name='firstAid' value='Unknown')
+                                label(for='firstAidUnknown')  Unknown
+                                br
+                            .col-md-6.mb-3
+                                label(for='firstAidName') Name and Position of person who Administered First Aid
+                                input#firstAidName.form-control(type='text' value='')
+                            .col-md-6.mb-3
+                                label(for='firstAidGiven') Was First Aid Given?
+                                input#firstAidGiven.form-control(type='text' value='')
+                            .col-md-6.mb-3
+                                | Did First Aid involve AED and/or CPR?
+                                br
+                                input#firstAidDetailsYes(type='checkbox' name='firstAidDetails' value='Yes')
+                                label(for='firstAidDetailsYes')  Yes
+                                input#firstAidDetailsNo(type='checkbox' name='firstAidDetails' value='No')
+                                label(for='firstAidDetailsNo')  No
+                                input#firstAidDetailsUnknown(type='checkbox' name='firstAidDetails' value='Unknown')
+                                label(for='firstAidDetailsUnknown')  Unknown
+                                br
+                                | If yes, please submit a PDRMA post-AED form.
+                            .col-md-6.mb-3
+                                | Were paramedic services offered?
+                                br
+                                input#calledRefused(type='checkbox' name='paramedicServices' value='Yes')
+                                label(for='calledRefused')  Called and refused (at scene by patron)
+                                br
+                                input#offeredRefused(type='checkbox' name='paramedicServices' value='Yes')
+                                label(for='offeredRefused')  Offered and refused
+                                br
+                                input#unableRespond(type='checkbox' name='paramedicServices' value='Yes')
+                                label(for='unableRespond')  Unable to respond and called
+                                br
+                                input#offeredCalled(type='checkbox' name='paramedicServices' value='Yes')
+                                label(for='offeredCalled')  Offered and called
+                                br
+                                input#OfferedRefusedCalled(type='checkbox' name='paramedicServices' value='Yes')
+                                label(for='offeredRefusedCalled')  Offered, refused, called by agency anyways
+                            .col-md-6.mb-3
+                                | Were the police called?
+                                br
+                                input#policeCalled(type='checkbox' name='firstAidDetails' value='Yes')
+                                label(for='policeCalled')  Yes
+                                br
+                                | If Yes, please provide the following information.
+                            .col-md-6.mb-3
+                                label(for='policeDeptName') Name of police department
+                                input#policeDeptName.form-control(type='text' value='')
+                            .col-md-6.mb-3
+                                label(for='policeName') Name of officer
+                                input#policeName.form-control(type='text' value='')
+                            .col-md-6.mb-3
+                                | Do you expect this person to submit a claim?
+                                br
+                                input#claimYes(type='checkbox' name='yes' value='Yes')
+                                label(for='claimYes')  Yes
+                                input#claimNo(type='checkbox' name='no' value='No')
+                                label(for='claimNo')  No
+                                input#claimUnknown(type='checkbox' name='unknown' value='Unknown')
+                                label(for='claimUnknown')  Unknown
+                                br
+                            .mb-3
+                                h1 PROPERTY DAMAGE
+                                | Was property damaged as a result of this accident/incident?
+                                br
+                                input#propertyDamageYes(type='checkbox' name='propertyDamage' value='Yes')
+                                label(for='propertyDamageYes')  Yes
+                                input#propertyDamageNo(type='checkbox' name='propertyDamage' value='No')
+                                label(for='propertyDamageNo')  No
+                                input#propertyDamageUnknown(type='checkbox' name='propertyDamage' value='Unknown')
+                                label(for='propertyDamageUnknown')  Unknown
+                                br
+                            .col-md-6.mb-3
+                                | If yes, how was the person involved in the accident/incident?
+                                br
+                                input#propertyOwner(type='checkbox' name='propertyDamagePerson' value='propertyOwner')
+                                label(for='propertyOwner') Owner of property adjacent to park district
+                                br
+                                input#vehicleOwner(type='checkbox' name='propertyDamagePerson' value='vehicleOwner')
+                                label(for='vehicleOwner')  Vehicle Owner
+                                br
+                                input#patron(type='checkbox' name='propertyDamagePerson' value='patron')
+                                label(for='patron')  Patron
+                                br
+                                input#other(type='checkbox' name='propertyDamagePerson' value='other')
+                                label(for='other')  Other
+                                br
+                            .col-md-6.mb-3
+                                label(for='propertyLastName') Last Name ( or business name )
+                                input#propertyLastName.form-control(type='text' placeholder='Enter Last Name Here' value='')
+                            .col-md-6.mb-3
+                                label(for='propertyFirstName') First Name ( not necessary if business name )
+                                input#propertyFirstName.form-control(type='text' placeholder='Enter First Name Here' value='')
+                            .col-md-6.mb-3
+                                label(for='propertyPersonAddress') Address
+                                input#propertyPersonAddress.form-control(type='text' placeholder='1234 Main St')
+                            .col-md-6.mb-3
+                                label(for='propertyPersonInfo') City, State, Zip, Phone Number
+                                input#propertyPersonInfo.form-control(type='text')
+                            .col-md-auto
+                                label(for='describeDamage') Describe the Property Damage
+                                textarea#describeDamage(rows='6' cols='96')
+                            .mb-3
+                                br
+                                h1 WITNESS INFORMATION
+                            .col-md-6.mb-3
+                                label(for='witnessLastName') Last Name
+                                input#witnessLastName.form-control(type='text' placeholder='Enter Last Name Here' value='')
+                            .col-md-6.mb-3
+                                label(for='witnessFirstName') First Name
+                                input#witnessFirstName.form-control(type='text' placeholder='Enter First Name Here' value='')
+                            .col-md-6.mb-3
+                                label(for='witnessAddress') Address
+                                input#witnessAddress.form-control(type='text' placeholder='1234 Main St')
+                            .col-md-6.mb-3
+                                label(for='witnessInfo') City, State, Zip, Phone Number
+                                input#witnessInfo.form-control(type='text')
+                            .col-md-6.mb-3
+                                | Did the witness make any statements?
+                                br
+                                input#witnessStatementYes(type='checkbox' name='witnessStatement' value='Yes')
+                                label(for='witnessStatementYes')  Yes
+                                input#witnessStatementNo(type='checkbox' name='witnessStatement' value='No')
+                                label(for='witnessStatementNo')  No
+                                input#witnessStatementUnknown(type='checkbox' name='witnessStatement' value='Unknown')
+                                label(for='witnessStatementUnknown')  Unknown
+                                br
+                            .col-md-auto
+                                label(for='witnessStatement') If yes, what did the witness say?
+                                textarea#witnessStatement(rows='4' cols='96')
+                        br
+                        h5 Please ensure every field is filled out!
+                        br
+                        button.btn.btn-primary.btn-lg.btn-block(type='submit') Submit Details
+                        br
+        script(src='https://code.jquery.com/jquery-3.3.1.slim.min.js' integrity='sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo' crossorigin='anonymous')
+        script.
+            window.jQuery || document.write('<script src="/docs/4.3/assets/js/vendor/jquery-slim.min.js"><\/script>')
+        script(src='/docs/4.3/dist/js/bootstrap.bundle.min.js' integrity='sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o' crossorigin='anonymous')
+        include footer.pug
