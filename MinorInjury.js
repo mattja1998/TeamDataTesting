@@ -79,8 +79,8 @@ app.post('/insertRow4e',function(req,res){
 })
 
 app.get('/form4e', function(req,res) {
-    con.connect(function (err) {
-        if (err) throw  err;
+
+
         let sql = "select FormId, FormName,UserId,Date,Time,State, FirstName,LastName from FormV2";
         con.query(sql, function (err2, result, fields) {
             if (err2) throw  err2;
@@ -89,7 +89,7 @@ app.get('/form4e', function(req,res) {
             res.render('form4e' );
         });
     });
-});
+
 
 app.get('/form1', function(req,res) {
     res.render('form1')
