@@ -1,0 +1,714 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Jekyll v3.8.5">
+    <title>Form 2</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/checkout/">
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/form1bootstrap1.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+    </style>
+    <!-- Custom styles for this template -->
+    <link href="form-validation.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+<div class="container">
+    <div class="py-5 text-center">
+        <h1>Vehicle Accident Report: Form 2</h1>
+    </div>
+
+    <div class="row">
+        <div class="col-md-4 order-md-2 mb-4">
+        </div>
+        <div class="col-md-8 order-md-1">
+            <form class="needs-validation" novalidate>
+                <div class="container"></div>
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label for="agencyName">Agency Name</label>
+                        <input type="text" class="form-control" id="agencyName" placeholder="Enter Name Here" value="" required>
+                        <label for="todaysDate">Today's Date</label>
+                        <input type="date" id="todaysDate" name="dateOfIncident"
+                               min="2021-01-01" max="2031-12-31">
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="dateOfIncident">Date of Incident</label>
+                        <input type="date" id="dateOfIncident" name="dateOfIncident"
+                               min="2021-01-01" max="2031-12-31">
+                        <label for="timeOfIncident">Time of Incident</label>
+                        <input type="text" class="form-control" id="timeOfIncident" placeholder="Enter Time: hh/mm a.m./p.m." value="" required>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="reporterName">Name of Person Completing Report</label>
+                        <input type="text" class="form-control" id="reporterName" placeholder="Enter Name Here" value="" required>
+
+                        <label for="reporterTitle">Title of Person Completing Report</label>
+                        <input type="text" class="form-control" id="reporterTitle" placeholder="Enter Title Here" value="" required>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="businessNumber">Business Phone Number</label>
+                        <input type="text" class="form-control" id="businessNumber" placeholder="Enter Phone Number Here" value="" required>
+
+                        <label for="businessEmail">Business Email</label>
+                        <input type="text" class="form-control" id="businessEmail" placeholder="Enter Email Here" value="" required>
+                    </div>
+                    <div class="col-md-auto">
+                        <label for="howOccured">How Did the Incident Occur?</label>
+                        <br>
+                        <textarea id="howOccured" rows="6" cols="96">
+                            Provide a brief, factual summary.
+                        </textarea>
+                    </div>
+                    <br>
+                    <div class="col-md-6 mb-3">
+                        <label for="incidentLocation">Name of Location (park, pool, community center) or nearest intersection</label>
+                        <input type="text" class="form-control" id="incidentLocation" placeholder="Enter Location Here" value="" required>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        Is there an Address for this location?
+                        <br>
+                        <input type="checkbox" id="checkYes" name="yes" value="Yes">
+                        <label for="checkYes"> Yes</label>
+                        <input type="checkbox" id="checkNo" name="no" value="No">
+                        <label for="checkNo"> No</label>
+                        <input type="checkbox" id="checkUnknown" name="unknown" value="Unknown">
+                        <label for="checkUnknown"> Unknown</label><br>
+                        If Yes, please provide the following (Address and City, State, Zip):
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="incidentAddress">Address</label>
+                        <input type="text" class="form-control" id="incidentAddress" placeholder="1234 Main St" required>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="city">City</label>
+                        <input type="text" class="form-control" id="city" placeholder="City" required>
+                        <label for="state">State</label>
+                        <input type="text" class="form-control" id="state" placeholder="State" required>
+                        <label for="zip">Zip</label>
+                        <input type="text" class="form-control" id="zip" placeholder="Zip" required>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="locationType">Location ( Specify the exact type of location/facility where injury occured )</label>
+                        <input type="text" class="form-control" id="locationType" placeholder="Enter Location Here" value="" required>
+                        <input type="checkbox" id="hurtOffsite" name="Offsite">
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="primaryLocation">Primary Location ( Specify the exact location Ex. pool, classroom etc.)</label>
+                        <input type="text" class="form-control" id="primaryLocation" placeholder="Enter Location Here" value="" required>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label>Was the agency vehicle occupied?</label>
+                        <input type="checkbox" id="occupiedYes" name="yes" value="Yes">
+                        <label for="occupiedYes"> Yes</label>
+                        <input type="checkbox" id="occupiedNo" name="no" value="No">
+                        <label for="occupiedNo"> No</label>
+                        <input type="checkbox" id="occupiedUnknown" name="unknown" value="Unknown">
+                        <label for="occupiedUnknown"> Unknown</label><br>
+                        If Yes, please provide the following information:
+                    </div>
+                    <br>
+                    <div class="col-md-6 mb-3">
+                        <label for="driverLastName">Last Name</label>
+                        <input type="text" class="form-control" id="driverLastName" placeholder="Agency Driver last name" value="" required>
+                        <label for="driverFirstName">First Name</label>
+                        <input type="text" class="form-control" id="driverFirstName" placeholder="First Name" value="" required>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="driverAddress">Address</label>
+                        <input type="text" class="form-control" id="driverAddress" placeholder="1234 Main St" required>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="driverCity">City</label>
+                        <input type="text" class="form-control" id="driverCity" placeholder="City" required>
+                        <label for="driverState">State</label>
+                        <input type="text" class="form-control" id="driverState" placeholder="State" required>
+                        <label for="driverZip">Zip</label>
+                        <input type="text" class="form-control" id="driverZip" placeholder="Zip" required>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="driverHomePhone">Home Phone #</label>
+                        <input type="text" class="form-control" id="driverHomePhone" placeholder="Enter Phone Number Here" value="" required>
+                        <label for="driverWorkPhone">Work Phone #</label>
+                        <input type="text" class="form-control" id="driverWorkPhone" placeholder="Enter Phone Number Here" value="" required>
+                        <label for="driverCellPhone">Cell Phone #</label>
+                        <input type="text" class="form-control" id="driverCellPhone" placeholder="Enter Phone Number Here" value="" required>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="driverEmail">Email</label>
+                        <input type="text" class="form-control" id="driverEmail" placeholder="" value=""required>
+                    </div>
+                    <br>
+                    <div class="col-md-6 mb-3">
+                        <label>Is this driver an employee</label>
+                        <br>
+                        <input type="checkbox" id="empDriverYes" name="yes" value="Yes">
+                        <label for="empDriverYes"> Yes</label>
+                        <input type="checkbox" id="empDriverNo" name="no" value="No">
+                        <label for="empDriverNo"> No</label>
+                        <input type="checkbox" id="empDriverUnknown" name="unknown" value="Unknown">
+                        <label for="empDriverUnknown"> Unknown</label><br>
+                        <label for="empJobTitle"> If Yes, enter Job title of employee</label><br>
+                        <input type="text" class="form-control" id="empJobTitle" value="">
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label>Identify the type of driver</label>
+                        <br>
+                        <input type="checkbox" id="fullTimeEmp" name="empType" value="fullTimeEmp" required>
+                        <label for="fullTimeEmp"> Full-Time Employee</label>
+                        <input type="checkbox" id="partTimeEmp" name="empType" value="partTimeEmp" required>
+                        <label for="partTimeEmp"> Part-Time Employee</label>
+                        <input type="checkbox" id="SeasonalEmp" name="empType" value="SeasonalEmp" required>
+                        <label for="SeasonalEmp"> Seasonal Employee</label><br>
+                        <input type="checkbox" id="intern" name="empType" value="intern" required>
+                        <label for="intern"> Intern </label>
+                        <input type="checkbox" id="volunteer" name="empType" value="volunteer" required>
+                        <label for="volunteer"> Volunteer </label><br>
+                        <input type="checkbox" id="nonAgencyEmp" name="empType" value="nonAgencyEmp" required>
+                        <label for="nonAgencyEmp"> Non-agency Employee </label>
+                        <input type="checkbox" id="familyMember" name="empType" value="familyMember" required>
+                        <label for="intern"> Spouse/family Member </label><br>
+                    </div>
+                    <br>
+                    <div class="col-md-6 mb-3">
+                        <label for="vehicleVIN">Agency Vehicle VIN</label>
+                        <input type="text" class="form-control" id="vehicleVIN" placeholder="" value="" required>
+                        <label for="vehicleMake">Make</label>
+                        <input type="text" class="form-control" id="vehicleMake" placeholder="" value="" required>
+                        <label for="vehicleModel">Model</label>
+                        <input type="text" class="form-control" id="vehicleModel" placeholder="" value="" required>
+                        <label for="vehicleLicenceNum">Licence Number</label>
+                        <input type="text" class="form-control" id="vehicleLicenceNum" placeholder="" value="" required>
+                    </div>
+                    <br>
+                    <div class="col-md-6 mb-3">
+                        <label>Is vehicle drivable</label>
+                        <br>
+                        <input type="checkbox" id="drivableYes" name="yes" value="Yes">
+                        <label for="drivableYes"> Yes</label>
+                        <input type="checkbox" id="drivableNo" name="no" value="No">
+                        <label for="drivableNo"> No</label>
+                        <input type="checkbox" id="drivableUnknown" name="unknown" value="Unknown">
+                        <label for="drivableUnknown"> Unknown</label><br>
+                        <label for="vehicleLocation">If No, please provide current location of vehicle:</label>
+                        <input type="text" class="form-control" id="vehicleLocation" placeholder="" value="" required>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="vehicleLocation">Area Of Damage</label>
+                        <input type="text" class="form-control" id="damageArea" placeholder="" value="" required>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="repairCost">Estimated Repair Cost:</label>
+                        <input type="number" class="form-control" id="repairCost" placeholder="" value="" required>
+                    </div>
+                    <br>
+                    <div class="col-md-6 mb-3">
+                        <label>Was a trailer involved?</label>
+                        <br>
+                        <input type="checkbox" id="trailerInvolvedYes" name="yes" value="Yes">
+                        <label for="trailerInvolvedYes"> Yes</label>
+                        <input type="checkbox" id="trailerInvolvedNo" name="no" value="No">
+                        <label for="trailerInvolvedNo"> No</label>
+                        <input type="checkbox" id="trailerInvolvedUnknown" name="unknown" value="Unknown">
+                        <label for="trailerInvolvedUnknown"> Unknown</label><br>
+                        <label>If Yes, provide the following information:</label>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="trailerYear">Trailer Year</label>
+                        <input type="number" class="form-control" id="trailerYear" placeholder="" value="" required>
+                        <label for="trailerMake">Make</label>
+                        <input type="text" class="form-control" id="trailerMake" placeholder="" value="" required>
+                        <label for="trailerMake">Make</label>
+                        <input type="text" class="form-control" id="trailerModel" placeholder="" value="" required>
+                        <label for="trailerLicenseNum">License Number</label>
+                        <input type="text" class="form-control" id="trailerLicenseNum" placeholder="" value="" required>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="trailerDamageArea">Trailer Area Of Damage</label>
+                        <input type="text" class="form-control" id="trailerDamageArea" placeholder="" value="" required>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="trailerLocation">Current Location of Trailer</label>
+                        <input type="text" class="form-control" id="trailerLocation" placeholder="" value="" required>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="trailerRepairCost">Estimated Repair Cost of Trailer</label>
+                        <input type="number" class="form-control" id="trailerRepairCost" placeholder="" value="" required>
+                    </div>
+                    <br>
+                    <div class="col-md-6 mb-3">
+                        <label>Has a police agency conducted an investigation?</label>
+                        <br>
+                        <input type="checkbox" id="policeInvestigationYes" name="yes" value="Yes">
+                        <label for="policeInvestigationYes"> Yes</label>
+                        <input type="checkbox" id="policeInvestigationNo" name="no" value="No">
+                        <label for="policeInvestigationNo"> No</label>
+                        <label>If Yes, provide the following information:</label>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="policeAgency">What police agency investigated the incident?</label>
+                        <input type="text" class="form-control" id="policeAgency" placeholder="" value="" required>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="policeReportNum">Police Report Number</label>
+                        <input type="number" class="form-control" id="policeReportNum" placeholder="" value="" required>
+                    </div>
+                    <br>
+                    <div class="col-md-6 mb-3">
+                        <label>Was the agency driver ticketed, arrested or cited for violation(s)?</label>
+                        <br>
+                        <input type="checkbox" id="agencyDriverTicketedYes" name="yes" value="Yes">
+                        <label for="agencyDriverTicketedYes"> Yes</label>
+                        <input type="checkbox" id="agencyDriverTicketedNo" name="no" value="No">
+                        <label for="agencyDriverTicketedNo"> No</label>
+                        <input type="checkbox" id="agencyDriverTicketedUnknown" name="unknown" value="Unknown">
+                        <label for="agencyDriverTicketedUnknown"> Unknown</label><br>
+                        <label for="policeReport">If Yes, provide details of the ticket, arrest or violation(s):</label>
+                        <input type="text" class="form-control" id="policeReport" placeholder="" value="" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <br>
+                        <H3> CLAIMANT INFORMATION</H3>
+                        Identify other people in the accident. (Make additional copies of this section if needed.)
+                        <br>
+                        <label>How was the person involved in the accident? ( Check all that apply. )</label>
+
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <input type="checkbox" id="otherVehicleDriver" name="yes" value="Yes">
+                        <label for="otherVehicleDriver">Driver of other vehicle</label>
+                        <input type="checkbox" id="injuredPerson" name="no" value="No">
+                        <label for="injuredPerson"> Injured Person</label>
+                        <input type="checkbox" id="involvedPropertyOwner" name="unknown" value="Unknown">
+                        <label for="involvedPropertyOwner">Owner of involved property</label><br>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <input type="checkbox" id="otherVehicleOwner" name="yes" value="Yes">
+                        <label for="otherVehicleOwner">Owner of other vehicle</label>
+                        <input type="checkbox" id="agencyVehiclePassenger" name="no" value="No">
+                        <label for="agencyVehiclePassenger">Passenger of agency vehicle</label>
+                        <input type="checkbox" id="otherVehiclePassenger" name="unknown" value="Unknown">
+                        <label for="otherVehiclePassenger">Passenger of other vehicle</label><br>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <input type="checkbox" id="pedestrian" name="yes" value="Yes">
+                        <label for="pedestrian">Pedestrian</label>
+                    </div>
+                    <br>
+                    <div class="col-md-6 mb-3">
+                        <label for="claimantLastName">Last Name or Business Name</label>
+                        <input type="text" class="form-control" id="claimantLastName" placeholder="Enter Last Name Here" value="" required>
+                        <label for="claimantFirstName">First Name</label>
+                        <input type="text" class="form-control" id="claimantFirstName" placeholder="Enter First Name Here" value="" required>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="claimantAddress">Address</label>
+                        <input type="text" class="form-control" id="claimantAddress" placeholder="1234 Main St" required>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="claimantCity">City</label>
+                        <input type="text" class="form-control" id="claimantCity" placeholder="City" required>
+
+                        <label for="claimantState">State</label>
+                        <input type="text" class="form-control" id="claimantState" placeholder="State" required>
+
+                        <label for="claimantZip">Zip</label>
+                        <input type="text" class="form-control" id="claimantZip" placeholder="Zip" required>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="claimantHomePhone">Home Phone #</label>
+                        <input type="text" class="form-control" id="claimantHomePhone" placeholder="Enter Phone Number Here" value="" required>
+                        <label for="claimantWorkPhone">Work Phone #</label>
+                        <input type="text" class="form-control" id="claimantWorkPhone" placeholder="Enter Phone Number Here" value="" required>
+                        <label for="claimantCellPhone">Cell Phone #</label>
+                        <input type="text" class="form-control" id="claimantCellPhone" placeholder="Enter Phone Number Here" value="" required>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="claimantVehicleMake">Vehicle Make</label>
+                        <input type="text" class="form-control" id="claimantVehicleMake" placeholder="" value="" required>
+                        <label for="claimantVehicleModel">Model</label>
+                        <input type="text" class="form-control" id="claimantVehicleModel" placeholder="" value="" required>
+                        <label for="claimantVehicleYear">Year</label>
+                        <input type="number" class="form-control" id="claimantVehicleYear" placeholder="" value="" required>
+                    </div>
+                    <br>
+                    <div class="col-md-6 mb-3">
+                        Is vehicle driveable?
+                        <br>
+                        <input type="checkbox" id="vehicleDrivableYes" name="volunteer" value="Yes">
+                        <label for="vehicleDrivableYes"> Yes</label>
+                        <input type="checkbox" id="vehicleDrivableNo" name="volunteer" value="No">
+                        <label for="vehicleDrivableNo"> No</label>
+                        <label for="vehicleCurrentLocation">If no, current location of vehicle</label>
+                        <input type="text" class="form-control" id="vehicleCurrentLocation" placeholder="" value="" required>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        Extent of Damage
+                        <br>
+                        <input type="checkbox" id="moderateDamage" name="moderateDamage" value="moderate">
+                        <label for="moderateDamage">Moderate</label>
+                        <input type="checkbox" id="noVisibleDamage" name="noVisibleDamage" value="NothingVisible">
+                        <label for="noVisibleDamage"> Nothing Visible</label>
+                        <input type="checkbox" id="severeDamage" name="severeDamage" value="severe">
+                        <label for="severeDamage">Severe</label>
+                        <input type="checkbox" id="slightDamage" name="slightDamage" value="slight">
+                        <label for="slightDamage">Slight</label>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        Describe the property damage (other than vehicle)
+                        <input type="text" id="propertyDamage" name="" value="" required>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        Extent of Damage to property other than vehicle
+                        <br>
+                        <input type="checkbox" id="propertyModerateDamage" name="propertyModerateDamage" value="moderate">
+                        <label for="propertyModerateDamage">Moderate</label>
+                        <input type="checkbox" id="noVisiblePropertyDamage" name="noVisiblePropertyDamage" value="NothingVisible">
+                        <label for="noVisiblePropertyDamage"> Nothing Visible</label>
+                        <input type="checkbox" id="severePropertyDamage" name="severePropertyDamage" value="severe">
+                        <label for="severePropertyDamage">Severe</label>
+                        <input type="checkbox" id="slightPropertyDamage" name="slightPropertyDamage" value="slight">
+                        <label for="slightPropertyDamage">Slight</label>
+                    </div>
+                    <br>
+                    <div class="col-md-6 mb-3">
+                        Age of injured person
+                        <input type="number" id="injuredAge" name="" value="" required>
+                        Sex of Injured person
+                        <input type="checkbox" id="injuredMale" name="injuredSex" value="male">
+                        <label for="injuredMale"> Male </label>
+                        <input type="checkbox" id="injuredFemale" name="injuredSex" value="female">
+                        <label for="injuredFemale"> Female </label>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        Was the injured person transported by paramedics?
+                        <br>
+                        <input type="checkbox" id="paramedicsTransferYes" name="paramedicTransfer" value="Yes">
+                        <label for="paramedicsTransferYes"> Yes</label>
+                        <input type="checkbox" id="paramedicsTransferNo" name="paramedicTransfer" value="No">
+                        <label for="paramedicsTransferNo"> No</label>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="injuredLocation">If yes, where was the injured person taken?</label>
+                        <input type="text" id="injuredLocation" name="" value="" required>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        Do you expect the injured person to file a claim?
+                        <br>
+                        <input type="checkbox" id="injuredClaimYes" name="injuredClaim" value="Yes">
+                        <label for="injuredClaimYes"> Yes</label>
+                        <input type="checkbox" id="injuredClaimNo" name="injuredClaim" value="No">
+                        <label for="injuredClaimNo"> No</label>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="injuryDescription">Describe the Injury</label>
+                        <input type="text" id="injuryDescription" name="" value="" required>
+                    </div>
+                    <br>
+
+                    <div class="mb-3">
+                        <br>
+                        <H3> ADDITIONAL CLAIMANT INFORMATION</H3>
+                        Identify other people in the accident. (Make additional copies of this section if needed.)
+                        <br>
+                        <label>How was the person involved in the accident? ( Check all that apply. )</label>
+                    </div>
+                </div>
+
+                <div class="col-md-6 mb-3">
+                    <input type="checkbox" id="otherVehicleDriver2" name="yes" value="Yes">
+                    <label for="otherVehicleDriver2">Driver of other vehicle</label>
+                    <input type="checkbox" id="injuredPerson2" name="no" value="No">
+                    <label for="injuredPerson2"> Injured Person</label>
+                    <input type="checkbox" id="involvedPropertyOwner2" name="unknown" value="Unknown">
+                    <label for="involvedPropertyOwner2">Owner of involved property</label><br>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <input type="checkbox" id="otherVehicleOwner2" name="yes" value="Yes">
+                    <label for="otherVehicleOwner2">Owner of other vehicle</label>
+                    <input type="checkbox" id="agencyVehiclePassenger2" name="no" value="No">
+                    <label for="agencyVehiclePassenger2">Passenger of agency vehicle</label>
+                    <input type="checkbox" id="otherVehiclePassenger2" name="unknown" value="Unknown">
+                    <label for="otherVehiclePassenger2">Passenger of other vehicle</label><br>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <input type="checkbox" id="pedestrian2" name="yes" value="Yes">
+                    <label for="pedestrian2">Pedestrian</label>
+                </div>
+                <br>
+                <div class="col-md-6 mb-3">
+                    <label for="claimantLastName2">Last Name or Business Name</label>
+                    <input type="text" class="form-control" id="claimantLastName2" placeholder="Enter Last Name Here" value="" required>
+                    <label for="claimantFirstName2">First Name</label>
+                    <input type="text" class="form-control" id="claimantFirstName2" placeholder="Enter First Name Here" value="" required>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label for="claimantAddress2">Address</label>
+                    <input type="text" class="form-control" id="claimantAddress2" placeholder="1234 Main St" required>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label for="claimantCity2">City</label>
+                    <input type="text" class="form-control" id="claimantCity2" placeholder="City" required>
+
+                    <label for="claimantState2">State</label>
+                    <input type="text" class="form-control" id="claimantState2" placeholder="State" required>
+
+                    <label for="claimantZip2">Zip</label>
+                    <input type="text" class="form-control" id="claimantZip2" placeholder="Zip" required>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label for="claimantHomePhone2">Home Phone #</label>
+                    <input type="text" class="form-control" id="claimantHomePhone2" placeholder="Enter Phone Number Here" value="" required>
+                    <label for="claimantWorkPhone2">Work Phone #</label>
+                    <input type="text" class="form-control" id="claimantWorkPhone2" placeholder="Enter Phone Number Here" value="" required>
+                    <label for="claimantCellPhone2">Cell Phone #</label>
+                    <input type="text" class="form-control" id="claimantCellPhone2" placeholder="Enter Phone Number Here" value="" required>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label for="claimantVehicleMake2">Vehicle Make</label>
+                    <input type="text" class="form-control" id="claimantVehicleMake2" placeholder="" value="" required>
+                    <label for="claimantVehicleModel2">Model</label>
+                    <input type="text" class="form-control" id="claimantVehicleModel2" placeholder="" value="" required>
+                    <label for="claimantVehicleYear2">Year</label>
+                    <input type="number" class="form-control" id="claimantVehicleYear2" placeholder="" value="" required>
+                </div>
+                <br>
+                <div class="col-md-6 mb-3">
+                    Is vehicle driveable?
+                    <br>
+                    <input type="checkbox" id="vehicleDrivableYes2" name="volunteer" value="Yes">
+                    <label for="vehicleDrivableYes2"> Yes</label>
+                    <input type="checkbox" id="vehicleDrivableNo2" name="volunteer" value="No">
+                    <label for="vehicleDrivableNo2"> No</label>
+                    <label for="vehicleCurrentLocation2">If no, current location of vehicle</label>
+                    <input type="text" class="form-control" id="vehicleCurrentLocation2" placeholder="" value="" required>
+                </div>
+                <div class="col-md-6 mb-3">
+                    Extent of Damage
+                    <br>
+                    <input type="checkbox" id="moderateDamage2" name="moderateDamage" value="moderate">
+                    <label for="moderateDamage2">Moderate</label>
+                    <input type="checkbox" id="noVisibleDamage2" name="noVisibleDamage" value="NothingVisible">
+                    <label for="noVisibleDamage2"> Nothing Visible</label>
+                    <input type="checkbox" id="severeDamage2" name="severeDamage" value="severe">
+                    <label for="severeDamage2">Severe</label>
+                    <input type="checkbox" id="slightDamage2" name="slightDamage" value="slight">
+                    <label for="slightDamage2">Slight</label>
+                </div>
+                <div class="col-md-6 mb-3">
+                    Describe the property damage (other than vehicle)
+                    <input type="text" id="propertyDamage2" name="" value="" required>
+                </div>
+                <div class="col-md-6 mb-3">
+                    Extent of Damage to property other than vehicle
+                    <br>
+                    <input type="checkbox" id="propertyModerateDamage2" name="propertyModerateDamage" value="moderate">
+                    <label for="propertyModerateDamage2">Moderate</label>
+                    <input type="checkbox" id="noVisiblePropertyDamage2" name="noVisiblePropertyDamage" value="NothingVisible">
+                    <label for="noVisiblePropertyDamage2"> Nothing Visible</label>
+                    <input type="checkbox" id="severePropertyDamage2" name="severePropertyDamage" value="severe">
+                    <label for="severePropertyDamage2">Severe</label>
+                    <input type="checkbox" id="slightPropertyDamage2" name="slightPropertyDamage" value="slight">
+                    <label for="slightPropertyDamage2">Slight</label>
+                </div>
+                <br>
+                <div class="col-md-6 mb-3">
+                    Age of injured person
+                    <input type="number" id="injuredAge2" name="" value="" required>
+                    Sex of Injured person
+                    <input type="checkbox" id="injuredMale2" name="injuredSex" value="male">
+                    <label for="injuredMale2"> Male </label>
+                    <input type="checkbox" id="injuredFemale2" name="injuredSex" value="female">
+                    <label for="injuredFemale2"> Female </label>
+                </div>
+                <div class="col-md-6 mb-3">
+                    Was the injured person transported by paramedics?
+                    <br>
+                    <input type="checkbox" id="paramedicsTransferYes2" name="paramedicTransfer" value="Yes">
+                    <label for="paramedicsTransferYes2"> Yes</label>
+                    <input type="checkbox" id="paramedicsTransferNo2" name="paramedicTransfer" value="No">
+                    <label for="paramedicsTransferNo2"> No</label>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label for="injuredLocation2">If yes, where was the injured person taken?</label>
+                    <input type="text" id="injuredLocation2" name="" value="" required>
+                </div>
+                <div class="col-md-6 mb-3">
+                    Do you expect the injured person to file a claim?
+                    <br>
+                    <input type="checkbox" id="injuredClaimYes2" name="injuredClaim" value="Yes">
+                    <label for="injuredClaimYes2"> Yes</label>
+                    <input type="checkbox" id="injuredClaimNo2" name="injuredClaim" value="No">
+                    <label for="injuredClaimNo2"> No</label>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label for="injuryDescription2">Describe the Injury</label>
+                    <input type="text" id="injuryDescription2" name="" value="" required>
+                </div>
+                <br>
+                <div class="col-md-6 mb-3"> Identify witnesses of the accident.(Provide information for each witness. Make additional copies of this page if needed.)</div>
+                <div class="col-md-6 mb-3">
+                    <label for="witnessLastName">Last Name </label>
+                    <input type="text" class="form-control" id="witnessLastName" placeholder="Enter Last Name Here" value="" required>
+                    <label for="witnessLastNameFirstName">First Name</label>
+                    <input type="text" class="form-control" id="witnessLastNameFirstName" placeholder="Enter First Name Here" value="" required>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label for="witnessAddress">Address</label>
+                    <input type="text" class="form-control" id="witnessAddress" placeholder="1234 Main St" required>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label for="witnessCity">City</label>
+                    <input type="text" class="form-control" id="witnessCity" placeholder="City" required>
+
+                    <label for="witnessState">State</label>
+                    <input type="text" class="form-control" id="witnessState" placeholder="State" required>
+
+                    <label for="witnessZip">Zip</label>
+                    <input type="text" class="form-control" id="witnessZip" placeholder="Zip" required>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label for="witnessHomePhone">Home Phone #</label>
+                    <input type="text" class="form-control" id="witnessHomePhone" placeholder="Enter Phone Number Here" value="" required>
+                    <label for="witnessWorkPhone">Work Phone #</label>
+                    <input type="text" class="form-control" id="witnessWorkPhone" placeholder="Enter Phone Number Here" value="" required>
+                    <label for="witnessCellPhone">Cell Phone #</label>
+                    <input type="text" class="form-control" id="witnessCellPhone" placeholder="Enter Phone Number Here" value="" required>
+                </div>
+                <br>
+                <div class="col-md-6 mb-3">
+                    Witness to accident?
+                    <br>
+                    <input type="checkbox" id="witnessCheckYes" name="yes" value="Yes">
+                    <label for="witnessCheckYes"> Yes</label>
+                    <input type="checkbox" id="witnessCheckNo" name="no" value="No">
+                    <label for="witnessCheckNo"> No</label>
+                    <input type="Checkbox" id="witnessCheckUnknown" name="unknown" value="Unknown">
+                    <label for="witnessCheckUnknown"> Unknown</label><br>
+                    If Yes, please provide the following (Address and City, State, Zip):
+                </div>
+                <div class="col-md-6 mb-3">
+                    Relation to injured person or property owner:
+                    <br>
+                    <input type="checkbox" id="agencyEmpVolunteer" name="agencyEmployeeOrVolunteer" value="agencyEmpVolunteer">
+                    <label for="agencyEmpVolunteer">Agency Employee or Volunteer</label>
+                    <input type="checkbox" id="anotherUser" name="anotherUser" value="anotherUser">
+                    <label for="anotherUser"> Another program participant or Park User</label>
+                    <input type="checkbox" id="friend" name="friend" value="friend">
+                    <label for="friend">Friend</label>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <input type="checkbox" id="otherUser" name="otherUser" value="otherUser">
+                    <label for="otherUser">Other</label>
+                    <input type="checkbox" id="passerby" name="passerby" value="passerby">
+                    <label for="passerby"> Passerby</label>
+                    <input type="checkbox" id="relative" name="relative" value="relative">
+                    <label for="friend">Relative</label>
+                </div>
+                <br>
+                <div class="col-md-6 mb-3">
+                    Did Witness make any statements?
+                    <input type="checkbox" id="witnessYes" name="yes" value="Yes">
+                    <label for="witnessYes"> Yes</label>
+                    <input type="checkbox" id="witnessNo" name="no" value="No">
+                    <label for="witnessNo"> No</label>
+                    <input type="Checkbox" id="witnessUnknown" name="unknown" value="Unknown">
+                    <label for="witnessUnknown"> Unknown</label><br>
+                    If Yes, please provide the following information:
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label for="witnessStatement">What did the witness say?</label>
+                    <input type="text" class="form-control" id="witnessStatement"  required>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label for="witnessLocation">Where was the witness when the accident occurred?</label>
+                    <input type="text" class="form-control" id="witnessLocation"  required>
+                </div>
+                <br>
+                <div class="col-md-6 mb-3">
+                    Was the driver of the agency vehicle conducting agency business at the time of the accident?
+                    <input type="checkbox" id="agencyDriverYes" name="yes" value="Yes">
+                    <label for="agencyDriverYes"> Yes</label>
+                    <input type="checkbox" id="agencyDriverNo" name="no" value="No">
+                    <label for="agencyDriverNo"> No</label>
+                    <input type="Checkbox" id="agencyDriverUnknown" name="unknown" value="Unknown">
+                    <label for="agencyDriverUnknown"> Unknown</label><br>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label for="agencyDriverLocation">What street was the agency driver on?</label>
+                    <input type="text" class="form-control" id="agencyDriverLocation"  required>
+                    <label for="otherDriverLocation">What street was the other driver on?</label>
+                    <input type="text" class="form-control" id="otherDriverLocation"  required>
+                </div>
+                <div class="col-md-6 mb-3">
+                    What direction was the agency driver traveling?
+                    <input type="checkbox" id="agencyNorth" name="north" value="north">
+                    <label for="agencyNorth">North</label>
+                    <input type="checkbox" id="agencySouth" name="south" value="south">
+                    <label for="agencySouth">South </label>
+                    <input type="Checkbox" id="agencyEast" name="east" value="east">
+                    <label for="agencyEast">East </label>
+                    <input type="Checkbox" id="agencyWest" name="west" value="west">
+                    <label for="agencyWest">West</label>
+                </div>
+                <div class="col-md-6 mb-3">
+                    What direction was the other driver traveling?
+                    <input type="checkbox" id="otherNorth" name="north" value="north">
+                    <label for="otherNorth">North</label>
+                    <input type="checkbox" id="otherSouth" name="south" value="south">
+                    <label for="otherSouth">South </label>
+                    <input type="Checkbox" id="otherEast" name="east" value="east">
+                    <label for="otherEast">East </label>
+                    <input type="Checkbox" id="otherWest" name="west" value="west">
+                    <label for="otherWest">West</label>
+                </div>
+                <div class="col-md-6 mb-3">
+                    Weather conditions
+                    <input type="checkbox" id="dry" name="dry" value="dry">
+                    <label for="dry">Dry</label>
+                    <input type="checkbox" id="fog" name="fog" value="fog">
+                    <label for="fog">Fog</label>
+                    <input type="Checkbox" id="ice" name="ice" value="ice">
+                    <label for="ice">Ice</label>
+                    <input type="Checkbox" id="snow" name="snow" value="snow">
+                    <label for="snow">Snow</label>
+                    <input type="Checkbox" id="wet" name="wet" value="wet">
+                    <label for="wet">Wet</label>
+                </div>
+                <br>
+                <br>
+                <h4>Accident Diagram</h4>
+                <h5>Please ensure every field is filled out!</h5>
+                <br>
+                <button class="btn btn-primary btn-lg btn-block" type="submit">Submit Details</button>
+                <br>
+            </form>
+        </div>
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script>window.jQuery || document.write('<script src="/docs/4.3/assets/js/vendor/jquery-slim.min.js"><\/script>')</script><script src="/docs/4.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o" crossorigin="anonymous"></script>
+</body>
+</html>
