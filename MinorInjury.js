@@ -81,13 +81,13 @@ app.post('/insertRow4e',function(req,res){
 app.get('/form4e', function(req,res) {
 
 
-        let sql = "select FormId, FormName,UserId,Date,Time,State, FirstName,LastName from FormV2";
-        con.query(sql, function (err2, result, fields) {
-            if (err2) throw  err2;
+       // let sql = "select FormId, FormName,UserId,Date,Time,State, FirstName,LastName from FormV2";
+       // con.query(sql, function (err2, result, fields) {
+         //   if (err2) throw  err2;
 
 
             res.render('form4e' );
-        });
+       // });
     });
 
 
