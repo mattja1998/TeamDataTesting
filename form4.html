@@ -3,602 +3,391 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <style>
-        body {
-            font-family: Arial;
-            font-size: 17px;
-            padding: 8px;
-        }
-
-        * {
-            box-sizing: border-box;
-        }
-
-        .row {
-            display: -ms-flexbox; /* IE10 */
-            display: flex;
-            -ms-flex-wrap: wrap; /* IE10 */
-            flex-wrap: wrap;
-            margin: 0 -16px;
-        }
-
-        .col-25 {
-            -ms-flex: 25%; /* IE10 */
-            flex: 25%;
-        }
-
-        .col-50 {
-            -ms-flex: 50%; /* IE10 */
-            flex: 50%;
-        }
-
-        .col-75 {
-            -ms-flex: 75%; /* IE10 */
-            flex: 75%;
-        }
-
-        .col-25,
-        .col-50,
-        .col-75 {
-            padding: 0 16px;
-        }
-
-        .container {
-            background-color: #f2f2f2;
-            padding: 5px 20px 15px 20px;
-            border: 1px solid lightgrey;
-            border-radius: 3px;
-        }
-
-        input[type=text] {
-            width: 100%;
-            margin-bottom: 20px;
-            padding: 12px;
-            border: 1px solid #ccc;
-            border-radius: 3px;
-        }
-
-        label {
-            margin-bottom: 10px;
-            display: block;
-        }
-
-        .icon-container {
-            margin-bottom: 20px;
-            padding: 7px 0;
-            font-size: 24px;
-        }
-
-        .btn {
-            background-color: black;
-            color: white;
-            padding: 12px;
-            margin: 10px 0;
-            border: none;
-            width: 100%;
-            border-radius: 3px;
-            cursor: pointer;
-            font-size: 17px;
-        }
-
-        .btn:hover {
-            background-color: darkgray;
-        }
-
-        a {
-            color: #2196F3;
-        }
-
-        hr {
-            border: 1px solid lightgrey;
-        }
-
-        span.price {
-            float: right;
-            color: grey;
-        }
-
-        /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other (also change the direction - make the "cart" column go on top) */
-        @media (max-width: 500px) {
-            .row {
-                flex-direction: column;
-            }
-            .col-25 {
-                margin-bottom: 20px;
-            }
-        }
-
-        /*==============radiobuttons===*/
-        /* The container */
-        .container5 {
-            display: block;
-            position: relative;
-            padding-left: 35px;
-            margin-bottom: 12px;
-            cursor: pointer;
-            font-size: 18px;
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            -ms-user-select: none;
-            user-select: none;
-        }
-
-        /* Hide the browser's default checkbox */
-        .container5 input {
-            position: absolute;
-            opacity: 0;
-            cursor: pointer;
-            height: 0;
-            width: 0;
-        }
-
-        /* Create a custom checkbox */
-        .checkmark {
-            position: absolute;
-            top: 0;
-            left: 0;
-            height: 20px;
-            width: 20px;
-            background-color: black;
-        }
-
-        /* On mouse-over, add a grey background color */
-        .container5:hover input ~ .checkmark {
-            background-color: #A9A9A9;
-        }
-
-        /* When the checkbox is checked, add a blue background */
-        .container5 input:checked ~ .checkmark {
-            background-color: #2196F3;
-        }
-
-        /* Create the checkmark/indicator (hidden when not checked) */
-        .checkmark:after {
-            content: "";
-            position: absolute;
-            display: none;
-        }
-
-        /* Show the checkmark when checked */
-        .container5 input:checked ~ .checkmark:after {
-            display: block;
-        }
-
-        /* Style the checkmark/indicator */
-        .container5 .checkmark:after {
-            left: 9px;
-            top: 5px;
-            width: 2.5px;
-            height: 8px;
-            border: solid white;
-            border-width: 0 3px 3px 0;
-            -webkit-transform: rotate(45deg);
-            -ms-transform: rotate(45deg);
-            transform: rotate(45deg);
-        }
-        img {
-            width: 100%;
-        }
-    </style>
+    <link rel="stylesheet" href="Form4.css">
 </head>
 <body>
+<<<<<<< HEAD
 <!--need to fix to fit screen size on mobile-->
 
-<h2><img src="img/form4.png" width="1400" height="115" ></h2>
+<h2><img src="form4.png" width="1400" height="115" ></h2>
+=======
+<h2><img src="form4.png" width="1400" height="115" ></h2>
+>>>>>>> 974c8c108e3c3dcdcd18565dd2be0e3300842ad1
 <div class="row">
     <div class="col-75">
         <div class="container">
             <form action="/action_page.php">
-
                 <div class="row" >
                     <div class="col-50" >
                         <h3>Complete an Employee Injury </h3>
-                        <label for="fname"><i class="fa fa-user"></i>Agency name </label>
-                        <input type="text" id="fname" name="firstname" placeholder="John M. Doe" required>
-                        <label for="email"><i class="fa fa-envelope"></i> Date of Incident </label>
-                        <input type="text" id="email" name="email" placeholder="john@example.com" required>
-                        <label for="adr"><i class="fa fa-address-card-o"></i> Name of person completing report </label>
-                        <input type="text" id="adr" name="address" placeholder="542 W. 15th Street" required>
-                        <label for="city"><i class="fa fa-institution"></i> Business Phone</label>
-                        <input type="text" id="city" name="city" placeholder="New York" required>
-
+                        <label for="Agency_name"> Agency name </label>
+                        <input type="text" id="Agency_name" name="firstname"required>
+                        <label for="Date_of_Incident"> Date of Incident </label>
+                        <input type="text" id="Date_of_Incident" name="email" placeholder="john@example.com" required>
+                        <label for="person_comp_report"> Name of person completing report </label>
+                        <input type="text" id="person_comp_report" name="address" placeholder="542 W. 15th Street" required>
+                        <label for="city">Business Phone</label>
+                        <input type="text" id="city" name="city" placeholder="###-###-####" required>
                     </div>
-
                     <div class="col-50">
-                        <h3>Payment</h3>
-                        <!--<label for="fname">Accepted Cards</label>
-                        <div class="icon-container">
-                            <i class="fa fa-cc-visa" style="color:navy;"></i>
-                            <i class="fa fa-cc-amex" style="color:blue;"></i>
-                            <i class="fa fa-cc-mastercard" style="color:red;"></i>
-                            <i class="fa fa-cc-discover" style="color:orange;"></i>
-                        </div>-->
+                        <h3> <br> </h3>
                         <label for="cname">Today's Date</label>
-                        <input type="text" id="cname" name="cardname" placeholder="John More Doe">
+                        <input type="text" id="cname" name="cardname" placeholder="mm/dd/yyyy" required>
                         <label for="ccnum">Time of incident(hh/mm a.m./p.m.)</label>
-                        <input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444">
+                        <input type="text" id="ccnum" name="cardnumber" placeholder="hh/mm a.m./p.m"required>
                         <label for="expmonth">Title of person completing report</label>
-                        <input type="text" id="expmonth" name="expmonth" placeholder="September">
+                        <input type="text" id="expmonth" name="expmonth" placeholder="Supervisor"required>
                         <label for="expmonth">Business Email</label>
-                        <input type="text" id="exmonth" name="expmonth" placeholder="September">
-
+                        <input type="text" id="exmonth" name="expmonth" placeholder="john@example.com"required>
                     </div>
-
                 </div>
-
                 <div class="row">
                     <div class="col-50">
-
-                        <label for="city"><i class="fa fa-institution"></i> How did the incident occur? (Provide a one-line factual description.)</label>
-                        <input type="text" id="desc" name="city" placeholder="New York">
-                        <label for="city"><i class="fa fa-institution"></i> Name of the location (park, pool, community center; Ex. Smith Pool, Johnson Community Center) or nearest intersection where the incident occurred.</label>
-                        <input type="text" id="loc" name="city" placeholder="New York">
-                        <label for="adr"><i class="fa fa-address-card-o"></i> Is there an address for this location? If yes, please provide the following: Street address </label>
-                        <input type="text" id="adrs" name="address" placeholder="542 W. 15th Street">
-
+                        <label for="incident_occur"> How did the incident occur? (Provide a one-line factual description.)</label>
+                        <input type="text" id="incident_occur" name="city" required>
+                        <label for="Loc_Name"> Name of the location (park, pool, community center; Ex. Smith Pool, Johnson Community Center) or nearest intersection where the incident occurred.</label>
+                        <input type="text" id="Loc_Name" name="city" required >
+                        <label for="adrs"> Is there an address for this location? If yes, please provide the following: Street address </label>
+                        <input type="text" id="adrs" name="address" placeholder="542 W. 15th Street"required>
                         <div class="row">
                             <div class="col-50">
-                                <label for="state">City</label>
-                                <input type="text" id="citys" name="state" placeholder="NY">
+                                <label for="City1">City</label>
+                                <input type="text" id="City1" name="state" placeholder="Aurora"required>
                             </div>
                             <div class="col-50">
                                 <label for="state">State</label>
-                                <input type="text" id="state" name="state" placeholder="NY">
+                                <input type="text" id="state" name="state" placeholder="IL" required>
                             </div>
                             <div class="col-50">
                                 <label for="zip">Zip code</label>
-                                <input type="text" id="zip" name="zip" placeholder="10001">
+                                <input type="text" id="zip" name="zip" placeholder="10001"required>
                             </div>
-
                         </div>
                     </div>
-
-
                 </div>
-
                 <div class="row">
                     <div class="col-50">
-                        <label for="fname"><i class="fa fa-user"></i>Location (Specify the exact type of location/facility where injury occurred. Ex. maintenance garage, sports field, aquatic outdoor, golf course, etc.) </label>
-                        <input type="text" id="location" name="firstname" placeholder="John M. Doe">
-                        <label for="email"><i class="fa fa-envelope"></i> Primary location (Specify exact location. Ex. lap pool, cart storage, classroom, pavilion) </label>
-                        <input type="text" id="primary loc" name="email" placeholder="john@example.com">
-                        <label for="adr"><i class="fa fa-address-card-o"></i> Employers FEIN </label>
-                        <input type="text" id="FEIN" name="address" placeholder="542 W. 15th Street">
-
+                        <label for="location">Location (Specify the exact type of location/facility where injury occurred. Ex. maintenance garage, sports field, aquatic outdoor, golf course, etc.) </label>
+                        <input type="text" id="location" name="firstname"required >
+                        <label for="primary loc"> Primary location (Specify exact location. Ex. lap pool, cart storage, classroom, pavilion) </label>
+                        <input type="text" id="primary loc" name="email" required>
+                        <label for="FEIN"> Employers FEIN </label>
+                        <input type="text" id="FEIN" name="address"required >
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-50">
-                        <label for="fname"><i class="fa fa-user"></i>Did the employee miss more than three (3) scheduled workdays? </label>
-                        <label class="container5">Yes
-                            <input type="checkbox">
+                        <label for="Agency_name">Did the employee miss more than three (3) scheduled workdays? </label>
+                        <label class="Yes">Yes
+                            <input type="checkbox" id="yes">
                             <span class="checkmark"></span>
                         </label>
-                        <label class="container5">No
-                            <input type="checkbox">
+                        <label class="no">No
+                            <input type="checkbox" id="no">
                             <span class="checkmark"></span>
                         </label>
-                        <label class="container5">Unknown
-                            <input type="checkbox">
+                        <label class="Unknown">Unknown
+                            <input type="checkbox" id="Unknown">
                             <span class="checkmark"></span>
                         </label>
-                        <label for="email"><i class="fa fa-envelope"></i> What was the employee doing when the accident occurred? </label>
-                        <input type="text" id="2" name="email" placeholder="john@example.com">
-                        <label for="adr"><i class="fa fa-address-card-o"></i>How did the incident occur? (Provide a detailed factual description.) </label>
-                        <input type="text" id="1" name="address" placeholder="542 W. 15th Street">
+                        <label for="Accident_Occured"> What was the employee doing when the accident occurred? </label>
+                        <input type="text" id="Accident_Occured" name="Accident_Occured" required>
+                        <label for="incident_occur1">How did the incident occur? (Provide a detailed factual description.) </label>
+                        <input type="text" id="incident_occur1" name="address"required >
                         <div class="row">
                             <div class="col-50">
-                                <label for="fname"><i class="fa fa-user"></i>Employee last name </label>
-                                <input type="text" id="11" name="firstname" placeholder="John M. Doe">
-                    </div>
+                                <label for="Emp_last_name">Employee last name </label>
+                                <input type="text" id="Emp_last_name" name="firstname" placeholder="Doe" required>
+                            </div>
                             <div class="col-50">
-                                <label for="cname">First Name</label>
-                                <input type="text" id="21" name="cardname" placeholder="John More Doe">
-                </div>
+                                <label for="Emp_first_name">First Name</label>
+                                <input type="text" id="Emp_first_name" name="cardname" placeholder="John" required>
+                            </div>
                         </div>
-                            <div class="row">
-                                <div class="col-50">
-
-                                    <label for="city"><i class="fa fa-institution"></i> Address</label>
-                                    <input type="text" id="31" name="city" placeholder="New York">
-
-                                    <div class="row">
-                                        <div class="col-50">
-                                            <label for="state">City</label>
-                                            <input type="text" id="22" name="state" placeholder="NY">
-                                        </div>
-                                        <div class="col-50">
-                                            <label for="state">State</label>
-                                            <input type="text" id="st" name="state" placeholder="NY">
-                                        </div>
-                                        <div class="col-50">
-                                            <label for="zip">Zip code</label>
-                                            <input type="text" id="z" name="zip" placeholder="10001">
-                                        </div>
-                                        <div class="col-50">
-                                            <label for="state">Home Phone #</label>
-                                            <input type="text" id="23" name="state" placeholder="NY">
-                                        </div>
-                                        <div class="col-50">
-                                            <label for="state">Work Phone #</label>
-                                            <input type="text" id="s" name="state" placeholder="NY">
-                                        </div>
-                                        <div class="col-50">
-                                            <label for="zip">Cell Phone #</label>
-                                            <input type="text" id="u" name="zip" placeholder="10001">
-                                        </div>
-                                        <div class="col-50">
-                                            <label for="state">Best Number to contact employee</label>
-                                            <input type="text" id="g" name="state" placeholder="NY">
-                                        </div>
-                                        <div class="col-50">
-                                            <label for="zip">Email</label>
-                                            <input type="text" id="sd" name="zip" placeholder="10001">
-                                        </div>
-                                        <div class="col-50">
-                                            <label for="state">Social security number</label>
-                                            <input type="text" id="gl" name="state" placeholder="NY">
-                                        </div>
-                                        <div class="col-50">
-                                            <label for="zip">Date of birth (mm/dd/yyyy)</label>
-                                            <input type="text" id="sl" name="zip" placeholder="10001">
-                                        </div>
-                                        <div class="col-50">
-                                            <label for="fname"><i class="fa fa-user"></i> Gender </label>
-                                            <label class="container5">Male
-                                                <input type="checkbox">
-                                                <span class="checkmark"></span>
-                                            </label>
-                                            <label class="container5">Female
-                                                <input type="checkbox">
-                                                <span class="checkmark"></span>
-                                            </label>
-                                        </div>
-                                        <div class="col-50">
-                                            <label for="fname"><i class="fa fa-user"></i> Does employee speak English </label>
-                                            <label class="container5">Yes
-                                                <input type="checkbox">
-                                                <span class="checkmark"></span>
-                                            </label>
-                                            <label class="container5">No
-                                                <input type="checkbox">
-                                                <span class="checkmark"></span>
-                                            </label>
-                                        </div>
-                                        <div class="col-50">
-                                            <label for="state">Marital status (divorced/married/single/unknown)</label>
-                                            <input type="text" id="glj" name="state" placeholder="NY">
-                                        </div>
-                                        <div class="col-50">
-                                            <label for="zip">Number of dependents</label>
-                                            <input type="text" id="slh" name="zip" placeholder="10001">
-                                        </div>
-                                        <div class="col-50">
-                                            <label for="state">Average weekly wage</label>
-                                            <input type="text" id="gljs" name="state" placeholder="NY">
-                                        </div>
-                                        <div class="col-50">
-                                            <label for="zip">Job title/occupation</label>
-                                            <input type="text" id="slhs" name="zip" placeholder="10001">
-                                        </div>
-                                        <div class="col-50">
-                                            <label for="fname"><i class="fa fa-user"></i> What is the employees employment status? </label>
-                                            <label class="container5">Permanent full-time
-                                                <input type="checkbox">
-                                                <span class="checkmark"></span>
-                                            </label>
-                                            <label class="container5">Permanent part-time
-                                                <input type="checkbox">
-                                                <span class="checkmark"></span>
-                                            </label>
-                                            <label class="container5">Seasonal
-                                                <input type="checkbox">
-                                                <span class="checkmark"></span>
-                                            </label>
-                                            <label class="container5">Intern
-                                                <input type="checkbox">
-                                                <span class="checkmark"></span>
-                                            </label>
-                                            <label class="container5">Other
-                                                <input type="checkbox">
-                                                <span class="checkmark"></span>
-                                            </label>
-                                        </div>
-                                        <div class="col-50">
-                                            <label for="fname"><i class="fa fa-user"></i> What is the employees tenure? (length of employment) </label>
-                                            <label class="container5">Less than 1 yr.
-                                                <input type="checkbox">
-                                                <span class="checkmark"></span>
-                                            </label>
-                                            <label class="container5">1-3 yrs.
-                                                <input type="checkbox">
-                                                <span class="checkmark"></span>
-                                            </label>
-                                            <label class="container5">4-10 yrs
-                                                <input type="checkbox">
-                                                <span class="checkmark"></span>
-                                            </label>
-                                            <label class="container5">11-19 yrs.
-                                                <input type="checkbox">
-                                                <span class="checkmark"></span>
-                                            </label>
-                                            <label class="container5">More than 20 yrs.
-                                                <input type="checkbox">
-                                                <span class="checkmark"></span>
-                                            </label>
-                                        </div>
-                                        <div class="col-50">
-                                            <label for="zip">Date hired (mm/dd/yyyy)</label>
-                                            <input type="text" id="slhss" name="zip" placeholder="10001">
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-50">
-                                            <label for="city"><i class="fa fa-institution"></i> Time employee began work on day of incident (hh/mm a.m./p.m.) (Provide a one-line factual description.)</label>
-                                            <input type="text" id="desc1" name="city" placeholder="New York">
-                                            <label for="city"><i class="fa fa-institution"></i> Last date employee worked prior to date of incident (mm/dd/yyyy)</label>
-                                            <input type="text" id="loc2" name="city" placeholder="New York">
-                                            <label for="adr"><i class="fa fa-address-card-o"></i>  If the employee died as a result of the accident, give the date of death. (mm/dd/yyyy) </label>
-                                            <input type="text" id="adrs3" name="address" placeholder="542 W. 15th Street">
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-50">
-                                            <label for="fname"><i class="fa fa-user"></i> Did the incident occur on agency premises? </label>
-                                            <label class="container5">Yes
-                                                <input type="checkbox">
-                                                <span class="checkmark"></span>
-                                            </label>
-                                            <label class="container5">No
-                                                <input type="checkbox">
-                                                <span class="checkmark"></span>
-                                            </label>
-                                            <label class="container5">Unknown
-                                                <input type="checkbox">
-                                                <span class="checkmark"></span>
-                                            </label>
-
-                                        </div>
-                                        <div class="col-50">
-                                            <label for="fname"><i class="fa fa-user"></i> Injury or Illness? </label>
-                                            <label class="container5">Injury
-                                                <input type="checkbox">
-                                                <span class="checkmark"></span>
-                                            </label>
-                                            <label class="container5">Illness
-                                                <input type="checkbox">
-                                                <span class="checkmark"></span>
-                                            </label>
-
-                                        </div>
-                            </div>
-                                    <div class="row">
-                                        <div class="col-50">
-                                            <label for="city"><i class="fa fa-institution"></i> Describe the injury or illness (affected body part and type of injury; Ex. contusion, bruise, laceration, sprain, break, etc.)</label>
-                                            <input type="text" id="desc11" name="city" placeholder="New York">
-                                </div>
-                            </div>
-                                    <div class="row">
+                        <div class="row">
+                            <div class="col-50">
+                                <label for="Address1"> Address</label>
+                                <input type="text" id="Address1" name="city" placeholder="542 W. 15th Street" required>
+                                <div class="row">
                                     <div class="col-50">
-                                        <label for="city"><i class="fa fa-institution"></i> What object or substance, if any, directly harmed the employee?</label>
-                                        <input type="text" id="desc111" name="city" placeholder="New York">
+                                        <label for="City2">City</label>
+                                        <input type="text" id="City2" name="state" placeholder="Aurora" required>
                                     </div>
-                                    </div>
-                                    <div class="row">
                                     <div class="col-50">
-                                        <label for="fname"><i class="fa fa-user"></i> Did the injured employee seek medical attention?</label>
-                                        <label class="container5">Yes
-                                            <input type="checkbox">
+                                        <label for="State1">State</label>
+                                        <input type="text" id="State1" name="state" placeholder="IL"required>
+                                    </div>
+                                    <div class="col-50">
+                                        <label for="zip1">Zip code</label>
+                                        <input type="text" id="zip1" name="zip" placeholder="10001"required>
+                                    </div>
+                                    <div class="col-50">
+                                        <label for="Home#">Home Phone #</label>
+                                        <input type="text" id="Home#" name="state" placeholder="###-###-####"required>
+                                    </div>
+                                    <div class="col-50">
+                                        <label for="Work_Phone">Work Phone #</label>
+                                        <input type="text" id="Work_Phone" name="state" placeholder="###-###-####"required>
+                                    </div>
+                                    <div class="col-50">
+                                        <label for="Cell_Phone">Cell Phone #</label>
+                                        <input type="text" id="Cell_Phone" name="zip" placeholder="###-###-####"required>
+                                    </div>
+                                    <div class="col-50">
+                                        <label for="Number_to_contact">Best Number to contact employee</label>
+                                        <input type="text" id="Number_to_contact" name="state" placeholder="###-###-####"required>
+                                    </div>
+                                    <div class="col-50">
+                                        <label for="Email1">Email</label>
+                                        <input type="text" id="Email1" name="zip" placeholder="john@example.com"required>
+                                    </div>
+                                    <div class="col-50">
+                                        <label for="ssn">Social security number</label>
+                                        <input type="text" id="ssn" name="state" required>
+                                    </div>
+                                    <div class="col-50">
+                                        <label for="DOB">Date of birth (mm/dd/yyyy)</label>
+                                        <input type="text" id="DOB" name="zip" placeholder="mm/dd/yyyy"required>
+                                    </div>
+                                    <div class="col-50">
+                                        <label for="Agency_name"> Gender </label>
+                                        <label class="Male">Male
+                                            <input type="checkbox" id="Male" >
                                             <span class="checkmark"></span>
                                         </label>
-                                        <label class="container5">No
-                                            <input type="checkbox">
-                                            <span class="checkmark"></span>
-                                        </label>
-                                        <label class="container5">Unknown
-                                            <input type="checkbox">
+                                        <label class="Female">Female
+                                            <input type="checkbox" id="Female" >
                                             <span class="checkmark"></span>
                                         </label>
                                     </div>
                                     <div class="col-50">
-                                        <label for="fname"><i class="fa fa-user"></i> If yes, was the treatment given away from the worksite?</label>
-                                        <label class="container5">Yes
-                                            <input type="checkbox">
+                                        <label for="Agency_name"> Does employee speak English </label>
+                                        <label class="Yes1">Yes
+                                            <input type="checkbox" id="Yes1">
                                             <span class="checkmark"></span>
                                         </label>
-                                        <label class="container5">No
-                                            <input type="checkbox">
-                                            <span class="checkmark"></span>
-                                        </label>
-                                        <label class="container5">Unknown
-                                            <input type="checkbox">
+                                        <label class="No1">No
+                                            <input type="checkbox" id="No1">
                                             <span class="checkmark"></span>
                                         </label>
                                     </div>
                                     <div class="col-50">
-                                        <label for="fname"><i class="fa fa-user"></i> Was the employee treated in an emergency room?</label>
-                                        <label class="container5">Yes
-                                            <input type="checkbox">
-                                            <span class="checkmark"></span>
-                                        </label>
-                                        <label class="container5">No
-                                            <input type="checkbox">
-                                            <span class="checkmark"></span>
-                                        </label>
-                                        <label class="container5">Unknown
-                                            <input type="checkbox">
-                                            <span class="checkmark"></span>
-                                        </label>
-                                    </div>
-                                    <div class="col-50">
-                                        <label for="fname"><i class="fa fa-user"></i> Was the employee hospitalized overnight as an inpatient?</label>
-                                        <label class="container5">Yes
-                                            <input type="checkbox">
-                                            <span class="checkmark"></span>
-                                        </label>
-                                        <label class="container5">No
-                                            <input type="checkbox">
-                                            <span class="checkmark"></span>
-                                        </label>
-                                        <label class="container5">Unknown
-                                            <input type="checkbox">
-                                            <span class="checkmark"></span>
-                                        </label>
-                                    </div>
-                                    </div>
-                                    <div class="row">
+                                        <label for="Marital_status">Marital status (divorced/married/single/unknown)</label>
+                                        <input type="text" id="Marital_status" name="state" required >
+                                        </div>
                                         <div class="col-50">
-
-                                            <label for="city"><i class="fa fa-institution"></i> Name of treating physician, health care provider, or emergency room</label>
-                                            <input type="text" id="desca11" name="city" placeholder="New York">
+                                            <label for="dependents">Number of dependents</label>
+                                            <input type="text" id="dependents" name="zip" placeholder="#" required>
+                                        </div>
+                                        <div class="col-50">
+                                            <label for="weekly_wage">Average weekly wage</label>
+                                            <input type="text" id="weekly_wage" name="state" required>
+                                        </div>
+                                        <div class="col-50">
+                                            <label for="Job_title">Job title/occupation</label>
+                                            <input type="text" id="Job_title" name="zip" required>
+                                        </div>
+                                        <div class="col-50">
+                                            <label for="Agency_name"> What is the employees employment status? </label>
+                                            <label class="Permanent_full-time">Permanent full-time
+                                                <input type="checkbox" id="Permanent_full-time">
+                                                <span class="checkmark"></span>
+                                            </label>
+                                            <label class="Permanent_part-time">Permanent part-time
+                                                <input type="checkbox" id="Permanent part-time" >
+                                                <span class="checkmark"></span>
+                                            </label>
+                                            <label class="Seasonal">Seasonal
+                                                <input type="checkbox" id="Seasonal">
+                                                <span class="checkmark"></span>
+                                            </label>
+                                            <label class="Intern">Intern
+                                                <input type="checkbox" id="Intern">
+                                                <span class="checkmark"></span>
+                                            </label>
+                                            <label class="Other">Other
+                                                <input type="checkbox" id="Other">
+                                                <span class="checkmark"></span>
+                                            </label>
+                                        </div>
+                                        <div class="col-50">
+                                            <label for="Agency_name"> What is the employees tenure? (length of employment) </label>
+                                            <label class="Less_than_1">Less than 1 yr.
+                                                <input type="checkbox" id="Less_than_1">
+                                                <span class="checkmark"></span>
+                                            </label>
+                                            <label class="1-3_yrs">1-3 yrs.
+                                                <input type="checkbox" id="1-3_yrs">
+                                                <span class="checkmark"></span>
+                                            </label>
+                                            <label class="4-10_yrs">4-10 yrs
+                                                <input type="checkbox" id="4-10_yrs">
+                                                <span class="checkmark"></span>
+                                            </label>
+                                            <label class="11-19_yrs">11-19 yrs.
+                                                <input type="checkbox" id="11-19_yrs">
+                                                <span class="checkmark"></span>
+                                            </label>
+                                            <label class="More_than_20">More than 20 yrs.
+                                                <input type="checkbox" id="More_than_20">
+                                                <span class="checkmark"></span>
+                                            </label>
+                                        </div>
+                                        <div class="col-50">
+                                            <label for="Date_hired">Date hired (mm/dd/yyyy)</label>
+                                            <input type="text" id="Date_hired" name="zip" placeholder="mm/dd/yyyy" required>
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div class="col-50">
-                                            <label for="city"><i class="fa fa-institution"></i> Address</label>
-                                            <input type="text" id="descaa111" name="city" placeholder="New York">
-
+                                            <label for="employee_began_work"> Time employee began work on day of incident (hh/mm a.m./p.m.) (Provide a one-line factual description.)</label>
+                                            <input type="text" id="employee_began_work" name="city" placeholder="hh/mm a.m./p.m." required>
+                                            <label for="date_employee_worked"> Last date employee worked prior to date of incident (mm/dd/yyyy)</label>
+                                            <input type="text" id="date_employee_worked" name="city" placeholder="mm/dd/yyyy" required>
+                                            <label for="employee_died">  If the employee died as a result of the accident, give the date of death. (mm/dd/yyyy) </label>
+                                            <input type="text" id="employee_died" name="address" placeholder="mm/dd/yyyy" required>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-50">
+                                            <label for="Agency_name"> Did the incident occur on agency premises? </label>
+                                            <label class="yes6">Yes
+                                                <input type="checkbox" id="yes6">
+                                                <span class="checkmark"></span>
+                                            </label>
+                                            <label class="no6">No
+                                                <input type="checkbox" id="no6">
+                                                <span class="checkmark"></span>
+                                            </label>
+                                            <label class="unknown6">Unknown
+                                                <input type="checkbox" id="unknown6">
+                                                <span class="checkmark"></span>
+                                            </label>
+                                        </div>
+                                        <div class="col-50">
+                                            <label for="Agency_name"> Injury or Illness? </label>
+                                            <label class="injury">Injury
+                                                <input type="checkbox" id="injury">
+                                                <span class="checkmark"></span>
+                                            </label>
+                                            <label class="illness">Illness
+                                                <input type="checkbox" id="illness">
+                                                <span class="checkmark"></span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-50">
+                                            <label for="city"> Describe the injury or illness (affected body part and type of injury; Ex. contusion, bruise, laceration, sprain, break, etc.)</label>
+                                            <input type="text" id="desc11" name="city" required >
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                    <div class="col-50">
+                                        <label for="city"> What object or substance, if any, directly harmed the employee?</label>
+                                        <input type="text" id="desc111" name="city" required>
+                                    </div>
+                                    </div>
+                                    <div class="row">
+                                    <div class="col-50">
+                                        <label for="Agency_name"> Did the injured employee seek medical attention?</label>
+                                        <label class="Yes2">Yes
+                                            <input type="checkbox" id="Yes2">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="No2">No
+                                            <input type="checkbox" id="No2">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="Unknown2">Unknown
+                                            <input type="checkbox" id="Unknown2">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </div>
+                                    <div class="col-50">
+                                        <label for="Agency_name"> If yes, was the treatment given away from the worksite?</label>
+                                        <label class="Yes3">Yes
+                                            <input type="checkbox" id="Yes3">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="No3">No
+                                            <input type="checkbox" id="No3">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="Unknown3">Unknown
+                                            <input type="checkbox" id="Unknown3">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </div>
+                                    <div class="col-50">
+                                        <label for="Agency_name"> Was the employee treated in an emergency room?</label>
+                                        <label class="yes4">Yes
+                                            <input type="checkbox" id="yes4">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="no4">No
+                                            <input type="checkbox" id="no4">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="Unknown4">Unknown
+                                            <input type="checkbox" id="Unknown4">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </div>
+                                    <div class="col-50">
+                                        <label for="Agency_name"> Was the employee hospitalized overnight as an inpatient?</label>
+                                        <label class="Yes5">Yes
+                                            <input type="checkbox" id="Yes5">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="No5">No
+                                            <input type="checkbox" id="No5">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="Unknown5">Unknown
+                                            <input type="checkbox" id="Unknown5">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-50">
+                                            <label for="Name_Physician"> Name of treating physician, health care provider, or emergency room</label>
+                                            <input type="text" id="Name_Physician" name="city" required>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-50">
+                                            <label for="Address3"> Address</label>
+                                            <input type="text" id="Address3" name="city" placeholder="542 W. 15th Street" required>
                                             <div class="row">
                                                 <div class="col-50">
-                                                    <label for="state">City</label>
-                                                    <input type="text" id="2w2" name="state" placeholder="NY">
+                                                    <label for="City3">City</label>
+                                                    <input type="text" id="City3" name="state" placeholder="Aurora"required>
                                                 </div>
                                                 <div class="col-50">
-                                                    <label for="state">State</label>
-                                                    <input type="text" id="swt" name="state" placeholder="NY">
+                                                    <label for="state3">State</label>
+                                                    <input type="text" id="state3" name="state" placeholder="IL"required>
                                                 </div>
                                                 <div class="col-50">
-                                                    <label for="zip">Zip code</label>
-                                                    <input type="text" id="wz" name="zip" placeholder="10001">
+                                                    <label for="zip3">Zip code</label>
+                                                    <input type="text" id="zip3" name="zip" placeholder="10001"required>
                                                 </div>
                                                 <div class="col-50">
-                                                    <label for="state">Home Phone #</label>
-                                                    <input type="text" id="2w3" name="state" placeholder="NY">
+                                                    <label for="Home_phone_#">Home Phone #</label>
+                                                    <input type="text" id="Home_phone_#" name="state" placeholder="###-###-####"required>
                                                 </div>
                                             </div>
-
                                         </div>
                                     </div>
                                 </div>
                             </div>
+                        </div>
                     </div>
-                </div>
                 <input type="submit" value="Submit Form" class="btn">
             </form>
         </div>
     </div>
-    <!--<div class="col-25">
-        <div class="container">
-            <h4>Cart <span class="price" style="color:black"><i class="fa fa-shopping-cart"></i> <b>4</b></span></h4>
-            <p><a href="#">Product 1</a> <span class="price">$15</span></p>
-            <p><a href="#">Product 2</a> <span class="price">$5</span></p>
-            <p><a href="#">Product 3</a> <span class="price">$8</span></p>
-            <p><a href="#">Product 4</a> <span class="price">$2</span></p>
-            <hr>
-            <p>Total <span class="price" style="color:black"><b>$30</b></span></p>
-        </div>
-    </div>-->
 </div>
-
 </body>
 </html>
