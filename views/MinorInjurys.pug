@@ -3,13 +3,13 @@ html
     head
         meta(charset='UTF-8')
         title Simple templates
-        link(rel='stylesheet', href='./styles2.css')
+        link(rel='stylesheet', href='css/styles2.css')
         script.
 
 
 
     body
-
+        include navbar.pug
 
         h3 Title: #{title}
         form(action='insertNewRow' method='post')
@@ -39,3 +39,4 @@ html
                         form(action='ConfirmDelete' method='post')
                             input(type='hidden' name=`id` value=`${row.FormId}`)
                             input(type='submit' value=`Delete Id: ${row.FormId}`)
+        include footer.pug
