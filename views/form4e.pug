@@ -58,17 +58,17 @@ body(class="bg-light")
 
 
         div(class="col-md-6 mb-3") Are you reporting the injury for the first time? Yes:
-            input(type='radio'  name='report' value='yes' id='checkYes' checked="checked" class="form-control")
+            input(type='radio'  name='report' value='yes' id='checkYes' checked="checked" )
             span No:
-            input(type='radio'  name = 'report' id='checkNo' value='no' class="form-control")
-        div(class="col-md-6 mb-3") If no, when did you first report the injury (verbally or in writing) and to whom did you report it?
+                input(type='radio'  name = 'report' id='checkNo' value='no' )
+            div(class="col-md-6 mb-3") If no, when did you first report the injury (verbally or in writing) and to whom did you report it?
 
-            div(class="col-md-6 mb-3") Date:
-                input(type='label' name = 'repDate' class="form-control")
-            div(class="col-md-6 mb-3") Time:
-                input(type='label' name = 'repTime' class="form-control")
-            div(class="col-md-6 mb-3") Reported to:
-                input(type='label' name = 'repTo' class="form-control")
+                div(class="col-md-6 mb-3") Date:
+                    input(type='label' name = 'repDate' class="form-control")
+                div(class="col-md-6 mb-3") Time:
+                    input(type='label' name = 'repTime' class="form-control")
+                div(class="col-md-6 mb-3") Reported to:
+                    input(type='label' name = 'repTo' class="form-control")
 
 
         div(class="col-md-6 mb-3") Describe how the injury Occurred ( Identify the job task you were doing and include a step-by-step explanation of what led to the injury.)
@@ -79,14 +79,23 @@ body(class="bg-light")
 
         div(class="col-md-6 mb-3")
             span Identify all body parts you injured. (Be specific. indicate left or right, upper or lower.)
-            input(type='label' name = 'Injury' class="form-control")
+                input(type='label' name = 'Injury' class="form-control")
 
         div(class="col-md-6 mb-3") Did you seek medical attention on the date of the accident  Yes:
-            input(type='radio' name ='medAtt' value='checkY' checked )
+                input(type='radio' name ='medAtt' value='checkY' checked )
+                span No:
+                    input(type='radio' name = 'medAtt' id = 'checkN' value='no')
+                div(class="col-md-6 mb-3") If yes, where did you seek treatment?
+                    input(type='label' name = 'treatLoc' class="form-control")
+
+        div(class="col-md-6 mb-3") Have you injured this body part previously. Yes:
+            input(type='radio'  name='PastTreat' value='yes' id='checkYes2' checked="checked" )
             span No:
-                input(type='radio' name = 'medAtt' id = 'checkN' value='no')
-            div(class="col-md-6 mb-3") If yes, where did you seek treatment?
-                input(type='label' name = 'treatLoc' class="form-control")
+                input(type='radio'  name = 'PastTreat' id='checkNo2' value='no' )
+            div(class="col-md-6 mb-3") If yes, please describe which body part and what the prior injury was?
+                input(type='label' name = 'repDate' class="form-control")
+            div(class="col-md-6 mb-3") If yes, where did you recieve treament?
+                input(type='label' name = 'repDate' class="form-control")
 
         div(class="col-md-6 mb-3") The above information is ture and accurate (please type name):
             input(type='label' name = 'sig' class="form-control")
