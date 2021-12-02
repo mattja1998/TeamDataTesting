@@ -1,138 +1,149 @@
 doctype html
 html(lang='en')
     head
-        style
-            include css/form1bootstrap1.css
 
         meta(charset='utf-8')
         meta(name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no')
         meta(name='description' content='')
         meta(name='author' content='Mark Otto, Jacob Thornton, and Bootstrap contributors')
         meta(name='generator' content='Jekyll v3.8.5')
-        title Form 3
-        link(rel='canonical' href='https://getbootstrap.com/docs/4.3/examples/checkout/')
+        link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css')
+
+        style
+            include css/FormLook.css
         // Bootstrap core CSS
 
-        style.
-            .bd-placeholder-img {
-                font-size: 1.125rem;
-                text-anchor: middle;
-                -webkit-user-select: none;
-                -moz-user-select: none;
-                -ms-user-select: none;
-                user-select: none;
-            }
 
-            @media (min-width: 768px) {
-                .bd-placeholder-img-lg {
-                    font-size: 3.5rem;
-                }
-            }
         // Custom styles for this template
     include navbar.pug
-    body.bg-light
-        .container
-            .py-5.text-center
-                h1 Property Loss Report: Form 3
-            .row
-                .col-md-4.order-md-2.mb-4
-                .col-md-8.order-md-1
-                    form.needs-validation(novalidate)
-                        .row
-                            .col-md-6.mb-3
-                                label(for='agencyName') Agency Name
-                                input#agencyName.form-control(type='text' placeholder='Enter Name Here' value='' required)
-                            .col-md-6.mb-3
-                                label(for='todaysDate') Today's Date
-                                input#todaysDate(type='date' name='dateOfIncident' min='2021-01-01' max='2031-12-31')
-                            .col-md-6.mb-3
-                                label(for='dateOfIncident') Date of Incident
-                                input#dateOfIncident(type='date' name='dateOfIncident' min='2021-01-01' max='2031-12-31')
-                            .col-md-6.mb-3
-                                label(for='timeOfIncident') Time of Incident
-                                input#timeOfIncident.form-control(type='text' placeholder='Enter Time: hh/mm a.m./p.m.' value='' required)
-                            .col-md-6.mb-3
-                                label(for='reporterName') Name of Person Completing Report
-                                input#reporterName.form-control(type='text' placeholder='Enter Name Here' value='' required)
-                            .col-md-6.mb-3
-                                label(for='reporterTitle') Title of Person Completing Report
-                                input#reporterTitle.form-control(type='text' placeholder='Enter Title Here' value='' required)
-                            .col-md-6.mb-3
-                                label(for='businessNumber') Business Phone Number
-                                input#businessNumber.form-control(type='text' placeholder='Enter Phone Number Here' value='' required)
-                            .col-md-6.mb-3
-                                label(for='businessEmail') Business Email
-                                input#businessEmail.form-control(type='text' placeholder='Enter Email Here' value='' required)
-                            .col-md-auto
-                                label(for='howOccured') How Did the Incident Occur and What Property Was Damaged?
-                                textarea#howOccured(rows='6' cols='96')
-                                    | Provide a brief, factual description.
-                            .col-md-6.mb-3
-                                label(for='incidentLocation') Name of Location (park, pool, community center) or nearest intersection
-                                input#incidentLocation.form-control(type='text' placeholder='Enter Location Here' value='' required)
-                            .col-md-6.mb-3
-                                | Is there an Address for this location?
-                                | If Yes, please provide the following (Address and City, State, Zip):
-                                label(for='incidentAddress') Address
-                                input#incidentAddress.form-control(type='text' placeholder='1234 Main St' required)
-                            .col-md-6.mb-3
-                                label(for='cityStateZip') City, State, Zip
-                                input#cityStateZip.form-control(type='text' placeholder='City, State, Zip' required)
-                            .col-md-6.mb-3
-                                label(for='locationType') Location ( Specify the exact type of location/facility where injury occured )
-                                input#locationType.form-control(type='text' placeholder='Enter Location Here' value='' required)
-                            .col-md-6.mb-3
-                                label(for='primaryLocation') Primary Location ( Specify the exact location Ex. pool, classroom etc.)
-                                input#primaryLocation.form-control(type='text' placeholder='Enter Location Here' value='' required)
-                            .col-md-6.mb-3
-                                label(for='lossEstimate') Estimate of Loss
-                                input#lossEstimate.form-control(type='text' value='')
-                            .col-md-6.mb-3
-                                label(for='contactPerson') Contact Person at Facility
-                                input#contactPerson.form-control(type='text' value='')
-                            .col-md-6.mb-3
-                                label(for='contactPersonEmail') Contact Person's Email
-                                input#contactPersonEmail.form-control(type='text' value='')
-                            .col-md-6.mb-3
-                                label(for='contactPersonPhone') Contact Person's Phone Number
-                                input#contactPersonPhone.form-control(type='text' value='')
-                            .col-md-6.mb-3
-                                | Was damage caused by third-party (non-agency) individual?
-                                input#checkYes(type='checkbox' name='yes' value='Yes')
-                                label(for='checkYes')  Yes
-                                input#checkNo(type='checkbox' name='no' value='No')
-                                label(for='checkNo')  No
-                                input#checkUnknown(type='checkbox' name='unknown' value='Unknown')
-                                label(for='checkUnknown')  Unknown
-                                br
-                            .col-md-6.mb-3
-                                label(for='personIdentified') Has the party responsible for damage been identified? If yes, provide the following contact information for the person or persons identified:
-                                input#personIdentified.form-control(type='text' placeholder='Name, Street Address' value='')
-                            .col-md-6.mb-3
-                                label(for='cityStateZipPersonIdentidied') City, State, Zip
-                                input#cityStateZipPersonIdentidied.form-control(type='text' placeholder='City, State, Zip' required)
-                            .col-md-6.mb-3
-                                | Has a police agency conducted an investigation?
-                                br
-                                input#policeCheckYes(type='checkbox' name='yes' value='Yes')
-                                label(for='policeCheckYes')  Yes
-                                input#policeCheckNo(type='checkbox' name='no' value='No')
-                                label(for='policeCheckNo')  No
-                                input#policeCheckUnknown(type='checkbox' name='unknown' value='Unknown')
-                                label(for='policeCheckUnknown')  Unknown
-                                br
-                            .col-md-6.mb-3
-                                label(for='policeAgency') What policy agency investigated the incident? What is the police report number?
-                                input#policeAgency.form-control(type='text' value='')
-                            .col-md-6.mb-3
-                                label(for='theCharges') Were criminal charges brought against the responsible party? If yes, what were the charges?
-                                input#theCharges.form-control(type='text' value='')
-                            h5 Please ensure every field is filled out!
-                            button.btn.btn-primary.btn-lg.btn-block(type='submit') Submit Details
-                            br
-        script(src='https://code.jquery.com/jquery-3.3.1.slim.min.js' integrity='sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo' crossorigin='anonymous')
-        script.
-            window.jQuery || document.write('<script src="/docs/4.3/assets/js/vendor/jquery-slim.min.js"><\/script>')
-        script(src='/docs/4.3/dist/js/bootstrap.bundle.min.js' integrity='sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o' crossorigin='anonymous')
-        br
+
+    .row
+        .col-75
+            .container
+                form(action='/action_page.php')
+                    .row
+                        .col-50
+                            h1 Property Loss Report: Form3
+                    .row
+                        .col-50
+                            label(for='agencyName') Agency Name
+                            input#agencyName.form-control(type='text' placeholder='Enter Name Here' value='' required)
+
+                            label(for='todaysDate') Today's Date
+                            input#todaysDate(type='date' name='dateOfIncident' min='2021-01-01' max='2031-12-31')
+
+                            label(for='reporterName') Name of Person Completing Report
+                            input#reporterName.form-control(type='text' placeholder='Enter Name Here' value='' required)
+
+                            label(for='businessNumber') Business Phone Number
+                            input#businessNumber.form-control(type='text' placeholder='Enter Phone Number Here' value='' required)
+
+
+                        .col-50
+                            label(for='dateOfIncident') Date of Incident
+                            input#dateOfIncident(type='date' name='dateOfIncident' min='2021-01-01' max='2031-12-31')
+
+                            label(for='timeOfIncident') Time of Incident
+                            input#timeOfIncident.form-control(type='text' placeholder='Enter Time: hh/mm a.m./p.m.' value='' required)
+
+                            label(for='reporterTitle') Title of Person Completing Report
+                            input#reporterTitle.form-control(type='text' placeholder='Enter Title Here' value='' required)
+
+                            label(for='businessEmail') Business Email
+                            input#businessEmail.form-control(type='text' placeholder='Enter Email Here' value='' required)
+
+                    .row
+                        .col-50
+                            label(for='howOccured') How Did the Incident Occur and What Property Was Damaged? Provide a brief, factual description.
+                            Input#howOccured(type='text')
+
+                    .row
+                        .col-50
+                            label(for='incidentLocation') Name of Location (park, pool, community center) or nearest intersection
+                            input#incidentLocation.form-control(type='text' placeholder='Enter Location Here' value='' required)
+                    .row
+                        .col-50
+                            label Is there an Address for this location?
+                            label If Yes, please provide the following (Address and City, State, Zip):
+                            label(for='incidentAddress') Address
+                            input#incidentAddress.form-control(type='text' placeholder='1234 Main St' required)
+
+                            label(for='State') State
+                            input#State.form-control(type='text' placeholder='City, State, Zip' required)
+                            label(for='primaryLocation') Primary Location ( Specify the exact location Ex. pool, classroom etc.)
+                            input#primaryLocation.form-control(type='text' placeholder='Enter Location Here' value='' required)
+                            label(for='contactPerson') Contact Person at Facility
+                            input#contactPerson.form-control(type='text' value='')
+
+                            label(for='lossEstimate') Estimate of Loss
+                            input#lossEstimate.form-control(type='text' value='')
+                            label(for='contactPersonEmail') Contact Person's Email
+                            input#contactPersonEmail.form-control(type='text' value='')
+
+                        .col-50
+                            label(for='city') City
+                            input#city.form-control(type='text' placeholder='City, State, Zip' required)
+                            label(for='Zip') Zip
+                            input#Zip.form-control(type='text' placeholder='City, State, Zip' required)
+
+                            label(for='locationType') Location ( Specify the exact type of location/facility where injury occured )
+                            input#locationType.form-control(type='text' placeholder='Enter Location Here' value='' required)
+
+
+
+                            label(for='personIdentified') Has the party responsible for damage been identified? If yes, provide the following contact information for the person or persons identified:
+                            input#personIdentified.form-control(type='text' placeholder='Name, Street Address' value='')
+
+                            label(for='contactPersonPhone') Contact Person's Phone Number
+                            input#contactPersonPhone.form-control(type='text' value='')
+                    .row
+                        .col-50
+                            label Was damage caused by third-party (non-agency) individual?
+                            .row
+                                label(for='checkYes')
+                                    |Yes
+                                    input#checkYes(type='radio' name='damage' value='Yes')
+                                label(for='checkNo')
+                                    |No
+                                    input#checkNo(type='radio' name='damage' value='No')
+                                label(for='checkUnknown')
+                                    |Unknown
+                                    input#checkUnknown(type='radio' name='damage' value='Unknown')
+
+
+                    .row
+                        .col-50
+                            label(for='cityIdentidied') City
+                            input#cityIdentidied.form-control(type='text' placeholder='City' required)
+
+                            label(for='StatePersonIdentidied') State
+                            input#StatePersonIdentidied.form-control(type='text' placeholder='State' required)
+                        .col-50
+                            label(for='ZipPersonIdentidied') Zip
+                            input#ZipPersonIdentidied.form-control(type='text' placeholder='Zip' required)
+                    .row
+                        .col-50
+                            label Has a police agency conducted an investigation?
+                            .row
+                                label(for='policeCheckYes')
+                                    |Yes
+                                    input#policeCheckYes(type='radio' name='police' value='Yes')
+                                label(for='policeCheckNo')
+                                    |No
+                                    input#policeCheckNo(type='radio' name='Police' value='No')
+                                label(for='policeCheckUnknown')
+                                    |Unknown
+                                    input#policeCheckUnknown(type='radio' name='Police' value='Unknown')
+
+                    .row
+                        .col-50
+                            label(for='policeAgency') What policy agency investigated the incident? What is the police report number?
+                            input#policeAgency.form-control(type='text' value='')
+                        .col-50
+                            label(for='theCharges') Were criminal charges brought against the responsible party? If yes, what were the charges?
+                            input#theCharges.form-control(type='text' value='')
+                        h5 Please ensure every field is filled out!
+                    input.btn(type='submit', value='Submit Form')
+
+
     include footer.pug
