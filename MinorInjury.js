@@ -102,6 +102,9 @@ app.get('/form3', function(req,res) {
 app.get('/home', function(req,res) {
     res.render('index2')
 });
+app.get('/form4', function(req,res) {
+    res.render('Form4')
+});
 
 app.get('/login', function(req,res) {
     res.render('project')
