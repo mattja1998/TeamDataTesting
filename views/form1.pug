@@ -88,14 +88,14 @@ html(lang='en')
                             label(for='locationType') Location ( Specify the exact type of location/facility where injury occured )
                             input#locationType.form-control(type='text' placeholder='Enter Location Here' value='' required)
 
-                            label(for='Zip') City, State, Zip
-                            input#Zip.form-control(type='text' placeholder='City, State, Zip' required)
+                            label(for='Zip') Zip
+                            input#Zip.form-control(type='text' placeholder='Zip' required)
                         .col-50
                             label(for='city') City
-                            input#city.form-control(type='text' placeholder='City, State, Zip' required)
+                            input#city.form-control(type='text' placeholder='City' required)
 
                             label(for='State') State,
-                            input#State.form-control(type='text' placeholder='City, State, Zip' required)
+                            input#State.form-control(type='text' placeholder='State' required)
 
                             label(for='primaryLocation') Primary Location ( Specify the exact location Ex. pool, classroom etc.)
                             input#primaryLocation.form-control(type='text' placeholder='Enter Location Here' value='' required)
@@ -311,10 +311,10 @@ html(lang='en')
 
 
                             h1 PROPERTY DAMAGE
-                                | Was property damaged as a result of this accident/incident?
+
                     .row
                         .col-50
-                                label(for='propertyDamageYes')
+                                label(for='propertyDamageYes') Was property damaged as a result of this accident/incident?
                                     |Yes
                                     input#propertyDamageYes(type='radio' name='propertyDamage' value='Yes')
 
