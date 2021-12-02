@@ -1,107 +1,146 @@
 doctype html
 head
-    meta(charset='utf-8')
-    meta(name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no')
-    meta(name='description' content='')
-    meta(name='author' content='Mark Otto, Jacob Thornton, and Bootstrap contributors')
-    meta(name='generator' content='Jekyll v3.8.5')
-    title Form 4e
-    link(rel='canonical' href='https://getbootstrap.com/docs/4.3/examples/checkout/')
-    // Bootstrap core CSS
+        meta(charset='utf-8')
+        meta(name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no')
+        meta(name='description' content='')
+        meta(name='author' content='Mark Otto, Jacob Thornton, and Bootstrap contributors')
+        meta(name='generator' content='Jekyll v3.8.5')
+        link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css')
+        title Form 4e
 
-    style
-        include css/form1bootstrap1.css
-    style.
 
-        .bd-placeholder-img {
-            font-size: 1.125rem;
-            text-anchor: middle;
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            -ms-user-select: none;
-            user-select: none;
-        }
-        @media (min-width: 768px) {
-            .bd-placeholder-img-lg {
-                font-size: 3.5rem;
-            }
-        }
+
+        style
+            include css/FormLook.css
 
 
 
 
 
 
-body(class="bg-light")
+body
     include navbar.pug
-    div(class="container")
-        div(class="py-5 text-center")
-            h1 Form 04e Employee injury form
+    .row
+        .col-75
+            .container
+                form(action='/action_page.php')
+                    .row
+                        .col-50
+                            h3 Form 04e Employee injury form
+
+                            label.FirstName Employee First Name
+                            input#FirstName.form-control(input='text' requirec)
+
+                            label.time Time of incident
+                            input#time.form-control(type='text' required)
+                        .col-50
+                            h3
+                            br
+                            label.LastName Last Name
+                            input#LastName.form-control(type='text' required)
+
+                            label.Date Date of incident(mm/dd/yyyy)
+                            input#Date.form-control(type="text" required)
+                    .row
+                        .col-50
+                            label.location Specific location of the incident (second floor hallway of recreation center, storage closet of maintenance shed etc...)
+                            input#location.form-control(type='text' required)
+                        .col-50
+                            label Are you reporting the injury for the first time
+                            .row
+                                label.checkY
+                                    |Yes:
+                                    input#checkY(type='radio' name='report')
+                                    span.checkmark
+                                label.checkN
+                                    |No:
+                                    input#checkN(type='radio' name='report')
+                                    span.checkmark
+                    .row
+                        .col-50
+                            label If no, when did you first report the injury (verbally or in writing) and to whom did you report it?
+                            label.repdate
+                            input#repdate.form-control(type="date" required)
+                            label.repTo Reported to:
+                            input#repTo.form-control(type='text' required)
+                        .col-50
+                            label.repTime Time:
+                            input#repTime.form-control(type='time' required)
+                    .row
+                        .col-50
+                            label.describe Describe how the injury occurred (Identify the job task you were doing and include a step-by-step explanation of what led to the injury.)
+                            input#desccribe.form-control(type='text' required)
+                    .row
+                        .col-50
+                            label.Witness Name all people present at the time of injury(e.g , coworkers and/or witnesses)
+                            input#Witness.form-control(type='text')
+                            label Did you seek medical attention on the date of the accident
+                            .row
+                                label.checkY2
+                                    |   Yes
+                                    input#checkY2(type='radio' name='medAtten')
+                                    span.checkmark
+                                label.checkN2
+                                    | No
+                                    input#checkN2(type='radio' name='medAtten')
+                                    span.checkmark
+                        .col-50
+                            label.bodyInj Identify all body parts you injured. (Be specific. indicate left or right, upper or lower.)
+                            input#bodyInj.form-control(type='text' required)
+                            label Have you injured this body part previously
+                            .row
+                                label.checkY3
+                                    |Yes
+                                    input#checkY3(type='radio' name='PrevInj')
+                                    span.checkmark
+                                label.chekN3
+                                    |No
+                                    input#checkN3(type='radio' name='prevInj')
+                                    span.checkmark
+                    .row
+                        .col-50
+                            label.prevInj If yes, please describe which body part and what the prior injury was?
+                            input#prevInj.form-control(type='text' required)
+
+                            label.prevDate When did you receive prior injury
+                            input#prevDate.form-control(type='date' required)
+                        .col-50
+                            label.prevTreatment If yes, where did you receive treatment
+                            input#prevTreatment.form-control(type='text' required)
+                    .row
+                        .col-50
+                            label.sig The above information is true and accurate(please type Name)
+                            input#sig.form-control(type='text' required)
+                        .col-50
+                            label.TodaysDate Todays Date
+                            input#TodaysDate.form-control(type='date' required)
 
 
-    div(class="row")
-        div(class="col-md-4 order-md-2 mb-4")
-            div(class="col-md-8 order-md-1")
-                form(class="needs-validation" novalidate)
-                div(class="row")
-        div(class="col-md-6 mb-3") Employee Name.
-            input(type='label' name = 'name' class="form-control")
-
-        div(class='col-md-6 mb-3') Date of the incident (mm/dd/yyyy)
-            input(type='date' name = 'date' class="form-control")
-
-        div(class="col-md-6 mb-3") time of the Incident (hh/mm a.m/p.m)
-            input(type='label' name = 'time' class="form-control")
-
-        div(class="col-md-6 mb-3") Specific Location of the incident (second floor hallway of recreation center, storage closet of maintenance shed etc.)
-            input(type='label' name = 'location' class="form-control")
 
 
-        div(class="col-md-6 mb-3") Are you reporting the injury for the first time? Yes:
-            input(type='radio'  name='report' value='yes' id='checkYes' checked="checked" )
-            span No:
-                input(type='radio'  name = 'report' id='checkNo' value='no' )
-            div(class="col-md-6 mb-3") If no, when did you first report the injury (verbally or in writing) and to whom did you report it?
-
-                div(class="col-md-6 mb-3") Date:
-                    input(type='label' name = 'repDate' class="form-control")
-                div(class="col-md-6 mb-3") Time:
-                    input(type='label' name = 'repTime' class="form-control")
-                div(class="col-md-6 mb-3") Reported to:
-                    input(type='label' name = 'repTo' class="form-control")
 
 
-        div(class="col-md-6 mb-3") Describe how the injury Occurred ( Identify the job task you were doing and include a step-by-step explanation of what led to the injury.)
-            input(type='label' name = 'Exp' class="form-control")
 
-        div(class="col-md-6 mb-3") Name all people present at the time of injury(e.g., coworkers and/or witnesses)
-            input(type='label' name = 'witnesses' class="form-control")
 
-        div(class="col-md-6 mb-3")
-            span Identify all body parts you injured. (Be specific. indicate left or right, upper or lower.)
-                input(type='label' name = 'Injury' class="form-control")
 
-        div(class="col-md-6 mb-3") Did you seek medical attention on the date of the accident  Yes:
-                input(type='radio' name ='medAtt' value='checkY' checked )
-                span No:
-                    input(type='radio' name = 'medAtt' id = 'checkN' value='no')
-                div(class="col-md-6 mb-3") If yes, where did you seek treatment?
-                    input(type='label' name = 'treatLoc' class="form-control")
 
-        div(class="col-md-6 mb-3") Have you injured this body part previously. Yes:
-            input(type='radio'  name='PastTreat' value='yes' id='checkYes2' checked="checked" )
-            span No:
-                input(type='radio'  name = 'PastTreat' id='checkNo2' value='no' )
-            div(class="col-md-6 mb-3") If yes, please describe which body part and what the prior injury was?
-                input(type='label' name = 'repDate' class="form-control")
-            div(class="col-md-6 mb-3") If yes, where did you recieve treament?
-                input(type='label' name = 'repDate' class="form-control")
 
-        div(class="col-md-6 mb-3") The above information is ture and accurate (please type name):
-            input(type='label' name = 'sig' class="form-control")
-        div(class="col-md-6 mb-3") Date:
-            input(type='label' name='conDate' class="form-control")
-        input( class="btn btn-primary btn-lg btn-block" type="submit")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        input.btn(type='submit', value='Submit Form')
 
     include footer.pug
 
