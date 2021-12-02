@@ -109,6 +109,9 @@ app.get('/form4', function(req,res) {
 app.get('/login', function(req,res) {
     res.render('project')
 });
+app.get('/form2', function(req, res){
+    res.render('Form2')
+});
 
 
 

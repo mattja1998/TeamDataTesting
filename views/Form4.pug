@@ -38,7 +38,7 @@ h2
                 .row
                     .col-50
                         label(for='incident_occur')  How did the incident occur? (Provide a one-line factual description.)
-                        input#incident_occur(type='text', name='city', required='')
+                            input#incident_occur(type='text', name='city', required='')
                         label(for='Loc_Name')
                             | Name of the location (park, pool, community center; Ex. Smith Pool, Johnson Community Center) or nearest intersection where the incident occurred.
                         input#Loc_Name(type='text', name='city', required='')
@@ -57,17 +57,16 @@ h2
                                 input#zip(type='text', name='zip', placeholder='10001', required='')
                 .row
                     .col-50
-                        label(for='location')
-                            | Location (Specify the exact type of location/facility where injury occurred. Ex. maintenance garage, sports field, aquatic outdoor, golf course, etc.)
-                        input#location(type='text', name='firstname', required='')
-                        label(for='primary loc')
-                            | Primary location (Specify exact location. Ex. lap pool, cart storage, classroom, pavilion)
-                        input(type='text', id='primary loc', name='email', required='')
+                        label(for='location') Location (Specify the exact type of location/facility where injury occurred. Ex. maintenance garage, sports field, aquatic outdoor, golf course, etc.)
+                            input#location(type='text', name='firstname', required='')
+                        label(for='primary loc') Primary location (Specify exact location. Ex. lap pool, cart storage, classroom, pavilion)
+                            input(type='text', id='primary loc', name='email', required='')
                         label(for='FEIN')  Employers FEIN
-                        input#FEIN(type='text', name='address', required='')
+                            input#FEIN(type='text', name='address', required='')
                 .row
                     .col-50
                         label(for='Agency_name') Did the employee miss more than three (3) scheduled workdays?
+                    .row
                         label.Yes
                             | Yes
                             input#yes(type='checkbox')

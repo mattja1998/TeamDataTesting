@@ -1,0 +1,885 @@
+doctype html
+html(lang='en')
+    head
+        meta(charset='utf-8')
+        meta(name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no')
+        meta(name='description' content='')
+        meta(name='author' content='Mark Otto, Jacob Thornton, and Bootstrap contributors')
+        meta(name='generator' content='Jekyll v3.8.5')
+        link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css')
+
+        style
+            include css/FormLook.css
+        include navbar.pug
+        title Form 2
+    body
+        h2
+            img(src='img/form2.png' width='1400' height='115')
+        .row
+            .col-75
+                .container
+                    form(class='/action_page.php' novalidate)
+                        .row
+                            .col-50
+                                label(for='agencyName') Agency Name
+                                input#agencyName.form-control(type='text' placeholder='Enter Name Here' value='' required)
+                                label(for='todaysDate') Today's Date
+                                input#todaysDate(type='text' name='dateOfIncident' placeholder='mm/dd/yyyy')
+                                label(for='dateOfIncident') Date of Incident
+                                input#dateOfIncident(type='text' name='dateOfIncident' placeholder='542 W. 15th Street' required)
+                                label(for='timeOfIncident') Time of Incident
+                                input#timeOfIncident.form-control(type='text' placeholder='Enter Time: hh/mm a.m./p.m.' value='' required)
+
+                            .col-50
+                                label(for='reporterName') Name of Person Completing Report
+                                input#reporterName.form-control(type='text' placeholder='Enter Name Here' value='' required)
+                                label(for='reporterTitle') Title of Person Completing Report
+                                input#reporterTitle.form-control(type='text' placeholder='Enter Title Here' value='' required)
+                                label(for='businessNumber') Business Phone Number
+                                input#businessNumber.form-control(type='text' placeholder='Enter Phone Number Here' value='' required)
+                                label(for='businessEmail') Business Email
+                                input#businessEmail.form-control(type='text' placeholder='Enter Email Here' value='' required)
+                        // <div class="row">
+                        // <div class="col-50">
+                        .row
+                            .col-50
+                                label(for='howOccured') How Did the Incident Occur?
+                                input#howOccured.form-control(type='text'  placeholder='Provide a brief, factual summary.')
+
+
+                        .row
+                            .col-50
+                                label(for='incidentLocation') Name of Location (park, pool, community center) or nearest intersection
+                                    input#incidentLocation.form-control(type='text' placeholder='Enter Location Here' value='' required)
+                            .col-50
+                                label(for='yes') Is there an Address for this location?
+
+                                .row
+                                    label.Yes
+                                        | Yes
+                                        input#Yes(type='checkbox')
+                                        span.checkmark
+                                    label.No
+                                        | No
+                                        input#No(type='checkbox')
+                                        span.checkmark
+                                    label.Unknown
+                                        | Unknown
+                                        input#Unknown(type='checkbox')
+                                        span.checkmark
+                            .col-50
+                                label(for='incidentAddress') If Yes, please provide the following (Address and City, State, Zip):
+                                input#incidentAddress.form-control(type='text' placeholder='1234 Main St' required)
+
+                    .row
+                        .col-50
+                            label(for='City1') City
+                            input#City1(type='text', name='state', placeholder='Aurora', required='')
+                        .col-50
+                            label(for='state') State
+                            input#state(type='text', name='state', placeholder='IL', required='')
+                        .col-50
+                            label(for='zip') Zip code
+                            input#zip(type='text', name='zip', placeholder='10001', required='')
+                    .row
+                        .col-50
+                            label(for='locationType') Location ( Specify the exact type of location/facility where injury occured )
+                                input#locationType.form-control(type='text' placeholder='Enter Location Here' value='' required)
+
+
+                        .col-50
+                            label(for='primaryLocation') Primary Location ( Specify the exact location Ex. pool, classroom etc.)
+                                input#primaryLocation.form-control(type='text' placeholder='Enter Location Here' value='' required)
+
+                        label Was the agency vehicle occupied?
+                        label.occupiedYes
+                            | Yes
+                            input#occupiedYes(type='checkbox')
+                            span.checkmark
+                        label.occupiedNo
+                            | No
+                            input#occupiedNo(type='checkbox')
+                            span.checkmark
+                        label.occupiedUnknown
+                            | Unknown
+                            input#occupiedUnknown(type='checkbox')
+                            span.checkmark
+
+                        label If Yes, please provide the following information:
+                        .col-50
+                            label(for='driverLastName') Last Name
+                            input#driverLastName.form-control(type='text' placeholder='Agency Driver last name' value='' required)
+                        .col-50
+                            label(for='driverFirstName') First Name
+                            input#driverFirstName.form-control(type='text' placeholder='First Name' value='' required)
+                    .row
+                        .col-50
+                            label(for='driverAddress') Address
+                            input#driverAddress.form-control(type='text' placeholder='1234 Main St' required)
+                        .col-50
+                            label(for='driverCity') City
+                            input#driverCity.form-control(type='text' placeholder='City' required)
+                    .row
+                        .col-50
+                            label(for='driverState') State
+                            input#driverState.form-control(type='text' placeholder='State' required)
+                        .col-50
+                            label(for='driverZip') Zip
+                            input#driverZip.form-control(type='text' placeholder='Zip' required)
+
+                        .col-50
+                            label(for='driverHomePhone') Home Phone #
+                            input#driverHomePhone.form-control(type='text' placeholder='Enter Phone Number Here' value='' required)
+                        .col-50
+                            label(for='driverWorkPhone') Work Phone #
+                            input#driverWorkPhone.form-control(type='text' placeholder='Enter Phone Number Here' value='' required)
+                        .col-50
+                            label(for='driverCellPhone') Cell Phone #
+                            input#driverCellPhone.form-control(type='text' placeholder='Enter Phone Number Here' value='' required)
+
+                        .col-50
+                            label(for='driverEmail') Email
+                            input#driverEmail.form-control(type='text' placeholder='' value='' required)
+
+                        .row
+                            .col-50
+                                label Is this driver an employee
+                                .row
+                                    label.empDriverYes
+                                        | Yes
+                                        input#empDriverYes(type='checkbox')
+                                        span.checkmark
+                                    label.empDriverNo
+                                        | No
+                                        input#empDriverNo(type='checkbox')
+                                        span.checkmark
+                                    label.empDriverUnknown
+                                        | Unknown
+                                        input#empDriverUnknown(type='checkbox')
+                                        span.checkmark
+                            label(for='empJobTitle')  If Yes, enter Job title of employee
+
+                            input#empJobTitle.form-control(type='text' value='')
+
+                            label Identify the type of driver
+
+                            label.fullTimeEmp
+                                | Full-Time Employee
+                                input#fullTimeEmp(type='checkbox')
+                                span.checkmark
+                            label.partTimeEmp
+                                | Part-Time Employee
+                                input#partTimeEmp(type='checkbox')
+                                span.checkmark
+                            label.SeasonalEmp
+                                | Seasonal Employee
+                                input#SeasonalEmp(type='checkbox')
+                                span.checkmark
+                            label.intern
+                                | Intern
+                                input#intern(type='checkbox')
+                                span.checkmark
+                            label.volunteer
+                                | Volunteer
+                                input#volunteer(type='checkbox')
+                                span.checkmark
+                            label.nonAgencyEmp
+                                | Non-agency Employee
+                                input#nonAgencyEmp(type='checkbox')
+                                span.checkmark
+                            label.familyMember
+                                | Spouse/family Member
+                                input#familyMember(type='checkbox')
+                                span.checkmark
+
+                    .row
+                        .col-50
+
+                            label(for='vehicleVIN') Agency Vehicle VIN
+                            input#vehicleVIN.form-control(type='text' placeholder='' value='' required)
+
+                            label(for='vehicleMake') Make
+                            input#vehicleMake.form-control(type='text' placeholder='' value='' required)
+                        .col-50
+                            label(for='vehicleModel') Model
+                            input#vehicleModel.form-control(type='text' placeholder='' value='' required)
+                            label(for='vehicleLicenceNum') Licence Number
+                            input#vehicleLicenceNum.form-control(type='text' placeholder='' value='' required)
+
+                        label Is vehicle drivable
+                        br
+                        label.drivableYYes
+                            | Yes
+                            input#drivableYYes(type='checkbox')
+                            span.checkmark
+                        label.drivableYNo
+                            | No
+                            input#drivableYNo(type='checkbox')
+                            span.checkmark
+                        label.drivableYUnknown
+                            | Unknown
+                            input#drivableYUnknown(type='checkbox')
+                            span.checkmark
+                        .col-50
+                            label(for='vehicleLocation') If No, please provide current location of vehicle:
+                            input#vehicleLocation.form-control(type='text' placeholder='' value='' required)
+                            label(for='vehicleLocation') Area Of Damage
+                            input#damageArea.form-control(type='text' placeholder='' value='' required)
+
+                        .col-50
+                            label(for='repairCost') Estimated Repair Cost:
+                            input#repairCost.form-control(type='number' placeholder='' value='' required)
+
+
+                        .row
+                            label Was a trailer involved?
+
+                            label.trailerInvolvedYes
+                                | Yes
+                                input#trailerInvolvedYYes(type='checkbox')
+                            span.checkmark
+                            label.trailerInvolvedNo
+                                | No
+                                input#trailerInvolvedYNo(type='checkbox')
+                                span.checkmark
+                            label.trailerInvolvedUnknown
+                                | Unknown
+                                input#trailerInvolvedUnknown(type='checkbox')
+                                span.checkmark
+                        .row
+                            label If Yes, provide the following information:
+                            .col-50
+
+                                label.trailerYear(for='trailerYear') Trailer Year
+                                input#trailerYear.form-control(type='text' required)
+
+                                label.trailerModel(for='trailerModel') Model
+                                input#trailerModel.form-control(type='text' required)
+
+                                label(for='trailerRepairCost') Estimated Repair Cost of Trailer
+                                input#trailerRepairCost.form-control(type='text'  required)
+                            .col-50
+                                label.trailerLicenseNum(for='trailerLicenseNum') Trailer License
+                                input#trailerLicenseNum.form-control(type='text' required)
+
+                                label(for='trailerDamageArea') Trailer Area Of Damage
+                                input#trailerDamageArea.form-control(type='text'   required)
+
+                                label(for='trailerLocation') Current Location of Trailer
+                                input#trailerLocation.form-control(type='text'   required)
+
+                        .row
+                            .col-50
+                                label Has a police agency conducted an investigation?
+                            .row
+                                label.policeInvestigationYes
+                                    | Yes
+                                    input#policeInvestigationYes(type='checkbox')
+                                    span.checkmark
+                                label.policeInvestigationNo
+                                    | No
+                                    input#policeInvestigationNo(type='checkbox')
+                                    span.checkmark
+                        .row
+                            label If Yes, provide the following information:
+                            .col-50
+                                label(for='policeAgency') What police agency investigated the incident?
+                                input#policeAgency.form-control(type='text' placeholder='' value='' required)
+                            .col-50
+                                label(for='policeReportNum') Police Report Number
+                                input#policeReportNum.form-control(type='number' placeholder='' value='' required)
+                        .row
+                            .col-50
+                                label Was the agency driver ticketed, arrested or cited for violation(s)?
+                            .row
+                                label.agencyDriverTicketedYes
+                                    | Yes
+                                    input#agencyDriverTicketedYes(type='checkbox')
+                                    span.checkmark
+                                label.agencyDriverTicketedNo
+                                    | No
+                                    input#agencyDriverTicketedNo(type='checkbox')
+                                    span.checkmark
+                                label.agencyDriverTicketedUnknown
+                                    | Unknown
+                                    input#agencyDriverTicketedUnknown(type='checkbox')
+                                    span.checkmark
+                        .row
+                            .col-50
+                                label(for='policeReport') If Yes, provide details of the ticket, arrest or violation(s):
+                                input#policeReport.form-control(type='text' placeholder='' value='' required)
+                        h3  CLAIMANT INFORMATION
+                        | Identify other people in the accident. (Make additional copies of this section if needed.)
+                        .row
+                            .col-50
+                                label How was the person involved in the accident? ( Check all that apply. )
+                            .row
+                            label.otherVehicleDriverYes
+                                | Driver injured
+                                input#otherVehicleDriverYes(type='checkbox')
+                                span.checkmark
+                            label.otherVehicleDriverNo
+                                | Driver not injured
+                                input#otherVehicleDriverNo(type='checkbox')
+                                span.checkmark
+                            label.otherVehicleDriverUnknown
+                                | Unknown
+                                input#otherVehicleDriverUnknown(type='checkbox')
+                                span.checkmark
+
+                            label.otherVehicleOwnerYes
+                                | Passenger injured
+                                input#otherVehicleOwnerYes(type='checkbox')
+                                span.checkmark
+                            label.otherVehicleOwnerNo
+                                | Passenger not injured
+                                input#otherVehicleOwnerNo(type='checkbox')
+                                span.checkmark
+                            label.otherVehicleOwnerUnknown
+                                | Unknown
+                                input#otherVehicleOwnerUnknown(type='checkbox')
+                                span.checkmark
+                        .row
+                            .col-50
+                                label(for='claimantLastName') Last Name or Business Name
+                                input#claimantLastName.form-control(type='text' placeholder='Enter Last Name Here' value='' required)
+
+                                label(for='claimantAddress') Address
+                                input#claimantAddress.form-control(type='text' placeholder='1234 Main St' required)
+
+                                label(for='claimantState') State
+                                input#claimantState.form-control(type='text' placeholder='State' required)
+
+                                label(for='claimantWorkPhone') Work Phone #
+                                input#claimantWorkPhone.form-control(type='text' placeholder='Enter Phone Number Here' value='' required)
+
+                                label(for='claimantVehicleMake') Vehicle Make
+                                input#claimantVehicleMake.form-control(type='text' placeholder='' value='' required)
+
+                                label(for='claimantVehicleYear') Year
+                                input#claimantVehicleYear.form-control(type='number' placeholder='' value='' required)
+
+                            .col-50
+                                label(for='claimantFirstName') First Name
+                                input#claimantFirstName.form-control(type='text' placeholder='Enter First Name Here' value='' required)
+
+                                label(for='claimantCity') City
+                                input#claimantCity.form-control(type='text' placeholder='City' required)
+
+                                label(for='claimantZip') Zip
+                                input#claimantZip.form-control(type='text' placeholder='Zip' required)
+
+                                label(for='claimantHomePhone') Home Phone #
+                                input#claimantHomePhone.form-control(type='text' placeholder='Enter Phone Number Here' value='' required)
+
+                                label(for='claimantCellPhone') Cell Phone #
+                                input#claimantCellPhone.form-control(type='text' placeholder='Enter Phone Number Here' value='' required)
+
+                                label(for='claimantVehicleModel') Model
+                                input#claimantVehicleModel.form-control(type='text' placeholder='' value='' required)
+
+                        .row
+                            .col-50
+                                label Is vehicle driveable?
+                            .row
+                                label.vehicleDrivableYes
+                                    | Yes
+                                    input#vehicleDrivableYes(type='checkbox')
+                                    span.checkmark
+                                label.vehicleDrivableNo
+                                    | No
+                                    input#vehicleDrivableNo(type='checkbox')
+                                    span.checkmark
+                            label(for='vehicleCurrentLocation') If no, current location of vehicle
+                            input#vehicleCurrentLocation.form-control(type='text' placeholder='' value='' required)
+
+                        .row
+                            .col-50
+                                label Extent of Damage
+
+                            .row
+                                label.moderateDamage
+                                    | Moderate
+                                    input#moderateDamage(type='checkbox')
+                                    span.checkmark
+                                label.noVisibleDamage
+                                    | Nothing Visible
+                                    input#noVisibleDamage(type='checkbox')
+                                    span.checkmark
+                                label.severeDamage
+                                    | Severe
+                                    input#severeDamage(type='checkbox')
+                                    span.checkmark
+                                label.slightDamage
+                                    |  Slight
+                                    input#slightDamage(type='checkbox')
+                                    span.checkmark
+
+                            .row
+                                .col-50
+                                    label Describe the property damage (other than vehicle)
+                                    input#propertyDamage(type='text' name='' value='' required)
+
+                            .row
+                                .col-50
+                                    label Extent of Damage to property other than vehicle
+                                .row
+                                    label.propertyModerateDamage
+                                        | Moderate
+                                        input#propertyModerateDamage(type='checkbox')
+                                        span.checkmark
+                                    label.noVisiblePropertyDamage
+                                        | Nothing Visible
+                                        input#noVisiblePropertyDamage(type='checkbox')
+                                        span.checkmark
+                                    label.severePropertyDamage
+                                        | Severe
+                                        input#severePropertyDamage(type='checkbox')
+                                        span.checkmark
+                                    label.slightPropertyDamage
+                                        | Slight
+                                        input#slightPropertyDamage(type='checkbox')
+                                        span.checkmark
+                        .row
+                            .col-50
+                                label(for='injuredAge') Age of injured person
+                                input#injuredAge(type='text' name='' value='' required)
+                        label Sex of Injured person
+                        label.injuredMale
+                            | Male
+                            input#injuredMale(type='checkbox')
+                            span.checkmark
+                        label.injuredFemale
+                            | Female
+                            input#injuredFemale(type='checkbox')
+                            span.checkmark
+                        .row
+                            .col-50
+                                label.parmedicsTransferYes Was the injured person transported by paramedics?
+                            .row
+                                label.paramedicsTransferYes
+                                    | Yes
+                                    input#paramedicsTransferYes(type='checkbox')
+                                    span.checkmark
+                                label.paramedicsTransferNo
+                                    | No
+                                    input#paramedicsTransferNo(type='checkbox')
+                                    span.checkmark
+                        .row
+                            .col-50
+                                label(for='injuredLocation') If yes, where was the injured person taken?
+                                input#injuredLocation(type='text' name='' value='' required)
+
+                                label Do you expect the injured person to file a claim?
+                            .row
+                                label.injuredClaimYes
+                                    | Yes
+                                    input#injuredClaimYes(type='checkbox')
+                                    span.checkmark
+                                label.injuredClaimNo
+                                    | No
+                                    input#injuredClaimNo(type='checkbox')
+                                    span.checkmark
+                        .row
+                            .col-50
+
+                                label(for='injuryDescription') Describe the Injury
+                                input#injuryDescription(type='text' name='' value='' required)
+
+
+                        h3  ADDITIONAL CLAIMANT INFORMATION
+                        | Identify other people in the accident. (Make additional copies of this section if needed.)
+
+
+                        .row
+                            .col-50
+                                label How was the person involved in the accident? ( Check all that apply. )
+                            .row
+                                label.otherVehicleDriver2
+                                    | Driver of other vehicle
+                                    input#otherVehicleDriver2(type='checkbox')
+                                    span.checkmark
+                                label.injuredPerson2
+                                    | Injured Person
+                                    input#injuredPerson2(type='checkbox')
+                                    span.checkmark
+                                label.involvedPropertyOwner2
+                                    | Owner of involved property
+                                    input#involvedPropertyOwner2(type='checkbox')
+                                    span.checkmark
+                                label.otherVehicleOwner2
+                                    | Owner of other vehicle
+                                    input#otherVehicleOwner2(type='checkbox')
+                                    span.checkmark
+                                label.agencyVehiclePassenger2
+                                    | Passenger of agency vehicle
+                                    input#agencyVehiclePassenger2(type='checkbox')
+                                    span.checkmark
+                                label.otherVehiclePassenger2
+                                    | Passenger of other vehicle
+                                    input#otherVehiclePassenger2(type='checkbox')
+                                    span.checkmark
+
+                        .row
+                            .col-50
+                                label(for='claimantLastName2') Last Name or Business Name
+                                input#claimantLastName2.form-control(type='text' placeholder='Enter Last Name Here' value='' required)
+
+                                label(for='claimantAddress2') Address
+                                input#claimantAddress2.form-control(type='text' placeholder='1234 Main St' required)
+
+                                label(for='claimantState2') State
+                                input#claimantState2.form-control(type='text' placeholder='State' required)
+
+                                label(for='claimantWorkPhone2') Work Phone #
+                                input#claimantWorkPhone2.form-control(type='text' placeholder='Enter Phone Number Here' value='' required)
+
+                                label(for='claimantCellPhone2') Cell Phone #
+                                input#claimantCellPhone2.form-control(type='text' placeholder='Enter Phone Number Here' value='' required)
+
+                                label(for='claimantVehicleModel2') Model
+                                input#claimantVehicleModel2.form-control(type='text' placeholder='' value='' required)
+
+
+                            .col-50
+                                label(for='claimantFirstName2') First Name
+                                input#claimantFirstName2.form-control(type='text' placeholder='Enter First Name Here' value='' required)
+
+                                label(for='claimantCity2') City
+                                input#claimantCity2.form-control(type='text' placeholder='City' required)
+
+                                label(for='claimantZip2') Zip
+                                input#claimantZip2.form-control(type='text' placeholder='Zip' required)
+
+                                label(for='claimantHomePhone2') Home Phone #
+                                input#claimantHomePhone2.form-control(type='text' placeholder='Enter Phone Number Here' value='' required)
+
+                                label(for='claimantVehicleMake2') Vehicle Make
+                                input#claimantVehicleMake2.form-control(type='text' placeholder='' value='' required)
+
+                                label(for='claimantVehicleYear2') Year
+                                input#claimantVehicleYear2.form-control(type='number' placeholder='' value='' required)
+
+
+
+
+
+
+                        .row
+                            .col-50
+
+                            label Is vehicle driveable?
+                            .row
+                                label.vehicleDrivableYes2
+                                    | Yes
+                                    input#vehicleDrivableYes2(type='checkbox')
+                                    span.checkmark
+                                label.vehicleDrivableNo2
+                                    | No
+                                    input#vehicleDrivableNo2(type='checkbox')
+                                    span.checkmark
+                        .row
+                            .col-50
+                                label(for='vehicleCurrentLocation2') If no, current location of vehicle
+                                input#vehicleCurrentLocation2.form-control(type='text' placeholder='' value='' required)
+                        .row
+                            .col-50
+
+                                label Extent of Damage
+                            .row
+                                label.moderateDamage2
+                                    | Moderate
+                                    input#moderateDamage2(type='checkbox')
+                                    span.checkmark
+                                label.noVisibleDamage2
+                                    | Nothing Visible
+                                    input#noVisibleDamage2(type='checkbox')
+                                    span.checkmark
+                                label.severeDamage2
+                                    | Severe
+                                    input#severeDamage2(type='checkbox')
+                                    span.checkmark
+                                label.slightDamage2
+                                    | Slight
+                                    input#slightDamage2(type='checkbox')
+                                    span.checkmark
+
+                        .row
+                            .col-50
+                                label.propertyDamage2 Describe the property damage (other than vehicle)
+                                input#propertyDamage2(type='text' name='' value='' required)
+
+                                label Extent of Damage to property other than vehicle
+                            .row
+                                label.propertyModerateDamage2
+                                    | Moderate
+                                    input#propertyModerateDamage2(type='checkbox')
+                                    span.checkmark
+                                label.noVisiblePropertyDamage2
+                                    | Nothing Visible
+                                    input#noVisiblePropertyDamage2(type='checkbox')
+                                    span.checkmark
+                                label.severePropertyDamage2
+                                    | Severe
+                                    input#severePropertyDamage2(type='checkbox')
+                                    span.checkmark
+                                label.slightPropertyDamage2
+                                    | Slight
+                                    input#slightPropertyDamage2(type='checkbox')
+                                    span.checkmark
+
+                        .row
+                            .col-50
+
+                                label.injuredAge2 Age of injured person
+                                input#injuredAge2.form-control(type='number' name='' value='' required)
+
+                            .col-50
+                                label Sex of Injured person
+                                .row
+                                    label.injuredMale2
+                                        | Male
+                                        input#injuredMale2(type='checkbox')
+                                        span.checkmark
+                                    label.injuredFemale2
+                                        | Female
+                                        input#injuredFemale2(type='checkbox')
+                                        span.checkmark
+                            .col-50
+                                label Was the injured person transported by paramedics?
+                                .row
+                                    label.paramedicsTransferYes2
+                                        | Yes
+                                        input#paramedicsTransferYes2(type='checkbox')
+                                        span.checkmark
+                                    label.paramedicsTransferNo2
+                                        | No
+                                        input#paramedicsTransferNo2(type='checkbox')
+                                        span.checkmark
+                        .row
+                            .col-50
+
+                                label(for='injuredLocation2') If yes, where was the injured person taken?
+                                input#injuredLocation2(type='text' name='' value='' required)
+                                label Identify witnesses of the accident.(Provide information for each witness. Make additional copies of this page if needed.)
+                                label Witness to accident?
+                                .row
+                                    label.witnessCheckYes
+                                        | Yes
+                                        input#witnessCheckYes(type='checkbox')
+                                        span.checkmark
+                                    label.witnessCheckNo
+                                        | No
+                                        input#witnessCheckNo(type='checkbox')
+                                        span.checkmark
+                                    label.witnessCheckUnknown
+                                        | Unknown
+                                        input#witnessCheckUnknown(type='checkbox')
+                                        span.checkmark
+                                    label If Yes, please provide the following (Address and City, State, Zip):
+
+                            .col-50
+                                label Do you expect the injured person to file a claim?
+                                .row
+                                    label.injuredClaimYes2
+                                        | Yes
+                                        input#injuredClaimYes2(type='checkbox')
+                                        span.checkmark
+                                    label.injuredClaimNo2
+                                        | No
+                                        input#injuredClaimNo2(type='checkbox')
+                                        span.checkmark
+                                label(for='injuryDescription2') Describe the Injury
+                                input#injuryDescription2(type='text' name='' value='' required)
+
+
+                        .row
+                            .col-50
+                                label(for='witnessLastName') Last Name
+                                input#witnessLastName.form-control(type='text' placeholder='Enter Last Name Here' value='' required)
+
+                                label(for='witnessAddress') Address
+                                input#witnessAddress.form-control(type='text' placeholder='1234 Main St' required)
+
+                                label(for='witnessState') State
+                                input#witnessState.form-control(type='text' placeholder='State' required)
+
+                                label(for='witnessWorkPhone') Work Phone #
+                                input#witnessWorkPhone.form-control(type='text' placeholder='Enter Phone Number Here' value='' required)
+                            .col-50
+
+
+                                label(for='witnessLastNameFirstName') First Name
+                                input#witnessLastNameFirstName.form-control(type='text' placeholder='Enter First Name Here' value='' required)
+
+                                label(for='witnessCity') City
+                                input#witnessCity.form-control(type='text' placeholder='City' required)
+
+                                label(for='witnessZip') Zip
+                                input#witnessZip.form-control(type='text' placeholder='Zip' required)
+
+                                label(for='witnessHomePhone') Home Phone #
+                                input#witnessHomePhone.form-control(type='text' placeholder='Enter Phone Number Here' value='' required)
+
+                                label(for='witnessCellPhone') Cell Phone #
+                                input#witnessCellPhone.form-control(type='text' placeholder='Enter Phone Number Here' value='' required)
+
+
+
+
+
+
+
+
+                        .row
+                            .col-50
+                                label Relation to injured person or property owner:
+                            .row
+                                label.agencyEmpVolunteer
+                                    | Agency Employee or Volunteer
+                                    input#agencyEmpVolunteer(type='checkbox')
+                                    span.checkmark
+                                label.anotherUser
+                                    | Another program participant or Park User
+                                    input#anotherUser(type='checkbox')
+                                    span.checkmark
+                                label.friend
+                                    | Friend
+                                    input#friend(type='checkbox')
+                                    span.checkmark
+
+                                label.otherUser
+                                    | Other
+                                    input#otherUser(type='checkbox')
+                                    span.checkmark
+                                label.passerby
+                                    | Passerby
+                                    input#passerby(type='checkbox')
+                                    span.checkmark
+                                label.relative
+                                    | Relative
+                                    input#relative(type='checkbox')
+                                    span.checkmark
+
+                            .col-50
+                                label Did Witness make any statements?
+                                .row
+                                    label.witnessYes
+                                        | Yes
+                                        input#witnessYes(type='checkbox')
+                                        span.checkmark
+                                    label.witnessNo
+                                        | No
+                                        input#witnessNo(type='checkbox')
+                                        span.checkmark
+                                    label.witnessUnknown
+                                        | Unknown
+                                        input#witnessUnknown(type='checkbox')
+                                        span.checkmark
+                        .row
+                            .col-50
+                                label If Yes, please provide the following information:
+
+                                label(for='witnessStatement') What did the witness say?
+                                input#witnessStatement.form-control(type='text' required)
+
+                                label Was the driver of the agency vehicle conducting agency business at the time of the accident?
+                                .row
+                                    label.agencyDriverYes
+                                        | Yes
+                                        input#agencyDriverYes(type='checkbox')
+                                        span.checkmark
+                                    label.agencyDriverNo
+                                        | No
+                                        input#agencyDriverNo(type='checkbox')
+                                        span.checkmark
+                                    label.agencyDriverUnknown
+                                        | Unknown
+                                        input#agencyDriverUnknown(type='checkbox')
+                                        span.checkmark
+                            .col-50
+                                label(for='witnessLocation') Where was the witness when the accident occurred?
+                                input#witnessLocation.form-control(type='text' required)
+                        .row
+                            .col-50
+                                label(for='agencyDriverLocation') What street was the agency driver on?
+                                input#agencyDriverLocation.form-control(type='text' required)
+                            .col-50
+                                label(for='otherDriverLocation') What street was the other driver on?
+                                input#otherDriverLocation.form-control(type='text' required)
+                        .row
+                            .col-50
+                                label What direction was the agency driver traveling?
+                                .row
+                                    label.North
+                                        | North
+                                        input#North(type='checkbox')
+                                        span.checkmark
+                                    label.South
+                                        | South
+                                        input#South(type='checkbox')
+                                        span.checkmark
+                                    label.East
+                                        | East
+                                        input#East(type='checkbox')
+                                        span.checkmark
+                                    label.West
+                                        | West
+                                        input#West(type='checkbox')
+                                        span.checkmark
+                            .col-50
+
+                                label What direction was the other driver traveling?
+                                .row
+                                    label.otherNorth
+                                        | North
+                                        input#otherNorth(type='checkbox')
+                                        span.checkmark
+                                    label.otherSouth
+                                        | South
+                                        input#otherSouth(type='checkbox')
+                                        span.checkmark
+                                    label.otherEast
+                                        | East
+                                        input#otherEast(type='checkbox')
+                                        span.checkmark
+                                    label.otherWest
+                                        | West
+                                        input#otherWest(type='checkbox')
+                                        span.checkmark
+                        .row
+                            .col-50
+                                label Weather conditions
+                                .row
+                                    label.Dry
+                                        | Dry
+                                        input#Dry(type='checkbox')
+                                        span.checkmark
+                                    label.Fog
+                                        | Fog
+                                        input#Fog(type='checkbox')
+                                        span.checkmark
+                                    label.Ice
+                                        | Ice
+                                        input#Ice(type='checkbox')
+                                        span.checkmark
+                                    label.Snow
+                                        | Snow
+                                        input#Snow(type='checkbox')
+                                        span.checkmark
+                                    label.Wet
+                                        | Wet
+                                        input#Wet(type='checkbox')
+                                        span.checkmark
+
+                        h4 Accident Diagram
+                        h5 Please ensure every field is filled out!
+                        br
+                        button.btn.btn-primary.btn-lg.btn-block(type='submit') Submit Details
+                        br
+                        // </div>
+        script(src='https://code.jquery.com/jquery-3.3.1.slim.min.js' integrity='sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo' crossorigin='anonymous')
+        script.
+            window.jQuery || document.write('<script src="/docs/4.3/assets/js/vendor/jquery-slim.min.js"><\/script>')
+        script(src='/docs/4.3/dist/js/bootstrap.bundle.min.js' integrity='sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o' crossorigin='anonymous')
+include footer.pug
