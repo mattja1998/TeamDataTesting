@@ -14,16 +14,16 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 
 app.post('/insertRow',function(req,res){
-    let id = req.body.fId;
-    let fName = req.body.FormName;
-    let date = req.body.d;
-    let time = req.body.t;
-    let state = req.body.s;
-    let userId = req.body.UId;
-    let firstName = req.body.firstName;
-    let lastName = req.body.lName;
+    let Date = req.body.date;
+    let Time = req.body.time;
+    let Name = req.body.name;
+    let Location = req.body.location;
+    let Treatment = req.body.treatment;
+    let how = req.body.how;
+    let facility = req.body.fLocal;
+    let staffName = req.body.StaffName;
 
-    let sql = `INSERT INTO FormV2(FormId,FormName,Date,Time,State,UserId,FirstName,LastName)  VALUES ('${id}', '${fName}', CURRENT_DATE, '${time}', '${state}', '${userId}', '${firstName}', '${lastName}')`;
+    let sql = `INSERT INTO Minor_Injury_Log(Date,Time,Name,Location,Treatment,how,facility,staffName)  VALUES ('${Date}','${Time}','${Name}','${Location}','${Treatment}','${how}','${facility}','${staffName}')`;
     con.query(sql);
 
 
@@ -31,7 +31,7 @@ app.post('/insertRow',function(req,res){
 
 
 app.post('/insertNewRow',function(req,res){
-    res.render('insert');
+    res.render('insertMinor');
 })
 
 app.post('/deleteThis',function(req,res){
@@ -46,33 +46,19 @@ app.post('/deleteThis',function(req,res){
 
 })
 
-app.post('/ConfirmDelete', function(req,res) {
 
-    let id = req.body.id;
-    console.log(id);
-    let sql = `select * from FormV2 where FormId = ${id}`;
-    con.query(sql,function(err2,result,fields){
-       // console.log(result);
-    res.render('deleterow', {
-        title:"FormV2",
-        Form:result
-
-    })
-
-    })
-})
 
 app.post('/insertRow4e',function(req,res){
-    let id = req.body.fId;
-    let fName = req.body.FormName;
-    let date = req.body.d;
-    let time = req.body.t;
-    let state = req.body.s;
-    let userId = req.body.UId;
-    let firstName = req.body.firstName;
-    let lastName = req.body.lName;
+    let Date = req.body.date;
+    let Time = req.body.time;
+    let Name = req.body.name;
+    let Location = req.body.loacation;
+    let Treatment = req.body.treatment;
+    let how = req.body.how;
+    let facility = req.body.fLocal;
+    let staffName = req.body.StaffName;
 
-    let sql = `INSERT INTO FormV2(FormId,FormName,Date,Time,State,UserId,FirstName,LastName)  VALUES ('${id}', '${fName}', CURRENT_DATE, '${time}', '${state}', '${userId}', '${firstName}', '${lastName}')`;
+    let sql = `INSERT INTO Minor_Injury_Log(Date,Time,Name,Location,Treatment,how,facility,staffName)  VALUES ('${date}', '${time}', '${name}, '${location}', '${treatment}', '${how}', '${fLocal}', '${StaffName}')`;
     con.query(sql);
 
 
@@ -117,7 +103,7 @@ app.get('/form2', function(req, res){
 
 app.get('/minorInjDb', function(req,res) {
 
-        let sql = "select FormId, FormName,UserId,Date,Time,State, FirstName,LastName from FormV2";
+        let sql = "SELECT `Date`,`Time`,`Name`,`Location`,`Treatment`,`how`,`facility`,`staffName` FROM `Minor_Injury_Log` WHERE 1";
         con.query(sql, function (err2, result, fields) {
             if (err2) throw  err2;
 

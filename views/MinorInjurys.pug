@@ -1,42 +1,54 @@
 doctype html
 html
     head
-        meta(charset='UTF-8')
-        title Simple templates
-        link(rel='stylesheet', href='css/styles2.css')
-        script.
+        meta(charset='utf-8')
+        meta(name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no')
+        meta(name='description' content='')
+        meta(name='author' content='Mark Otto, Jacob Thornton, and Bootstrap contributors')
+        meta(name='generator' content='Jekyll v3.8.5')
+        link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css')
+
+        style
+            include css/FormLook.css
+
+        style.
+            table tr th td{border :black solid 1px;}
 
 
 
     body
         include navbar.pug
+        .row
+            .col-75
+                .container
 
-        h3 Title: #{title}
-        form(action='insertNewRow' method='post')
-            input(type='submit' value=`insert`)
-        table(style='with:100%' border='1')
-            tr
-                th ID
-                th FName
-                th Date
-                th Time
-                th State
-                th User Id
-                th First Name
-                th Last Name
+                        .row
+                            .col-50
+                                h1 Minor Injury Report
+                                form(action='insertNewRow' method='post')
 
-            each row in Form
-                tr
-                    td= row.FormId
-                    td= row.FormName
-                    td= row.Date
-                    td= row.Time
-                    td= row.State
-                    td= row.UserId
-                    td= row.FirstName
-                    td= row.LastName
-                    td
-                        form(action='ConfirmDelete' method='post')
-                            input(type='hidden' name=`id` value=`${row.FormId}`)
-                            input(type='submit' value=`Delete Id: ${row.FormId}`)
+                                    input(type='submit' value=`insert`)
+                                table(style='width:100%' border='1')
+                                    tr
+                                        th Date
+                                        th Time
+                                        th Name
+                                        th Location
+                                        th Treatment
+                                        th How occurred
+                                        th Facility
+                                        th Staff Member
+                                    each row in Form
+                                        tr
+
+                                            td= row.Date
+                                            td= row.Time
+                                            td= row.Name
+                                            td= row.Location
+                                            td= row.Treatment
+                                            td= row.how
+                                            td= row.facility
+                                            td= row.staffName
+
+
         include footer.pug

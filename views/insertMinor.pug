@@ -1,0 +1,58 @@
+doctype html
+html
+    head
+        meta(charset='utf-8')
+        meta(name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no')
+        meta(name='description' content='')
+        meta(name='author' content='Mark Otto, Jacob Thornton, and Bootstrap contributors')
+        meta(name='generator' content='Jekyll v3.8.5')
+        link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css')
+
+        style
+            include css/FormLook.css
+
+    body
+
+        include navbar.pug
+        .row
+            .col-75
+                .container
+                    form(action = "/insertRow", method = "POST")
+                        .row
+                            .col-50
+                                h1 Minor injury report
+
+                        .row
+                            .col-50
+                                label(for = "Date") Date:
+                                input#Date.form-control(type='date' name="date" value = "" required)
+                                br
+                                label(for = "name") Name of person receiving treatment
+                                input#name.form-control(type='text' name = "name" value = "" required)
+                                br
+                                lable(for = 'How') How did the injury occur
+                                input#How.form-control(type='text' name = 'how' value='' required)
+
+                                label(for = 'StaffName') Full name of staff who notified guardian
+                                input#StaffName.form-control(type='text' name='StaffName' value='' required)
+
+                            .col-50
+                                label(for="Time") Time
+                                input#time.form-control(type='time'  name="time" value = "" required)
+                                br
+                                label(for = "Location") Injury location (eg, right elbow)
+                                input#location.form-control(type='text' name ='location' value='' required)
+
+                                label.Treatment Treatment(eg. rise and ice pack)
+                                input#treatment.form-control(type='text' name='treatment' required)
+
+                                lable(for='fLocal') Facility Location
+                                input#fLocal.form-control(type='text' name='fLocal' value="" required)
+
+                        input.btn(type='submit', value='Submit Form')
+
+
+
+
+
+        include footer.pug
