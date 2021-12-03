@@ -29,6 +29,7 @@ app.post('/insertRow',function(req,res){
 
 
 })
+
 app.post('/insertForm4',function (req,res){
     let firstname = req.body.firstname;
     let DateIncident = req.body.DateIncident;
@@ -255,18 +256,33 @@ app.post('/deleteThis',function(req,res){
 
 
 app.post('/insertRow4e',function(req,res){
-    let Date = req.body.date;
-    let Time = req.body.time;
-    let Name = req.body.name;
-    let Location = req.body.loacation;
-    let Treatment = req.body.treatment;
-    let how = req.body.how;
-    let facility = req.body.fLocal;
-    let staffName = req.body.StaffName;
+    let FirstName = req.body.FirstName;
+    let time = req.body.time;
+    let LastName = req.body.LastName;
+    let Date = req.body.Date;
+    let location = req.body.location;
+    let report = req.body.report;
+    let repdate = req.body.repdate;
+    let reptime = req.body.reptime;
+    let repTo = req.body.repTo
+    let describe = req.body.describe;
+    let witness = req.body.witness;
+    let medAtten = req.body.medAtten;
+    let bodyInj = req.body.bodyInj;
 
-    let sql = `INSERT INTO Minor_Injury_Log(Date,Time,Name,Location,Treatment,how,facility,staffName)  VALUES ('${date}', '${time}', '${name}, '${location}', '${treatment}', '${how}', '${fLocal}', '${StaffName}')`;
+    let PrevInj = req.body.PrevInj;
+    let prevInjDescribe = req.body.prevInjDescribe;
+    let preDate = req.body.preDate;
+    let prevTreatment = req.body.prevTreatment;
+    let sig = req.body.sig;
+    let TDay = req.body.TDay;
+
+
+    let sql = `INSERT INTO Form4e(Employee_Name,lastName, Date_Occurred, Time_Occurred, Location, first_Report,Time_FRepo, Date_FRepo, Repo_To, How_Occurred, People_Pres, Body_injur, Med_attention, Where_medAtten, 
+    Signiture, Sig_Date, Prev_Injury, Prior_inj, Prior_treat) VALUES ('${FirstName}','${LastName}','${Date}','${time}','${location}','${report}',
+    '${reptime}','${repdate}','${repTo}','${describe}','${witness}','${bodyInj}','${medAtten}','${prevTreatment}','${sig}','${TDay}','${PrevInj}','${prevInjDescribe}','${preDate}')`;
     con.query(sql);
-
+    res.render('index2')
 
 })
 
