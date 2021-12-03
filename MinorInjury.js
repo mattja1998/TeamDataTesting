@@ -29,6 +29,148 @@ app.post('/insertRow',function(req,res){
 
 
 })
+app.post('/insertForm2',function (req,res){
+    let agencyName = req.body.agencyName;
+    let todaysDate = req.body.todaysDate;
+    let dateOfIncident = req.body.dateOfIncident;
+    let timeOfIncident = req.body.timeOfIncident;
+
+    let reporterTitle = req.body.reporterTitle;
+    let businessNumber = req.body.businessNumber;
+    let businessEmail = req.body.businessEmail;
+    let howOccured = req.body.howOccured;
+
+    let incidentLocation = req.body.incidentLocation;
+    let incidentLocationAddress = req.body.incidentLocationAddress;
+    let incidentAddress = req.body.incidentAddress;
+    let city1 = req.body.city1;
+    let state = req.body.state;
+    let zip = req.body.zip;
+    let locationType = req.body.locationType;
+    let primaryLocation = req.body.primaryLocation;
+
+    let agencyVehicleOccupied = req.body.agencyVehicleOccupied;
+    let driverLastName = req.body.driverLastName;
+    let driverFirstName = req.body.driverFirstName;
+    let driverAddress = req.body.driverAddress;
+    let driverCity = req.body.driverCity;
+    let driverState = req.body.driverState;
+    let driverZip = req.body.driverZip;
+    let driverHomePhone = req.body.driverHomePhone;
+    let driverWorkPhone = req.body.driverWorkPhone;
+    let driverCellPhone = req.body.driverCellPhone;
+    let driverEmail = req.body.driverEmail;
+
+    let employeeDriver = req.body.employeeDriver;
+    let employeeJobTitle = req.body.employeeJobTitle;
+    let typeOfDriver = req.body.typeOfDriver;
+    let vehicleVIN = req.body.vehicleVIN;
+    let vehicleMake = req.body.vehicleMake;
+    let vehicleModel = req.body.vehicleModel;
+    let vehicleLicenceNum = req.body.vehicleLicenceNum;
+    let vehicleDrivable = req.body.vehicleDrivable;
+    let vehicleLocation = req.body.vehicleLocation;
+    let damageArea = req.body.damageArea;
+    let repairCost = req.body.repairCost;
+
+    let trailerInvolved = req.body.trailerInvolved;
+    let trailerYear = req.body.trailerYear;
+    let trailerModel = req.body.trailerModel;
+    let trailerRepairCost = req.body.trailerRepairCost;
+    let trailerLicenseNum = req.body.trailerLicenseNum;
+    let trailerDamageArea = req.body.trailerDamageArea;
+    let trailerLocation = req.body.trailerLocation;
+
+    let policeInvestigation = req.body.policeInvestigation;
+    let policeAgency = req.body.policeAgency;
+    let policeReportNum = req.body.policeReportNum;
+    let isDriverInjured = req.body.isDriverInjured;
+
+    let peopleInvolved = req.body.peopleInvolved;
+    let claimantLastName = req.body.claimantLastName;
+    let claimantAddress = req.body.claimantAddress;
+    let claimantState = req.body.claimantState;
+    let claimantWorkPhone = req.body.claimantWorkPhone;
+    let claimantVehicleMake = req.body.claimantVehicleMake;
+    let claimantVehicleYear = req.body.claimantVehicleYear;
+    let claimantFirstName = req.body.claimantFirstName;
+    let claimantCity = req.body.claimantCity;
+    let claimantZip = req.body.claimantZip;
+    let claimantHomePhone = req.body.claimantHomePhone;
+    let claimantCellPhone = req.body.claimantCellPhone;
+    let claimantVehicleModel = req.body.claimantVehicleModel;
+
+    let isVehicleDrivable = req.body.isVehicleDrivable;
+    let drivableVehicleLocation = req.body.drivableVehicleLocation;
+    let vehicleDamageExtent = req.body.vehicleDamageExtent;
+    let propDamageDescription = req.body.propDamageDescription;
+    let propertyDamageExtent = req.body.propertyDamageExtent;
+
+    let injuredAge = req.body.injuredAge;
+    let injuredSex = req.body.injuredSex;
+    let paramedicsTransfer = req.body.paramedicsTransfer;
+    let injuredLocation = req.body.injuredLocation;
+    let injuredClaim = req.body.injuredClaim;
+    let injuryDescription = req.body.injuryDescription;
+
+    let peopleInvolved2 = req.body.peopleInvolved2;
+    let claimantLastName2 = req.body.claimantLastName2;
+    let claimantAddress2 = req.body.claimantAddress2;
+    let claimantState2 = req.body.claimantState2;
+    let claimantWorkPhone2 = req.body.claimantWorkPhone2;
+    let claimantVehicleMake2 = req.body.claimantVehicleMake2;
+    let claimantVehicleYear2 = req.body.claimantVehicleYear2;
+    let claimantFirstName2 = req.body.claimantFirstName2;
+    let claimantCity2 = req.body.claimantCity2;
+    let claimantZip2 = req.body.claimantZip2;
+    let claimantHomePhone2 = req.body.claimantHomePhone2;
+    let claimantCellPhone2 = req.body.claimantCellPhone2;
+    let claimantVehicleModel2 = req.body.claimantVehicleModel2;
+
+    let isVehicleDrivable2 = req.body.isVehicleDrivable2;
+    let drivableVehicleLocation2 = req.body.drivableVehicleLocation2;
+    let vehicleDamageExtent2 = req.body.vehicleDamageExtent2;
+    let propDamageDescription2 = req.body.propDamageDescription2;
+    let propertyDamageExtent2 = req.body.propertyDamageExtent2;
+
+    let injuredAge2 = req.body.injuredAge2;
+    let injuredSex2 = req.body.injuredSex2;
+    let paramedicsTransfer2 = req.body.paramedicsTransfer2;
+    let injuredLocation2 = req.body.injuredLocation2;
+    let injuredClaim2 = req.body.injuredClaim2;
+    let injuryDescription2 = req.body.injuryDescription2;
+
+    let witnessLastName = req.body.witnessLastName;
+    let witnessAddress = req.body.witnessAddress;
+    let witnessState = req.body.witnessState;
+    let witnessWorkPhone = req.body.witnessWorkPhone;
+    let witnessFirstName = req.body.witnessFirstName;
+    let witnessCity = req.body.witnessCity;
+    let witnessZip = req.body.witnessZip;
+    let witnessHomePhone = req.body.witnessHomePhone;
+    let witnessCellPhone = req.body.witnessCellPhone;
+
+    let agencyEmpVolunteer = req.body.agencyEmpVolunteer;
+    let anotherUser = req.body.anotherUser;
+    let friend = req.body.friend;
+    let passerby = req.body.passerby;
+    let relative = req.body.relative;
+    let isThereAWitnessStatement = req.body.isThereAWitnessStatement;
+    let witnessStatement = req.body.witnessStatement;
+    let agencyDriverBusiness = req.body.agencyDriverBusiness;
+    let witnessLocation = req.body.witnessLocation;
+    let agencyDriverLocation = req.body.agencyDriverLocation;
+    let otherDriverLocation = req.body.otherDriverLocation;
+    let agencyDriverDirection = req.body.agencyDriverDirection;
+    let otherDriverDirection = req.body.otherDriverDirection;
+    let weatherCondition = req.body.weatherCondition;
+
+
+
+
+    con.query(sql);
+    res.render('index2');
+})
 
 app.post('/insertForm4',function (req,res){
     let firstname = req.body.firstname;
@@ -149,7 +291,6 @@ app.post('/insertForm3',function(req,res){
         '${theCharges}','${Today}')`;
     con.query(sql);
     res.render('index2')
-
 })
 app.post('/insertForm1',function(req,res){
     let AgencyName = req.body.agencyName;
