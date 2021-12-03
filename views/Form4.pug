@@ -12,319 +12,334 @@ h2
 .row
     .col-75
         .container
-            form(action='/action_page.php')
+            form(action='/InsertForm4' method='post')
                 .row
                     .col-50
                         h3 Complete an Employee Injury
                         label(for='Agency_name')  Agency name
                         input#Agency_name(type='text', name='firstname', required='')
+
                         label(for='Date_of_Incident')  Date of Incident
-                        input#Date_of_Incident(type='text', name='email', placeholder='john@example.com', required='')
+                        input#Date_of_Incident(type='date', name='DateIncident', placeholder='john@example.com', required='')
+                        br
                         label(for='person_comp_report')  Name of person completing report
-                        input#person_comp_report(type='text', name='address', placeholder='542 W. 15th Street', required='')
+                        input#person_comp_report(type='text', name='PersonName', placeholder='542 W. 15th Street', required='')
+
                         label(for='city') Business Phone
-                        input#city(type='text', name='city', placeholder='###-###-####', required='')
+                        input#city(type='text', name='BisPhone', placeholder='###-###-####', required='')
                     .col-50
                         h3
                             br
-                        label(for='cname') Today&apos;s Date
-                        input#cname(type='text', name='cardname', placeholder='mm/dd/yyyy', required='')
-                        label(for='ccnum') Time of incident(hh/mm a.m./p.m.)
-                        input#ccnum(type='text', name='cardnumber', placeholder='hh/mm a.m./p.m', required='')
+                        label(for='Today') Todays Date
+                        input#Today(type='date', name='Today', placeholder='mm/dd/yyyy', required='')
+
+                        label(for='Time_incident') Time of incident(hh/mm a.m./p.m.)
+                        input#Time_incident(type='time', name='Time', placeholder='hh/mm a.m./p.m', required='')
+                        br
                         label(for='expmonth') Title of person completing report
-                        input#expmonth(type='text', name='expmonth', placeholder='Supervisor', required='')
+                        input#expmonth(type='text', name='ReportTitle', placeholder='Supervisor', required='')
                         label(for='expmonth') Business Email
-                        input#exmonth(type='text', name='expmonth', placeholder='john@example.com', required='')
+                        input#exmonth(type='text', name='Bis_Email', placeholder='john@example.com', required='')
                 .row
                     .col-50
                         label(for='incident_occur')  How did the incident occur? (Provide a one-line factual description.)
-                            input#incident_occur(type='text', name='city', required='')
+                            input#incident_occur(type='text', name='HowOccur', required='')
                         label(for='Loc_Name')
                             | Name of the location (park, pool, community center; Ex. Smith Pool, Johnson Community Center) or nearest intersection where the incident occurred.
-                        input#Loc_Name(type='text', name='city', required='')
+                        input#Loc_Name(type='text', name='Location', required='')
                         label(for='adrs')
                             | Is there an address for this location? If yes, please provide the following: Street address
-                        input#adrs(type='text', name='address', placeholder='542 W. 15th Street', required='')
+                        input#adrs(type='text', name='address2', placeholder='542 W. 15th Street', required='')
                         .row
                             .col-50
                                 label(for='City1') City
-                                input#City1(type='text', name='state', placeholder='Aurora', required='')
+                                input#City1(type='text', name='city2', placeholder='Aurora', required='')
                             .col-50
                                 label(for='state') State
-                                input#state(type='text', name='state', placeholder='IL', required='')
+                                input#state(type='text', name='state2', placeholder='IL', required='')
                             .col-50
                                 label(for='zip') Zip code
-                                input#zip(type='text', name='zip', placeholder='10001', required='')
+                                input#zip(type='text', name='zip2', placeholder='10001', required='')
                 .row
                     .col-50
                         label(for='location') Location (Specify the exact type of location/facility where injury occurred. Ex. maintenance garage, sports field, aquatic outdoor, golf course, etc.)
-                            input#location(type='text', name='firstname', required='')
+                            input#location(type='text', name='LocationSpecific', required='')
                         label(for='primary loc') Primary location (Specify exact location. Ex. lap pool, cart storage, classroom, pavilion)
-                            input(type='text', id='primary loc', name='email', required='')
+                            input(type='text', id='primary loc', name='PrimaryLoc', required='')
                         label(for='FEIN')  Employers FEIN
-                            input#FEIN(type='text', name='address', required='')
+                            input#FEIN(type='text', name='Fein', required='')
                 .row
                     .col-50
                         label(for='Agency_name') Did the employee miss more than three (3) scheduled workdays?
                     .row
                         label.Yes
                             | Yes
-                            input#yes(type='checkbox')
+                            input#yes(type='radio' name='Days3' value='yes')
                             span.checkmark
                         label.no
                             | No
-                            input#no(type='checkbox')
+                            input#no(type='radio' name='3Days' value='no')
                             span.checkmark
                         label.Unknown
                             | Unknown
-                            input#Unknown(type='checkbox')
+                            input#Unknown(type='radio' name='3Days' value='unknown')
                             span.checkmark
                         label(for='Accident_Occured')  What was the employee doing when the accident occurred?
                         input#Accident_Occured(type='text', name='Accident_Occured', required='')
                         label(for='incident_occur1') How did the incident occur? (Provide a detailed factual description.)
-                        input#incident_occur1(type='text', name='address', required='')
+                        input#incident_occur1(type='text', name='incident_occur1', required='')
                         .row
                             .col-50
                                 label(for='Emp_last_name') Employee last name
-                                input#Emp_last_name(type='text', name='firstname', placeholder='Doe', required='')
+                                input#Emp_last_name(type='text', name='Emp_last_name', placeholder='Doe', required='')
                             .col-50
                                 label(for='Emp_first_name') First Name
-                                input#Emp_first_name(type='text', name='cardname', placeholder='John', required='')
+                                input#Emp_first_name(type='text', name='Emp_first_name', placeholder='John', required='')
                         .row
                             .col-50
                                 label(for='Address1')  Address
-                                input#Address1(type='text', name='city', placeholder='542 W. 15th Street', required='')
+                                input#Address1(type='text', name='Address1', placeholder='542 W. 15th Street', required='')
                                 .row
                                     .col-50
                                         label(for='City2') City
-                                        input#City2(type='text', name='state', placeholder='Aurora', required='')
+                                        input#City2(type='text', name='City3', placeholder='Aurora', required='')
                                     .col-50
                                         label(for='State1') State
-                                        input#State1(type='text', name='state', placeholder='IL', required='')
+                                        input#State1(type='text', name='State3', placeholder='IL', required='')
                                     .col-50
                                         label(for='zip1') Zip code
-                                        input#zip1(type='text', name='zip', placeholder='10001', required='')
+                                        input#zip1(type='text', name='zip3', placeholder='10001', required='')
                                     .col-50
                                         label(for='Home#') Home Phone #
-                                        input(type='text', id='Home#', name='state', placeholder='###-###-####', required='')
+                                        input(type='text', id='Home#', name='HomePhone', placeholder='###-###-####', required='')
                                     .col-50
                                         label(for='Work_Phone') Work Phone #
-                                        input#Work_Phone(type='text', name='state', placeholder='###-###-####', required='')
+                                        input#Work_Phone(type='text', name='Work_Phone', placeholder='###-###-####', required='')
                                     .col-50
                                         label(for='Cell_Phone') Cell Phone #
-                                        input#Cell_Phone(type='text', name='zip', placeholder='###-###-####', required='')
+                                        input#Cell_Phone(type='text', name='Cell_Phone', placeholder='###-###-####', required='')
                                     .col-50
                                         label(for='Number_to_contact') Best Number to contact employee
-                                        input#Number_to_contact(type='text', name='state', placeholder='###-###-####', required='')
+                                        input#Number_to_contact(type='text', name='Number_to_contact', placeholder='###-###-####', required='')
                                     .col-50
                                         label(for='Email1') Email
-                                        input#Email1(type='text', name='zip', placeholder='john@example.com', required='')
+                                        input#Email1(type='text', name='Email1', placeholder='john@example.com', required='')
                                     .col-50
                                         label(for='ssn') Social security number
-                                        input#ssn(type='text', name='state', required='')
+                                        input#ssn(type='text', name='ssn', )
                                     .col-50
                                         label(for='DOB') Date of birth (mm/dd/yyyy)
-                                        input#DOB(type='text', name='zip', placeholder='mm/dd/yyyy', required='')
+                                        input#DOB(type='date', name='DOB', placeholder='mm/dd/yyyy', required='')
                                     .col-50
                                         label(for='Agency_name')  Gender
-                                        label.Male
-                                            | Male
-                                            input#Male(type='checkbox')
-                                            span.checkmark
-                                        label.Female
-                                            | Female
-                                            input#Female(type='checkbox')
-                                            span.checkmark
+                                        .row
+                                            label.Male
+                                                | Male
+                                                input#Male(type='radio' name='gender' value='Male')
+
+                                            label.Female
+                                                | Female
+                                                input#Female(type='radio' name='gender' vlaue='Female')
+
                                     .col-50
                                         label(for='Agency_name')  Does employee speak English
-                                        label.Yes1
-                                            | Yes
-                                            input#Yes1(type='checkbox')
-                                            span.checkmark
-                                        label.No1
-                                            | No
-                                            input#No1(type='checkbox')
-                                            span.checkmark
+                                        .row
+                                            label.Yes1
+                                                | Yes
+                                                input#Yes1(type='radio' name='English' value='yes')
+
+                                            label.No1
+                                                | No
+                                                input#No1(type='radio' name='English' value='no')
+
                                     .col-50
                                         label(for='Marital_status') Marital status (divorced/married/single/unknown)
-                                        input#Marital_status(type='text', name='state', required='')
+                                        input#Marital_status(type='text', name='Marital_status', required='')
                                     .col-50
                                         label(for='dependents') Number of dependents
-                                        input#dependents(type='text', name='zip', placeholder='#', required='')
+                                        input#dependents(type='text', name='dependents', placeholder='#', required='')
                                     .col-50
                                         label(for='weekly_wage') Average weekly wage
-                                        input#weekly_wage(type='text', name='state', required='')
+                                        input#weekly_wage(type='text', name='weekly_wage', required='')
                                     .col-50
                                         label(for='Job_title') Job title/occupation
-                                        input#Job_title(type='text', name='zip', required='')
+                                        input#Job_title(type='text', name='Job_title', required='')
                                     .col-50
                                         label(for='Agency_name')  What is the employees employment status?
-                                        label.Permanent_full-time
-                                            | Permanent full-time
-                                            input#Permanent_full-time(type='checkbox')
-                                            span.checkmark
-                                        label.Permanent_part-time
-                                            | Permanent part-time
-                                            input(type='checkbox', id='Permanent part-time')
-                                            span.checkmark
-                                        label.Seasonal
-                                            | Seasonal
-                                            input#Seasonal(type='checkbox')
-                                            span.checkmark
-                                        label.Intern
-                                            | Intern
-                                            input#Intern(type='checkbox')
-                                            span.checkmark
-                                        label.Other
-                                            | Other
-                                            input#Other(type='checkbox')
-                                            span.checkmark
+                                        .row
+                                            label.Permanent_full-time
+                                                | Permanent full-time
+                                                input#Permanent_full-time(type='radio' name='employment' value='full time')
+
+                                            label.Permanent_part-time
+                                                | Permanent part-time
+                                                input(type='radio' name='employment' id='Permanent part-time' value='part time')
+
+                                            label.Seasonal
+                                                | Seasonal
+                                                input#Seasonal(type='radio' name='employment' value='seasonal')
+
+                                            label.Intern
+                                                | Intern
+                                                input#Intern(type='radio' name='employment' value='intern')
+
+                                            label.Other
+                                                | Other
+                                                input#Other(type='radio' name='employment' value='other')
+
                                     .col-50
                                         label(for='Agency_name')  What is the employees tenure? (length of employment)
-                                        label.Less_than_1
-                                            | Less than 1 yr.
-                                            input#Less_than_1(type='checkbox')
+                                        .row
+                                            label.Less_than_1
+                                                | Less than 1 yr.
+                                                input#Less_than_1(type='radio' name='CompanyTime' value='less Then 1 year')
                                             span.checkmark
-                                        label.1-3_yrs
-                                            | 1-3 yrs.
-                                            input#1-3_yrs(type='checkbox')
-                                            span.checkmark
-                                        label.4-10_yrs
-                                            | 4-10 yrs
-                                            input#4-10_yrs(type='checkbox')
-                                            span.checkmark
-                                        label.11-19_yrs
-                                            | 11-19 yrs.
-                                            input#11-19_yrs(type='checkbox')
-                                            span.checkmark
-                                        label.More_than_20
-                                            | More than 20 yrs.
-                                            input#More_than_20(type='checkbox')
-                                            span.checkmark
+                                            label
+                                                | 1-3 yrs.
+                                                input#1-3_yrs(type='radio' name='CompanyTime' value='1-3 Years')
+
+                                            label
+                                                | 4-10 yrs
+                                                input#4-10_yrs(type='radio' name='CompanyTime' value='4-10 Years')
+
+                                            label
+                                                | 11-19 yrs.
+                                                input#11-19_yrs(type='radio' name='CompanyTime' value="11-19 Years")
+
+                                            label.More_than_20
+                                                | More than 20 yrs.
+                                                input#More_than_20(type='radio' name='CompanyTime' value='Over 20 Years')
+
                                     .col-50
                                         label(for='Date_hired') Date hired (mm/dd/yyyy)
-                                            input#Date_hired(type='text', name='zip', placeholder='mm/dd/yyyy', required='')
+                                            input#Date_hired(type='date', name='Date_hired', placeholder='mm/dd/yyyy', required='')
                                 .row
                                     .col-50
                                         label(for='employee_began_work')
                                             | Time employee began work on day of incident (hh/mm a.m./p.m.) (Provide a one-line factual description.)
-                                            input#employee_began_work(type='text', name='city', placeholder='hh/mm a.m./p.m.', required='')
+                                            input#employee_began_work(type='time', name='employee_began_work', placeholder='hh/mm a.m./p.m.', required='')
                                         label(for='date_employee_worked')  Last date employee worked prior to date of incident (mm/dd/yyyy)
-                                            input#date_employee_worked(type='text', name='city', placeholder='mm/dd/yyyy', required='')
+                                            input#date_employee_worked(type='date', name='date_employee_worked', placeholder='mm/dd/yyyy', required='')
                                         label(for='employee_died')
                                             | If the employee died as a result of the accident, give the date of death. (mm/dd/yyyy)
-                                            input#employee_died(type='text', name='address', placeholder='mm/dd/yyyy', required='')
+                                            input#employee_died(type='date', name='employee_died', placeholder='mm/dd/yyyy', required='')
                                 .row
                                     .col-50
                                         label(for='Agency_name')  Did the incident occur on agency premises?
-                                        label.yes6
-                                            | Yes
-                                            input#yes6(type='checkbox')
-                                            span.checkmark
-                                        label.no6
-                                            | No
-                                            input#no6(type='checkbox')
-                                            span.checkmark
-                                        label.unknown6
-                                            | Unknown
-                                            input#unknown6(type='checkbox')
-                                            span.checkmark
+                                        .row
+                                            label.yes6
+                                                | Yes
+                                                input#yes6(type='radio' name='OnGrounds' value='yes')
+
+                                            label.no6
+                                                | No
+                                                input#no6(type='radio' name='OnGrounds' value='no')
+
+                                            label.unknown6
+                                                | Unknown
+                                                input#unknown6(type='radio' name='OnGrounds' value='unknown' )
+
                                     .col-50
-                                        label(for='Agency_name')  Injury or Illness?
-                                        label.injury
-                                            | Injury
-                                            input#injury(type='checkbox')
+                                        .row
+                                            label(for='Agency_name')  Injury or Illness?
+                                            label.injury
+                                                | Injury
+                                                input#injury(type='radio' name='InjIll' value='Injury')
                                             span.checkmark
-                                        label.illness
-                                            | Illness
-                                            input#illness(type='checkbox')
-                                            span.checkmark
+                                            label.illness
+                                                | Illness
+                                                input#illness(type='radio' name='InjIll' value='Illness')
+
                                 .row
                                     .col-50
                                         label(for='city')
                                             | Describe the injury or illness (affected body part and type of injury; Ex. contusion, bruise, laceration, sprain, break, etc.)
-                                            input#desc11(type='text', name='city', required='')
+                                            input#desc11(type='text', name='descIll', required='')
                                 .row
                                     .col-50
                                         label(for='city')  What object or substance, if any, directly harmed the employee?
-                                            input#desc111(type='text', name='city', required='')
+                                            input#desc111(type='text', name='Substance', required='')
                                 .row
                                     .col-50
-                                        label(for='Agency_name')  Did the injured employee seek medical attention?
-                                        label.Yes2
-                                            | Yes
-                                            input#Yes2(type='checkbox')
-                                            span.checkmark
-                                        label.No2
-                                            | No
-                                            input#No2(type='checkbox')
-                                            span.checkmark
-                                        label.Unknown2
-                                            | Unknown
-                                            input#Unknown2(type='checkbox')
-                                            span.checkmark
+                                        .row
+                                            label(for='Agency_name')  Did the injured employee seek medical attention?
+                                            label.Yes2
+                                                | Yes
+                                                input#Yes2(type='radio' name='medAtten' value='yes')
+
+                                            label.No2
+                                                | No
+                                                input#No2(type='radio' name='medAtten' value='no')
+
+                                            label.Unknown2
+                                                | Unknown
+                                                input#Unknown2(type='radio' name='medAtten' value='unknown')
+
                                     .col-50
-                                        label(for='Agency_name')  If yes, was the treatment given away from the worksite?
-                                        label.Yes3
-                                            | Yes
-                                            input#Yes3(type='checkbox')
-                                            span.checkmark
-                                        label.No3
-                                            | No
-                                            input#No3(type='checkbox')
-                                            span.checkmark
-                                        label.Unknown3
-                                            | Unknown
-                                            input#Unknown3(type='checkbox')
-                                            span.checkmark
+                                        .row
+                                            label(for='Agency_name')  If yes, was the treatment given away from the worksite?
+                                            label.Yes3
+                                                | Yes
+                                                input#Yes3(type='radio' name='treatment' value='yes')
+
+                                            label.No3
+                                                | No
+                                                input#No3(type='radio' name='treatment' value='no')
+
+                                            label.Unknown3
+                                                | Unknown
+                                                input#Unknown3(type='radio' name='treatment' value='unknown')
+
                                     .col-50
-                                        label(for='Agency_name')  Was the employee treated in an emergency room?
-                                        label.yes4
-                                            | Yes
-                                            input#yes4(type='checkbox')
-                                            span.checkmark
-                                        label.no4
-                                            | No
-                                            input#no4(type='checkbox')
-                                            span.checkmark
-                                        label.Unknown4
-                                            | Unknown
-                                            input#Unknown4(type='checkbox')
-                                            span.checkmark
+                                        .row
+                                            label(for='Agency_name')  Was the employee treated in an emergency room?
+                                                label.yes4
+                                                | Yes
+                                                input#yes4(type='radio' name='ER' value='yes')
+
+                                            label.no4
+                                                | No
+                                                input#no4(type='radio' name='ER' value='no')
+
+                                            label.Unknown4
+                                                | Unknown
+                                                input#Unknown4(type='radio' name='ER' value='Unknown')
+
                                     .col-50
-                                        label(for='Agency_name')  Was the employee hospitalized overnight as an inpatient?
-                                        label.Yes5
-                                            | Yes
-                                            input#Yes5(type='checkbox')
-                                            span.checkmark
-                                        label.No5
-                                            | No
-                                            input#No5(type='checkbox')
-                                            span.checkmark
-                                        label.Unknown5
-                                            | Unknown
-                                            input#Unknown5(type='checkbox')
-                                            span.checkmark
+                                        .row
+                                            label(for='Agency_name')  Was the employee hospitalized overnight as an inpatient?
+                                            label.Yes5
+                                                | Yes
+                                                input#Yes5(type='radio' name='OverNight' value='yes')
+
+                                            label.No5
+                                                | No
+                                                input#No5(type='radio' name='OverNight' value='no')
+
+                                            label.Unknown5
+                                                | Unknown
+                                                input#Unknown5(type='radio' name='OverNight' value='unkown')
+
                                 .row
                                     .col-50
                                         label(for='Name_Physician')  Name of treating physician, health care provider, or emergency room
-                                            input#Name_Physician(type='text', name='city', required='')
+                                            input#Name_Physician(type='text', name='Name_Physician', required='')
                                 .row
                                     .col-50
                                         label(for='Address3')  Address
-                                            input#Address3(type='text', name='city', placeholder='542 W. 15th Street', required='')
+                                            input#Address3(type='text', name='Address3', placeholder='542 W. 15th Street', required='')
                                 .row
                                     .col-50
                                         label(for='City3') City
-                                            input#City3(type='text', name='state', placeholder='Aurora', required='')
+                                            input#City3(type='text', name='City4', placeholder='Aurora', required='')
                                     .col-50
                                         label(for='state3') State
-                                            input#state3(type='text', name='state', placeholder='IL', required='')
+                                            input#state3(type='text', name='state4', placeholder='IL', required='')
                                     .col-50
                                         label(for='zip3') Zip code
-                                            input#zip3(type='text', name='zip', placeholder='10001', required='')
+                                            input#zip3(type='text', name='zip4', placeholder='10001', required='')
                                     .col-50
                                         label(for='Home_phone_#') Home Phone #
-                                            input(type='text', id='Home_phone_#', name='state', placeholder='###-###-####', required='')
+                                            input(type='text', id='Home_phone_#', name='Home_phone2', placeholder='###-###-####', required='')
                                     input.btn(type='submit', value='Submit Form')
     include footer.pug

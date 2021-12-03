@@ -18,50 +18,50 @@ html(lang='en')
     .row
         .col-75
             .container
-                form(action='/action_page.php')
+                form(action='/insertForm1', method="POST")
                     .row
                         .col-50
                             h1 Accident/ incident report: Form 1
                     .row
                         .col-50
                             label.agencyName Agency Name
-                            input#agencyName.form-control(type='text' required)
+                            input#agencyName.form-control(type='text' name='agencyName' required)
 
                             label.Date Today's Date
-                            input#Date.form-control(type='text' required)
+                            input#Date.form-control(type='date' name='TodaysDate' required)
 
                         .col-50
                             label.date2 Date of incident
-                            input#date2.form-control(type='date' required)
+                            input#date2.form-control(type='date' name='DateOfIncident' required)
 
                             label.time Time of incident
-                            input#time.form-control(type='time' required)
+                            input#time.form-control(type='time' name='timeOfIncident' required)
                     .row
                         .col-50
                             label.reporterName Name of person completing report
-                            input#reporterName(type='text' required)
+                            input#reporterName(type='text' name='reporterName' required)
 
                             label.reporterTitle Title of person completing report
-                            input#reporterTitle.form-control(type='text' placeholder='EnterTitle Here' required)
+                            input#reporterTitle.form-control(type='text' placeholder='EnterTitle Here' name='reporterTitle' required)
 
 
 
                         .col-50
                             label.businessEmail Business Email
-                            input#businessEmail.form-control(type='text' placeholder='Enter Email Here' value='' required)
+                            input#businessEmail.form-control(type='text' placeholder='Enter Email Here' name='BisEmail' value='' required)
 
                             label.businessNumber Business Phone Number
-                            input#businessNumber.form-control(type='text' placeholder='Enter Phone Number Here' value='' required)
+                            input#businessNumber.form-control(type='text' placeholder='Enter Phone Number Here' name='bisPhone' value='' required)
 
                     .row
                         .col-50
                             label.howOccured How Did the Incident Occur? Provide a brief, factual description; do not speculate on fault, etc.
-                            input#howOccured(type='text' rows='6' cols='96')
+                            input#howOccured(type='text' name='occurred')
 
                     .row
                         .col-50
                             label(for='incidentLocation') Name of Location (park, pool, community center) or nearest intersection
-                            input#incidentLocation.form-control(type='text' placeholder='Enter Location Here' value='' required)
+                            input#incidentLocation.form-control(type='text' placeholder='Enter Location Here' name='nameLocation' value='' required)
                         .col-50
                             label Is there an Address for this location?
                             .row
@@ -84,21 +84,21 @@ html(lang='en')
 
 
                             label(for='incidentAddress') Address
-                            input#incidentAddress.form-control(type='text' placeholder='1234 Main St' required)
+                            input#incidentAddress.form-control(type='text' placeholder='1234 Main St' name='IncidentAdress' required)
                             label(for='locationType') Location ( Specify the exact type of location/facility where injury occured )
-                            input#locationType.form-control(type='text' placeholder='Enter Location Here' value='' required)
+                            input#locationType.form-control(type='text' placeholder='Enter Location Here' name='IncidentLocation' value='' required)
 
                             label(for='Zip') Zip
-                            input#Zip.form-control(type='text' placeholder='Zip' required)
+                            input#Zip.form-control(type='text' placeholder='Zip' name='locationZip' required)
                         .col-50
                             label(for='city') City
-                            input#city.form-control(type='text' placeholder='City' required)
+                            input#city.form-control(type='text' name='LocationCity' placeholder='City' required)
 
                             label(for='State') State,
-                            input#State.form-control(type='text' placeholder='State' required)
+                            input#State.form-control(type='text' placeholder='State' name='LocationState' required)
 
                             label(for='primaryLocation') Primary Location ( Specify the exact location Ex. pool, classroom etc.)
-                            input#primaryLocation.form-control(type='text' placeholder='Enter Location Here' value='' required)
+                            input#primaryLocation.form-control(type='text' name='PrimaryLocation' placeholder='Enter Location Here' value='' required)
 
                     .row
                         .col-50
@@ -126,36 +126,36 @@ html(lang='en')
                         .col-50
 
                             label(for='lastName') Last Name
-                            input#lastName.form-control(type='text' placeholder='Enter Last Name Here' value='' required)
+                            input#lastName.form-control(type='text' placeholder='Enter Last Name Here' name='InjLastName' value='' required)
 
                             label(for='injuredAddress') Address
-                            input#injuredAddress.form-control(type='text' placeholder='1234 Main St' required)
+                            input#injuredAddress.form-control(type='text' placeholder='1234 Main St' name='InjAdress' required)
                             label(for='injuredState') State
-                            input#injuredState.form-control(type='text' placeholder='State' required)
+                            input#injuredState.form-control(type='text' placeholder='State' name='InjState' required)
 
                             label(for='homePhone') Home Phone #
-                            input#homePhone.form-control(type='text' placeholder='Enter Phone Number Here' value='' required)
+                            input#homePhone.form-control(type='text' placeholder='Enter Phone Number Here' name='InjPhone' value='' required)
 
                             label(for='cellPhone') Cell Phone #
-                            input#cellPhone.form-control(type='text' placeholder='Enter Phone Number Here' value='' required)
+                            input#cellPhone.form-control(type='text' placeholder='Enter Phone Number Here' name='InjCell' value='' required)
 
 
 
                         .col-50
                             label(for='firstName') First Name
-                            input#firstName.form-control(type='text' placeholder='Enter First Name Here' value='' required)
+                            input#firstName.form-control(type='text' name='InjFirstName' placeholder='Enter First Name Here' value='' required)
 
                             label(for='injuredCity') City
-                            input#injuredCity.form-control(type='text' placeholder='City' required)
+                            input#injuredCity.form-control(type='text' placeholder='City' name='InjCity' required)
 
                             label(for='injuredZip') Zip
-                            input#injuredZip.form-control(type='text' placeholder='Zip' required)
+                            input#injuredZip.form-control(type='text' placeholder='Zip' name='InjZip' required)
 
                             label(for='workPhone') Work Phone #
-                            input#workPhone.form-control(type='text' placeholder='Enter Phone Number Here' value='' required)
+                            input#workPhone.form-control(type='text' placeholder='Enter Phone Number Here' name='InjWorkPhone' value='' required)
 
                             label(for='injuredAge') Age
-                            input#injuredAge.form-control(type='text' placeholder='' value='' required)
+                            input#injuredAge.form-control(type='text' placeholder='' value='' name='InjAge' required)
 
 
                     .row
@@ -186,7 +186,7 @@ html(lang='en')
                     .row
                         .col-50
                             label(for='describeInjury') Describe the Injury ( Affected body part and type of injury )
-                            input#describeInjury(type='text' required)
+                            input#describeInjury(type='text' name='InjDescription' required)
 
                     .row
                         .col-50
@@ -206,33 +206,33 @@ html(lang='en')
                     .row
                         .col-50
                             label(for='injuredStatement') If yes, what did the injured person say?
-                            input#injuredStatement(type='text' required)
+                            input#injuredStatement(type='text' name='StatementSaid' required)
 
                     .row
                         .col-50
                             label Was First Aid Administered?
                                 label(for='firstAidYes')
                                     |Yes
-                                    input#firstAidYes(type='checkbox' name='firstAid' value='Yes')
+                                    input#firstAidYes(type='radio' name='firstAid' value='Yes')
 
                                 label(for='firstAidNo')
                                     |No
-                                    input#firstAidNo(type='checkbox' name='firstAid' value='No')
+                                    input#firstAidNo(type='radio' name='firstAid' value='No')
 
                                 label(for='firstAidUnknown')
                                     |Unknown
-                                    input#firstAidUnknown(type='checkbox' name='firstAid' value='Unknown')
+                                    input#firstAidUnknown(type='radio' name='firstAid' value='Unknown')
 
 
 
                     .row
                         .col-50
                             label(for='firstAidName') Name and Position of person who Administered First Aid
-                            input#firstAidName.form-control(type='text' value='')
+                            input#firstAidName.form-control(type='text' name='PositionFirstAid' value='')
 
 
                             label(for='firstAidGiven') Was First Aid Given?
-                            input#firstAidGiven.form-control(type='text' value='')
+                            input#firstAidGiven.form-control(type='text' name='FirstAidGiven' value='')
 
                     .row
                         .col-50
@@ -278,18 +278,21 @@ html(lang='en')
                             .row
                                 label(for='policeCalled')
                                     |Yes
-                                    input#policeCalled(type='checkbox' name='firstAidDetails' value='Yes')
+                                    input#policeCalled(type='radio' name='PoliceCalled' value='Yes')
+                                label(for='PoliceNo')
+                                    |No
+                                    input#policeNo(type='radio' name='PoliceCalled' value='no')
 
 
                     .row
                         .col-50
                             label If Yes, please provide the following information.
                             label(for='policeDeptName') Name of police department
-                            input#policeDeptName.form-control(type='text' value='')
+                            input#policeDeptName.form-control(type='text' value='' name='departmentName')
 
                         .col-50
                             label(for='policeName') Name of officer
-                            input#policeName.form-control(type='text' value='')
+                            input#policeName.form-control(type='text' value='' name='OfficerName')
 
 
                     .row
@@ -303,11 +306,11 @@ html(lang='en')
 
                                 label(for='claimNo')
                                     |No
-                                    input#claimNo(type='checkbox' name='claim' value='No')
+                                    input#claimNo(type='radio' name='claim' value='No')
 
                                 label(for='claimUnknown')
                                     |Unknown
-                                    input#claimUnknown(type='checkbox' name='claim' value='Unknown')
+                                    input#claimUnknown(type='radio' name='claim' value='Unknown')
 
 
                             h1 PROPERTY DAMAGE
@@ -350,31 +353,31 @@ html(lang='en')
                     .row
                         .col-50
                             label(for='propertyLastName') Last Name ( or business name )
-                            input#propertyLastName.form-control(type='text' placeholder='Enter Last Name Here' value='')
+                            input#propertyLastName.form-control(type='text' placeholder='Enter Last Name Here' name='PropertyLastName' value='')
 
                             label(for='propertyFirstName') First Name ( not necessary if business name )
-                            input#propertyFirstName.form-control(type='text' placeholder='Enter First Name Here' value='')
+                            input#propertyFirstName.form-control(type='text' placeholder='Enter First Name Here' name='PropertyFirstName' value='')
 
                             label(for='propertyPersonInfoZip') Zip
-                            input#propertyPersonInfoZip.form-control(type='text')
+                            input#propertyPersonInfoZip.form-control(type='text' name='PropertyZip')
 
 
                         .col-50
                             label(for='propertyPersonAddress') Address
-                            input#propertyPersonAddress.form-control(type='text' placeholder='1234 Main St')
+                            input#propertyPersonAddress.form-control(type='text' name='PropertyAdress' placeholder='1234 Main St')
 
                             label(for='propertyPersonInfoCity') City
-                            input#propertyPersonInfoCity.form-control(type='text')
+                            input#propertyPersonInfoCity.form-control(type='text' name='propertyCity')
 
                             label(for='propertyPersonInfoState') State
-                            input#propertyPersonInfoState.form-control(type='text')
+                            input#propertyPersonInfoState.form-control(type='text' name='PropertyState')
 
                             label(for='propertyPersonInfoPhone') Phone Number
-                            input#propertyPersonInfoPhone.form-control(type='text')
+                            input#propertyPersonInfoPhone.form-control(type='text' name='PropertyPhone')
                     .row
                         .col-50
                             label(for='describeDamage') Describe the Property Damage
-                            input#describeDamage(type='text')
+                            input#describeDamage(type='text' name='DescribeDamage')
 
                     .row
                         .col-50
@@ -383,25 +386,25 @@ html(lang='en')
                     .row
                         .col-50
                             label(for='witnessLastName') Last Name
-                            input#witnessLastName.form-control(type='text' placeholder='Enter Last Name Here' value='')
+                            input#witnessLastName.form-control(type='text' placeholder='Enter Last Name Here' value='' name='WitnessLastName')
 
                             label(for='propertyPersonInfoCity') City
-                            input#witnessCity.form-control(type='text')
+                            input#witnessCity.form-control(type='text' name='WitnessCity')
 
                             label(for='propertyPersonInfoState') State
-                            input#witnessState.form-control(type='text')
+                            input#witnessState.form-control(type='text' name='witnessState')
 
                             label(for='propertyPersonInfoPhone') Phone Number
-                            input#witnessPhone.form-control(type='text')
+                            input#witnessPhone.form-control(type='text' name='WitnessPhone')
                         .col-50
                             label(for='witnessFirstName') First Name
-                            input#witnessFirstName.form-control(type='text' placeholder='Enter First Name Here' value='')
+                            input#witnessFirstName.form-control(type='text' placeholder='Enter First Name Here' value='' name='WitnessFirstName')
 
                             label(for='witnessAddress') Address
-                            input#witnessAddress.form-control(type='text' placeholder='1234 Main St')
+                            input#witnessAddress.form-control(type='text' placeholder='1234 Main St' name='WitnessAdress')
 
                             label(for='witnessInfoZip') Zip
-                            input#witnessInfoZip.form-control(type='text')
+                            input#witnessInfoZip.form-control(type='text' name='WitnessZip')
                     .row
                         .col-50
                             label Did the witness make any statements?
@@ -422,7 +425,7 @@ html(lang='en')
                     .row
                         .col-50
                             label(for='witnessStatement') If yes, what did the witness say?
-                            input#witnessStatement(type='text')
+                            input#witnessStatement(type='text' name='WitnessSaid')
 
                             h5 Please ensure every field is filled out!
 
