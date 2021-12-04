@@ -274,11 +274,11 @@ html(lang='en')
                             .row
                                 label.policeInvestigationYes
                                     | Yes
-                                    input#policeInvestigationYes(type='checkbox' name='policeInvestigation' value='Yes')
+                                    input#policeInvestigationYes(type='radio' name='policeInvestigation' value='Yes')
                                     span.checkmark
                                 label.policeInvestigationNo
                                     | No
-                                    input#policeInvestigationNo(type='checkbox' name='policeInvestigation' value='No')
+                                    input#policeInvestigationNo(type='radio' name='policeInvestigation' value='No')
                                     span.checkmark
                         .row
                             label If Yes, provide the following information:
@@ -316,31 +316,31 @@ html(lang='en')
                             .row
                             label.otherVehicleDriver
                                 | Driver of other vehicle
-                                input#otherVehicleDriver(type='checkbox' name='peopleInvolved' value='otherVehicleDriver')
+                                input#otherVehicleDriver(type='radio' name='peopleInvolved' value='otherVehicleDriver')
                                 span.checkmark
                             label.injuredPerson
                                 | Injured Person
-                                input#injuredPerson(type='checkbox' name='peopleInvolved' value='No' value='injuredPerson')
+                                input#injuredPerson(type='radio' name='peopleInvolved'  value='injuredPerson')
                                 span.checkmark
                             label.involvedPropertyOwner
                                 | Owner of involved property
-                                input#involvedPropertyOwner(type='checkbox' name='peopleInvolved' value='Unknown' value='involvedPropertyOwner')
+                                input#involvedPropertyOwner(type='radio' name='peopleInvolved'  value='involvedPropertyOwner')
                                 span.checkmark
                             label.otherVehicleOwner
                                 | Owner of other vehicle
-                                input#otherVehicleOwner(type='checkbox' name='peopleInvolved' value='otherVehicleOwner')
+                                input#otherVehicleOwner(type='radio' name='peopleInvolved' value='otherVehicleOwner')
                                 span.checkmark
                             label.agencyVehiclePassenger
                                 | Passenger of agency vehicle
-                                input#agencyVehiclePassenger(type='checkbox' name='peopleInvolved' value='agencyVehiclePassenger')
+                                input#agencyVehiclePassenger(type='radio' name='peopleInvolved' value='agencyVehiclePassenger')
                                 span.checkmark
                             label.otherVehiclePassenger
                                 | Passenger of other vehicle
-                                input#otherVehiclePassenger(type='checkbox' name='peopleInvolved' value='otherVehiclePassenger')
+                                input#otherVehiclePassenger(type='radio' name='peopleInvolved' value='otherVehiclePassenger')
                                 span.checkmark
                             label.pedestrian
                                 | Pedestrian
-                                input#pedestrian(type='checkbox' name='peopleInvolved' value='pedestrian')
+                                input#pedestrian(type='radio' name='peopleInvolved' value='pedestrian')
                                 span.checkmark
                         .row
                             .col-50
@@ -500,31 +500,31 @@ html(lang='en')
                             .row
                                 label.otherVehicleDriver2
                                     | Driver of other vehicle
-                                    input#otherVehicleDriver2(type='checkbox' name='peopleInvolved2' value='otherVehicleDriver')
+                                    input#otherVehicleDriver2(type='radio' name='peopleInvolved2' value='otherVehicleDriver')
                                     span.checkmark
                                 label.injuredPerson2
                                     | Injured Person
-                                    input#injuredPerson2(type='checkbox' name='peopleInvolved2' value='No' value='injuredPerson')
+                                    input#injuredPerson2(type='radio' name='peopleInvolved2'  value='injuredPerson')
                                     span.checkmark
                                 label.involvedPropertyOwner2
                                     | Ownder of involved property
-                                    input#involvedPropertyOwner2(type='checkbox' name='peopleInvolved2' value='Unknown' value='involvedPropertyOwner')
+                                    input#involvedPropertyOwner2(type='radio' name='peopleInvolved2'  value='involvedPropertyOwner')
                                     span.checkmark
                                 label.otherVehicleOwner2
                                     | Owner of other vehicle
-                                    input#otherVehicleOwner2(type='checkbox' name='peopleInvolved2' value='otherVehicleOwner')
+                                    input#otherVehicleOwner2(type='radio' name='peopleInvolved2' value='otherVehicleOwner')
                                     span.checkmark
                                 label.agencyVehiclePassenger2
                                     | Passenger of agency vehicle
-                                    input#agencyVehiclePassenger2(type='checkbox' name='peopleInvolved2' value='agencyVehiclePassenger')
+                                    input#agencyVehiclePassenger2(type='radio' name='peopleInvolved2' value='agencyVehiclePassenger')
                                     span.checkmark
                                 label.otherVehiclePassenger2
                                     | Passenger of other vehicle
-                                    input#otherVehiclePassenger2(type='checkbox' name='peopleInvolved2' value='otherVehiclePassenger')
+                                    input#otherVehiclePassenger2(type='radio' name='peopleInvolved2' value='otherVehiclePassenger')
                                     span.checkmark
                                 label.pedestrian2
                                     | Peedestrian
-                                    input#pedestrian2(type='checkbox' name='peopleInvolved2' value='pedestrian')
+                                    input#pedestrian2(type='radio' name='peopleInvolved2' value='pedestrian')
                                     span.checkmark
                         .row
                             .col-50
@@ -832,19 +832,19 @@ html(lang='en')
                                         span.checkmark
                                     label.Fog
                                         | Fog
-                                        input#Fog(type='weatherCondition' name='weatherCondition' value='Fog')
+                                        input#Fog(type='radio' name='weatherCondition' value='Fog')
                                         span.checkmark
                                     label.Ice
                                         | Ice
-                                        input#Ice(type='weatherCondition' name='weatherCondition' value='Ice')
+                                        input#Ice(type='radio' name='weatherCondition' value='Ice')
                                         span.checkmark
                                     label.Snow
                                         | Snow
-                                        input#Snow(type='weatherCondition' name='weatherCondition' value='Snow')
+                                        input#Snow(type='radio' name='weatherCondition' value='Snow')
                                         span.checkmark
                                     label.Wet
                                         | Wet
-                                        input#Wet(type='weatherCondition' name='weatherCondition' value='Wet')
+                                        input#Wet(type='radio' name='weatherCondition' value='Wet')
                                         span.checkmark
 
                         h4 Accident Diagram
