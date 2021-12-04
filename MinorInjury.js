@@ -85,6 +85,9 @@ app.post('/insertForm2',function (req,res){
     let policeInvestigation = req.body.policeInvestigation;
     let policeAgency = req.body.policeAgency;
     let policeReportNum = req.body.policeReportNum;
+    let ticket = req.body.ticket;
+    let Desticket = req.body.Desticket;
+
     let isDriverInjured = req.body.isDriverInjured;
 
     let peopleInvolved = req.body.peopleInvolved;
@@ -151,11 +154,7 @@ app.post('/insertForm2',function (req,res){
     let witnessHomePhone = req.body.witnessHomePhone;
     let witnessCellPhone = req.body.witnessCellPhone;
 
-    let agencyEmpVolunteer = req.body.agencyEmpVolunteer;
-    let anotherUser = req.body.anotherUser;
-    let friend = req.body.friend;
-    let passerby = req.body.passerby;
-    let relative = req.body.relative;
+    let relation = req.body.relation
     let isThereAWitnessStatement = req.body.isThereAWitnessStatement;
     let witnessStatement = req.body.witnessStatement;
     let agencyDriverBusiness = req.body.agencyDriverBusiness;
@@ -166,32 +165,33 @@ app.post('/insertForm2',function (req,res){
     let otherDriverDirection = req.body.otherDriverDirection;
     let weatherCondition = req.body.weatherCondition;
 
-   let sql= `INSERT INTO Form2(AgencyName, ReporterName, TodaysDate, ReporterTitle, DateIncident, BisPhone, TimeIncident,BisEmail, HowOccur, Location, IsAdress, 
+   let sql= `INSERT INTO Form2(AgencyName, ReporterName, TodaysDate, ReporterTitle, DateIncident, BisPhone, TimeIncident,BisEmail, HowOccur, Location, IsAdress, Adress,
         City, State, Zip, SpecificLocation, PrimaryLocation, VOccupied, VLastName, VFName, VAddress, VCity, VState, VZip, VHome, VWork, VCell, VEmail, Emp, 
         EMPTitle, DriverType, VVin, vModel, vMake, vLicense, vDrivable, vLocation, vRepair, vAreaDamage, Trailet, tYear, tLicense, tModel, tAreaDMG, tRepairCost, 
         tCurrentLocation, PoliceInvestigation, PoliceAgency, PoliceReportNum, Ticket, describeTicket, Claimant, cLName, cFName, cAdress, cCity, cState, cZip, cWOrk, cHome, 
         cMake, cCell, cYear, cModel, cDrivable, cLocation, cExtent, cPropertyDMG, cPersonExtent, cAge, cSex, cTransported, cTaken, cClaim, cDescribe, additional, addLName, 
         addFname, addAdress, addCity, addZip, addWork, addHome, addCell, addMake, addmodel, addDriveable, addLoc, addExtent, addProp, addAge, addSex, addTransport, addTaken, 
-        addClaim, addDescribe, Witness, witName, witFname, witAddress, witCIty, witState, witZip, witWork, witHome, witCell, withRelation, witStatment, witSaid, witLoc, ABis, 
-        aStreet, OStreet, ADirection, ODirection, weather) VALUES ('${agencyName}','${reporterName}','${todaysDate}','${reporterTitle}','${dateOfIncident}','${businessNumber}','${howOccured}',
-        [value-8],[value-9],[value-10],[value-11],[value-12],[value-13],
-        [value-14],[value-15],[value-16],[value-17],[value-18],[value-19],[value-20],[value-21],[value-22],
-        [value-23],[value-24],[value-25],[value-26],[value-27],[value-28],[value-29],[value-30],[value-31],
-        [value-32],[value-33],[value-34],[value-35],[value-36],[value-37],[value-38],[value-39],[value-40],
-        [value-41],[value-42],[value-43],[value-44],[value-45],[value-46],[value-47],[value-48],[value-49],
-        [value-50],[value-51],[value-52],[value-53],[value-54],[value-55],[value-56],[value-57],[value-58],
-        [value-59],[value-60],[value-61],[value-62],[value-63],[value-64],[value-65],[value-66],[value-67],
-        [value-68],[value-69],[value-70],[value-71],[value-72],[value-73],[value-74],[value-75],[value-76],
-        [value-77],[value-78],[value-79],[value-80],[value-81],[value-82],[value-83],[value-84],[value-85],
-        [value-86],[value-87],[value-88],[value-89],[value-90],[value-91],[value-92],[value-93],[value-94],
-        [value-95],[value-96],[value-97],[value-98],[value-99],[value-100],[value-101],[value-102],[value-103],
-        [value-104],[value-105],[value-106],[value-107],[value-108],[value-109],[value-110],[value-111],
-        [value-112],[value-113],[value-114],[value-115])`
+        addClaim, addDescribe, addPropDamage, witName, witFname, witAddress, witCIty, witState, witZip, witWork, witHome, witCell, withRelation, witStatment, witSaid, witLoc, ABis, 
+        aStreet, OStreet, ADirection, ODirection, weather) VALUES ('${agencyName}','${reporterName}','${todaysDate}','${reporterTitle}','${dateOfIncident}','${businessNumber}','${timeOfIncident}',
+        '${businessEmail}','${howOccured}','${incidentLocation}','${incidentLocationAddress}','${incidentAddress}','${city1}','${state}',
+        '${zip}','${locationType}','${primaryLocation}','${agencyVehicleOccupied}','${driverLastName}','${driverFirstName}','${driverAddress}','${driverCity}','${driverState}',
+        '${driverZip}','${driverHomePhone}','${driverWorkPhone}','${driverCellPhone}','${driverEmail}','${employeeDriver}','${employeeJobTitle}','${typeOfDriver}','${vehicleVIN}',
+        '${vehicleModel}','${vehicleMake}','${vehicleLicenceNum}','${vehicleDrivable}','${vehicleLocation}','${repairCost}','${damageArea}','${trailerInvolved}','${trailerYear}',
+        '${trailerLicenseNum}','${trailerModel}','${trailerDamageArea}','${trailerRepairCost}','${trailerLocation}','${policeInvestigation}','${policeAgency}','${policeReportNum}','${ticket}',
+        '${Desticket}','${isDriverInjured}','${claimantLastName}','${claimantFirstName}','${claimantAddress}','${claimantCity}','${claimantState}','${claimantZip}','${claimantWorkPhone}',
+        '${claimantHomePhone}','${claimantVehicleMake}','${claimantCellPhone}','${claimantVehicleYear}','${claimantVehicleModel}','${isVehicleDrivable}','${drivableVehicleLocation}','${vehicleDamageExtent}',
+        '${propDamageDescription}',
+        '${propertyDamageExtent}','${injuredAge}','${injuredSex}','${paramedicsTransfer}','${injuredLocation}','${injuredClaim}','${injuryDescription}','${peopleInvolved2}','${claimantLastName2}',
+        '${claimantFirstName2}','${claimantAddress2}','${claimantCity2}','${claimantZip2}','${claimantWorkPhone2}','${claimantHomePhone2}','${claimantCellPhone2}','${claimantVehicleMake2}','${claimantVehicleModel2}',
+        '${isVehicleDrivable2}','${drivableVehicleLocation2}','${vehicleDamageExtent2}','${propDamageDescription2}','${injuredAge2}','${injuredSex2}','${paramedicsTransfer2}','${injuredLocation2}','${injuredClaim2}',
+        '${injuryDescription2}','${propertyDamageExtent2}','${witnessLastName}','${witnessFirstName}','${witnessAddress}','${witnessCity}','${witnessState}','${witnessZip}','${witnessWorkPhone}',
+        '${witnessHomePhone}','${witnessCellPhone}','${relation}','${isThereAWitnessStatement}','${witnessStatement}','${witnessLocation}','${agencyDriverBusiness}','${agencyDriverLocation}',
+        '${otherDriverLocation}','${agencyDriverDirection}','${otherDriverDirection}','${weatherCondition}')`;
 
 
-    con.query(sql);
-    res.render('index2');
-})
+   con.query(sql);
+   res.render('index2');
+});
 
 app.post('/insertForm4',function (req,res){
     let firstname = req.body.firstname;
@@ -311,8 +311,8 @@ app.post('/insertForm3',function(req,res){
         '${police}','${policeAgency}',
         '${theCharges}','${Today}')`;
     con.query(sql);
-    res.render('index2')
-})
+    res.render('index2');
+});
 app.post('/insertForm1',function(req,res){
     let AgencyName = req.body.agencyName;
     let TodaysDate = req.body.TodaysDate;
