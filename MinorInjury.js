@@ -25,7 +25,7 @@ app.post('/insertRow',function(req,res){
 
     let sql = `INSERT INTO Minor_Injury_Log(Date,Time,Name,Location,Treatment,how,facility,staffName)  VALUES ('${Date}','${Time}','${Name}','${Location}','${Treatment}','${how}','${facility}','${staffName}')`;
     con.query(sql);
-    res.render('MinorInjurys')
+    res.render('index2')
 
 
 })
@@ -34,6 +34,7 @@ app.post('/insertForm2',function (req,res){
     let todaysDate = req.body.todaysDate;
     let dateOfIncident = req.body.dateOfIncident;
     let timeOfIncident = req.body.timeOfIncident;
+    let reporterName= req.body.reporterName
 
     let reporterTitle = req.body.reporterTitle;
     let businessNumber = req.body.businessNumber;
@@ -172,13 +173,20 @@ app.post('/insertForm2',function (req,res){
         cMake, cCell, cYear, cModel, cDrivable, cLocation, cExtent, cPropertyDMG, cPersonExtent, cAge, cSex, cTransported, cTaken, cClaim, cDescribe, additional, addLName, 
         addFname, addAdress, addCity, addZip, addWork, addHome, addCell, addMake, addmodel, addDriveable, addLoc, addExtent, addProp, addAge, addSex, addTransport, addTaken, 
         addClaim, addDescribe, Witness, witName, witFname, witAddress, witCIty, witState, witZip, witWork, witHome, witCell, withRelation, witStatment, witSaid, witLoc, ABis, 
-        aStreet, OStreet, ADirection, ODirection, weather) VALUES ([value-1],[value-2],[value-3],[value-4],[value-5],[value-6],[value-7],[value-8],[value-9],[value-10],[value-11],[value-12],[value-13],
-        [value-14],[value-15],[value-16],[value-17],[value-18],[value-19],[value-20],[value-21],[value-22],[value-23],[value-24],[value-25],[value-26],[value-27],[value-28],[value-29],[value-30],[value-31],
-        [value-32],[value-33],[value-34],[value-35],[value-36],[value-37],[value-38],[value-39],[value-40],[value-41],[value-42],[value-43],[value-44],[value-45],[value-46],[value-47],[value-48],[value-49],
-        [value-50],[value-51],[value-52],[value-53],[value-54],[value-55],[value-56],[value-57],[value-58],[value-59],[value-60],[value-61],[value-62],[value-63],[value-64],[value-65],[value-66],[value-67],
-        [value-68],[value-69],[value-70],[value-71],[value-72],[value-73],[value-74],[value-75],[value-76],[value-77],[value-78],[value-79],[value-80],[value-81],[value-82],[value-83],[value-84],[value-85],
-        [value-86],[value-87],[value-88],[value-89],[value-90],[value-91],[value-92],[value-93],[value-94],[value-95],[value-96],[value-97],[value-98],[value-99],[value-100],[value-101],[value-102],[value-103],
-        [value-104],[value-105],[value-106],[value-107],[value-108],[value-109],[value-110],[value-111],[value-112],[value-113],[value-114],[value-115])`
+        aStreet, OStreet, ADirection, ODirection, weather) VALUES ('${agencyName}','${reporterName}','${todaysDate}','${reporterTitle}','${dateOfIncident}','${businessNumber}','${howOccured}',
+        [value-8],[value-9],[value-10],[value-11],[value-12],[value-13],
+        [value-14],[value-15],[value-16],[value-17],[value-18],[value-19],[value-20],[value-21],[value-22],
+        [value-23],[value-24],[value-25],[value-26],[value-27],[value-28],[value-29],[value-30],[value-31],
+        [value-32],[value-33],[value-34],[value-35],[value-36],[value-37],[value-38],[value-39],[value-40],
+        [value-41],[value-42],[value-43],[value-44],[value-45],[value-46],[value-47],[value-48],[value-49],
+        [value-50],[value-51],[value-52],[value-53],[value-54],[value-55],[value-56],[value-57],[value-58],
+        [value-59],[value-60],[value-61],[value-62],[value-63],[value-64],[value-65],[value-66],[value-67],
+        [value-68],[value-69],[value-70],[value-71],[value-72],[value-73],[value-74],[value-75],[value-76],
+        [value-77],[value-78],[value-79],[value-80],[value-81],[value-82],[value-83],[value-84],[value-85],
+        [value-86],[value-87],[value-88],[value-89],[value-90],[value-91],[value-92],[value-93],[value-94],
+        [value-95],[value-96],[value-97],[value-98],[value-99],[value-100],[value-101],[value-102],[value-103],
+        [value-104],[value-105],[value-106],[value-107],[value-108],[value-109],[value-110],[value-111],
+        [value-112],[value-113],[value-114],[value-115])`
 
 
     con.query(sql);
